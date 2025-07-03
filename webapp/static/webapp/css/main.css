@@ -76,9 +76,8 @@ header.header {
 
 .logo .gold-text {
     color: #fff700;
-    text-shadow: 0 0 5px #fff700,
-    0 0 10px #ffd700,
-    0 0 15px #ffec8b;
+    text-shadow: 0 0 2px #fff700, 0 0 5px #FFD700, 0 0 0px #ffec8b;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .padding-menu {
@@ -96,6 +95,18 @@ header.header {
     color: #ffd700 !important;
 }
 
+.slider-nav .nav-dot {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.slider-nav .nav-dot:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
 /* Кнопка обратный звонок */
 .btn-callback {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
@@ -103,7 +114,7 @@ header.header {
     font-weight: 700;
     border-radius: 30px;
     padding: 8px 25px;
-    box-shadow: 0 0 15px #ffd700, 0 0 20px #fff700;
+    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
     width: 240px;
@@ -233,7 +244,7 @@ header.header {
     padding: 15px 40px;
     font-size: 1.2rem;
     border: none;
-    border-radius: 30px;
+    border-radius: 7px;
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     font-weight: 700;
@@ -245,7 +256,7 @@ header.header {
 .gold-btn {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
-    box-shadow: 0 0 15px #ffd700, 0 0 20px #fff700;
+    box-shadow: 0 0 2px #ffd700, 0 0 7px #fff700;
     width: 300px;
     text-align: center;
     position: relative;
