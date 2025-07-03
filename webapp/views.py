@@ -1,4 +1,8 @@
 from django.shortcuts import render
 
+from webapp.models import Slider
+
+
 def index(request):
-    return render(request, 'webapp/index.html')
+    slides = Slider.objects.all()
+    return render(request, 'webapp/index.html', {'slides': slides})
