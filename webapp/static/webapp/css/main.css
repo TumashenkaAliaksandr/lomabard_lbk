@@ -1,0 +1,237 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #121212; /* темный фон для контраста */
+    color: #f0e6d2; /* светлый цвет для текста */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Яркий золотой цвет с эффектом свечения */
+.gold-text {
+    font-weight: 700;
+    color: #ffd700; /* базовый яркий золотой */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.4s ease;
+}
+
+.gold-text:hover {
+    color: #ffe454;
+    text-shadow: 0 0 2px #787878, 0 0 4px #908239;
+    transform: scale(1.01);
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+    animation: none;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+
+/* Анимация мягкого пульсирующего свечения */
+@keyframes goldGlow {
+    0% {
+        text-shadow:
+            0 0 8px #fff700,
+            0 0 15px #ffd700,
+            0 0 25px #ffec8b,
+            0 0 35px #b8860b,
+            0 0 45px #ffd700,
+            0 0 60px #fff700;
+    }
+    100% {
+        text-shadow:
+            0 0 12px #fff700,
+            0 0 20px #ffd700,
+            0 0 30px #ffec8b,
+            0 0 45px #b8860b,
+            0 0 60px #ffd700,
+            0 0 80px #fff700;
+    }
+}
+
+
+/* Хедер */
+.header {
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    border-bottom: 2px solid #ffd700; /* яркий золотой */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+/* Навигация */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #f0e6d2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ffd700;
+}
+
+/* Главный блок (hero) */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1f1f1f 0%, #3a2f00 100%);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #e0d9b8;
+}
+
+/* Кнопка */
+.btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+.gold-btn {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    box-shadow: 0 0 15px #ffd700, 0 0 20px #fff700;
+    width: 300px;
+    text-align: center;
+    position: relative;
+
+    display: block;
+    margin: 0 auto;
+}
+
+.gold-btn:hover {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+}
+
+
+/* Слайдер */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #1f1f1f 0%, #3a2f00 100%);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+    margin-top: 50px;
+}
+
+.hero-slider input[type="radio"] {
+  display: none;
+}
+
+/* Контейнер слайдов */
+.slides {
+  display: flex;
+  width: 300%; /* по количеству слайдов */
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Каждый слайд занимает 1/3 ширины */
+.slide {
+  flex: 0 0 33.3333%;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  color: #f0e6d2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Управление положением слайдов через radio */
+#slide1:checked ~ .slides {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .slides {
+  transform: translateX(-33.3333%);
+}
+#slide3:checked ~ .slides {
+  transform: translateX(-66.6666%);
+}
+
+/* Навигационные точки */
+.slider-nav {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 8px;
+  background-color: #d4af37;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 8px #d4af37;
+}
+
+#slide1:checked ~ .slider-nav label[for="slide1"],
+#slide2:checked ~ .slider-nav label[for="slide2"],
+#slide3:checked ~ .slider-nav label[for="slide3"] {
+  background-color: #fff700;
+  box-shadow: 0 0 15px #fff700;
+}
+
+/* Стили для заголовков и кнопок наследуются из вашего CSS */
+
+
+/* Футер */
+.footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #ffd700;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #a89e7e;
+}
+

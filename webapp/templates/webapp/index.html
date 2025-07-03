@@ -1,10 +1,36 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ломбард ЛБК</title>
+    <link rel="stylesheet" href="{% static 'webapp/css/main.css' %}" />
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Ломбард <span class="gold-text">ЛБК</span></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="main-content">
+        {% include 'main/main_slider.html' %}
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Ломбард ЛБК г.Минск. Все права защищены.</p>
+        </div>
+    </footer>
 </body>
 </html>
