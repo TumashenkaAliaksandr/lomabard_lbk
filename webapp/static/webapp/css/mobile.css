@@ -11,3 +11,15 @@
         gap: 15px;
     }
 }
+
+/* Адаптивность для мобильных */
+@media (max-width: 991.98px) {
+    .contact-info {
+        font-size: 0.85rem;
+    }
+
+    .btn-callback {
+        padding: 6px 20px;
+        font-size: 0.9rem;
+    }
+}
