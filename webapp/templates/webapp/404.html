@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'main/base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+<section class="error-404-section">
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Страница не найдена!</h2>
+        <p class="error-description">
+            К сожалению, запрашиваемая страница не существует или была удалена.
+        </p>
+        <a href="/" class="btn-home">Вернуться на главную</a>
+    </div>
+</section>
+{% endblock %}

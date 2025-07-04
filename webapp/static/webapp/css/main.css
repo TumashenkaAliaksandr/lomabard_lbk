@@ -624,6 +624,65 @@ body.light-theme .section-divider {
     margin-right: auto;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
+.error-404-section {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: #121212; /* тёмный фон, если нужно */
+}
+
+.error-container {
+    max-width: 480px;
+    width: 100%;
+}
+
+.error-code {
+    font-family: 'CirceBold', sans-serif;
+    font-size: 6rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+    user-select: none;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.error-message {
+    font-family: 'CirceBold', sans-serif;
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.error-description {
+    font-size: 1.2rem;
+    color: #f0e6d2;
+    margin-bottom: 40px;
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #121212;
+    background-color: #d4af37;
+    border-radius: 30px;
+    text-decoration: none;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #b88f0b;
+}
+
 
 
 /* Футер */
