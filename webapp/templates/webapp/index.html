@@ -12,5 +12,25 @@
 
         <hr class="section-divider">
 
+        <section class="products-section">
+            <div class="products-grid">
+                {% for product in products|slice:":6" %}
+                    <div class="product-card">
+                        {% if product.main_photo %}
+                            <img src="{{ product.main_photo }}" alt="{{ product.name }}" class="product-image"/>
+                        {% else %}
+                            <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Нет изображения"
+                                 class="product-image"/>
+                        {% endif %}
+                        <h3 class="product-title">{{ product.name }}</h3>
+                        <p class="product-price">{{ product.price|floatformat:2 }} BYN</p>
+                        <a href="{{ product.get_absolute_url }}" class="product-button">Перейти</a>
+                    </div>
+                {% empty %}
+                    <p>Продукты не найдены.</p>
+                {% endfor %}
+            </div>
+        </section>
+
     </main>
 {% endblock %}

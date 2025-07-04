@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'main/base.html' %}
 
-</body>
-</html>
+{% block content %}
+<div class="product-detail-container">
+    <h1 class="product-name">{{ product.name }}</h1>
+
+    {% if product.main_photo %}
+        <img src="{{ product.main_photo }}" alt="{{ product.name }}" class="product-image" />
+    {% else %}
+        <div class="product-image-placeholder">Нет изображения</div>
+    {% endif %}
+
+    <div class="product-info">
+        <p class="product-price">🏷️ Цена: <span>{{ product.price }} BYN</span></p>
+        {% if product.phone %}
+            <p class="product-phone">☎️ Телефон: <a href="tel:{{ product.phone|default_if_none:'' }}">{{ product.phone }}</a></p>
+        {% endif %}
+        {% if product.description %}
+            <div class="product-description">
+                <h2>Описание</h2>
+                <p>{{ product.description }}</p>
+            </div>
+        {% endif %}
+        {% if product.characteristics %}
+            <div class="product-characteristics">
+                <h2>Характеристики</h2>
+                <p>{{ product.characteristics }}</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
