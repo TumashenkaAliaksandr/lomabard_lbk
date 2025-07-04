@@ -15,3 +15,16 @@ class Slider(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ServiceIcon(models.Model):
+    name = models.CharField("Название услуги", max_length=100)
+    icon = models.ImageField("Иконка услуги", upload_to='service_icons/')
+    link = models.URLField("Ссылка на страницу услуги", blank=True)
+
+    class Meta:
+        verbose_name = "Иконка услуги"
+        verbose_name_plural = "Иконки услуг"
+
+    def __str__(self):
+        return self.name

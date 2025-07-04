@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
-from webapp.models import Slider
+from webapp.models import Slider, ServiceIcon
 
 
 def index(request):
     slides = Slider.objects.all()
-    return render(request, 'webapp/index.html', {'slides': slides})
+    services = ServiceIcon.objects.all()
+    return render(request, 'webapp/index.html', {'slides': slides, 'services': services})

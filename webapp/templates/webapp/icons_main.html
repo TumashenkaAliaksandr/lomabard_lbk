@@ -1,0 +1,19 @@
+{% load static %}
+
+
+<h2 class="services-title">Услуги нашего Ломбарда</h2>
+<section class="services-icons">
+    {% for service in services %}
+        <div class="service-item">
+            <a href="{{ service.link }}">
+                <div class="icon-wrapper">
+                    <img src="{{ service.icon.url }}" alt="{{ service.name }}" class="service-icon">
+                </div>
+                <span class="service-label">{{ service.name }}</span>
+            </a>
+        </div>
+    {% endfor %}
+</section>
+
+
+

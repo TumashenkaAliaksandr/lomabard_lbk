@@ -39,8 +39,8 @@ body .main-bg {
     position: fixed;
     top: 10px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 47px;
+    height: 47px;
     border-radius: 50%;
     border: none;
     background-color: #ffd700;
@@ -195,6 +195,8 @@ header.header {
     font-weight: 600;
     transition: color 0.3s ease;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -238,7 +240,7 @@ header.header {
 .contact-info {
     color: #f0e6d2;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     user-select: none;
     margin-left: 30px;
 }
@@ -375,7 +377,7 @@ header.header {
 .hero-slider {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
   height: 400px;
   overflow: hidden;
@@ -483,6 +485,144 @@ header.header {
 body.light-theme .hero-slider {
     background: linear-gradient(135deg, #dddbd4 0%, #a37e05 100%);
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+.services-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* равные горизонтальные отступы между service-item */
+  padding: 20px 0;
+}
+
+.service-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px; /* фиксированная ширина для одинаковой ширины элементов */
+  box-sizing: border-box;
+}
+
+.service-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* чтобы ссылка занимала всю ширину service-item */
+}
+
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 8px; /* отступ под иконкой */
+}
+
+.icon-wrapper:hover {
+  box-shadow: 0 0 8px 2px rgba(212, 175, 55, 0.7);
+}
+
+.service-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.service-label {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  font-size: 15.7px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #ffed00; /* по умолчанию жёлтый */
+  margin-top: 8px; /* отступ сверху для равных вертикальных промежутков */
+  width: 100%; /* чтобы текст занимал всю ширину и был выровнен */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Цвет для светлой темы — тёмный */
+body.light-theme .service-label {
+  color: #222222;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+/* Цвет для тёмной темы — жёлтый */
+body.dark-theme .service-label {
+  color: #ffed00;
+}
+
+/* Показываем подпись при наведении на ссылку */
+.service-item a:hover .service-label {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.services-title {
+    font-size: 2rem;                       /* крупный размер */
+    color: #d4af37;                       /* золотистый цвет, подходящий для ломбарда */
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;            /* заглавные буквы */
+    letter-spacing: 2px;                  /* увеличенный межбуквенный интервал */
+    user-select: none;                    /* запрет выделения */
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.icon-wrapper {
+    width: 70px;               /* размер обводки */
+    height: 70px;
+    border: 2px solid #d4af37; /* золотистая рамка */
+    border-radius: 50%;        /* круглая форма */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;              /* внутренний отступ, чтобы иконка не прилегала к рамке */
+    box-sizing: border-box;    /* учитываем padding в размерах */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Можно добавить эффект при наведении */
+.icon-wrapper:hover {
+    box-shadow: 0 0 8px 2px rgba(212, 175, 55, 0.7);
+}
+
+
+.section-divider {
+    border: none;
+    height: 2px;                  /* толщина линии */
+    background: linear-gradient(90deg, #d4af37, #f0e6d2, #d4af37); /* золотистый градиент */
+    margin: 40px 0;               /* отступы сверху и снизу */
+    border-radius: 1px;           /* скругление краёв */
+    width: 90%;                   /* ширина линии */
+    max-width: 600px;             /* максимальная ширина */
+    margin-left: auto;            /* центрирование */
+    margin-right: auto;
+}
+
+
+body.light-theme .section-divider {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, #796628, #f0e6d2, #d8a603);
+    margin: 40px 0;
+    border-radius: 1px;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 
