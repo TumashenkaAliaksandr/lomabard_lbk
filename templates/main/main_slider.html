@@ -9,13 +9,13 @@
     <div class="slides">
         {% for slide in slides %}
             <div class="slide">
+                {% if slide.image %}
+                    <img src="{{ slide.image.url }}" alt="{{ slide.title }}">
+                {% endif %}
                 <h2 class="hero-title gold-text">{{ slide.title }}</h2>
                 <p class="hero-subtitle">{{ slide.subtitle }}</p>
                 {% if slide.button_text and slide.button_link %}
                     <a href="{{ slide.button_link }}" class="btn gold-btn">{{ slide.button_text }}</a>
-                {% endif %}
-                {% if slide.image %}
-                    <img src="{{ slide.image.url }}" alt="{{ slide.title }}">
                 {% endif %}
             </div>
         {% endfor %}
@@ -28,4 +28,5 @@
         {% endfor %}
     </div>
 </section>
+
 
