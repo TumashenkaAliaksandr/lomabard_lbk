@@ -6,14 +6,14 @@
     <main class="main-bg main-content">
         {% include 'main/main_slider.html' %}
 
-         <hr class="section-divider">
+        <hr class="section-divider">
 
-       {% include 'webapp/icons_main.html' %}
+        {% include 'webapp/icons_main.html' %}
 
         <hr class="section-divider">
 
         <section class="products-section">
-        <h2 class="services-title">Товары</h2>
+            <h2 class="services-title">Товары</h2>
             <div class="products-grid">
                 {% for product in products|slice:":6" %}
                     <div class="product-card">
@@ -32,6 +32,24 @@
                 {% endfor %}
             </div>
         </section>
+
+        <hr class="section-divider">
+
+        <section class="about-us-section">
+            <div class="container">
+                <h2 class="about-us-title">О нас</h2>
+                <div class="about-us-content">
+                    <p>Мы — команда профессионалов, которая занимается предоставлением качественных услуг и товаров.
+                        Наша миссия — помочь каждому клиенту найти лучшее решение и обеспечить высокий уровень
+                        сервиса.</p>
+                    <p>За годы работы мы заработали доверие сотен клиентов и постоянно совершенствуемся, чтобы
+                        соответствовать самым высоким стандартам.</p>
+                    <p>Свяжитесь с нами, чтобы узнать больше или получить консультацию.</p>
+                </div>
+                <p><a href="{% url 'about' %}" class="learn-more-link">Узнать больше..</a></p>
+            </div>
+        </section>
+
 
     </main>
 {% endblock %}

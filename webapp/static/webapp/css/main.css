@@ -86,7 +86,7 @@ body.light-theme header.header {
 
 
 body.light-theme .top-bar {
-    background-color: #f9e79f;
+    background: #f9e79f;
     color: #121212;
     box-shadow: 0 2px 5px rgba(184, 134, 11, 0.3);
 }
@@ -135,7 +135,8 @@ body.light-theme .footer {
 
 /* Верхняя интерактивная полоска */
 .top-bar {
-    background-color: #ffe900; /* насыщенный золотой, не слишком яркий */
+    /*background-color: #ffe900; !* насыщенный золотой, не слишком яркий *!*/
+    background: linear-gradient(45deg, rgb(255, 247, 0), #ffd700, rgb(178, 143, 32));
     height: 30px;
     display: flex;
     align-items: center;
@@ -302,6 +303,26 @@ body.light-theme .breadcrumb-item.active {
 }
 
 .btn-callback:hover {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+.btn-consultations {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 700;
+    border-radius: 7px;
+    padding: 8px 25px;
+    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    width: 38%;
+    display: block;       /* обязательно для margin auto */
+    margin: 0 auto;       /* центрируем по горизонтали */
+}
+
+.btn-consultations:hover {
     background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
@@ -988,6 +1009,47 @@ body.light-theme .product-card:hover {
     font-size: 1rem;
     line-height: 1.6;
     color: #555;
+}
+
+.about-us-section {
+    padding: 20px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-us-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d4af37;
+    user-select: none;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.about-us-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.learn-more-link {
+    color: #e2d384; /* золотистый цвет */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.learn-more-link:hover {
+    color: #b8860b;
+    text-decoration: none;
 }
 
 
