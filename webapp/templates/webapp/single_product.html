@@ -36,16 +36,16 @@
             {% if product.phone %}
                 <p class="product-phone">☎️ Телефон: <a href="tel:{{ product.phone }}">{{ product.phone }}</a></p>
             {% endif %}
-            {% if product.description %}
-                <div class="product-description">
-                    <h2>📋 Описание:</h2>
-                    <p>{{ product.description }}</p>
-                </div>
-            {% endif %}
             {% if product.characteristics %}
                 <div class="product-characteristics">
                     <h2>ℹ️ Характеристики:</h2>
                     <p>{{ product.characteristics }}</p>
+                </div>
+            {% endif %}
+            {% if product.description %}
+                <div class="product-description">
+                    <h2>📋 Описание:</h2>
+                    <p>{{ product.description }}</p>
                 </div>
             {% endif %}
         </div>

@@ -52,7 +52,10 @@
                             <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
                                href="{% url 'index' %}">Главная</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+                               href="{% url 'about' %}">О нас</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.resolver_match.url_name == 'store' %}active{% endif %}"
                                href="{% url 'store' %}">Магазин</a>

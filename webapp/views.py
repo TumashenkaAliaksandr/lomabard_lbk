@@ -29,6 +29,13 @@ def product_detail(request, slug):
     return render(request, 'webapp/single_product.html', {'product': product})
 
 
+def about(request):
+    """
+    Страница О нас
+    """
+    return render(request, 'webapp/about.html')
+
+
 def store(request):
     """
     Страница Магазина
