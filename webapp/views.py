@@ -29,11 +29,25 @@ def product_detail(request, slug):
     return render(request, 'webapp/single_product.html', {'product': product})
 
 
+def store(request):
+    """
+    Страница Магазина
+    """
+    return render(request, 'webapp/store.html')
+
+
 def action(request):
     """
     Страница акций
     """
     return render(request, 'webapp/action.html')
+
+
+def contacts(request):
+    """
+    Страница Контактов
+    """
+    return render(request, 'webapp/contacts.html')
 
 
 def custom_404_view(request, exception):
