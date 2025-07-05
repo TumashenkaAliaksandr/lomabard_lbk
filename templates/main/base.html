@@ -52,16 +52,16 @@
                             <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}"
                                href="{% url 'index' %}">Главная</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Как получить</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Условия и требования</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.resolver_match.url_name == 'store' %}active{% endif %}"
                                href="{% url 'store' %}">Магазин</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}"
-                               href="{% url 'contacts' %}">Контакты</a>
+                               href="{% url 'contacts' %}">Адреса Ломбардов</a>
                         </li>
                     </ul>
 
