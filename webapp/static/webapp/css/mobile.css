@@ -73,3 +73,19 @@
         font-size: 1rem;
     }
 }
+/* Адаптив */
+@media (max-width: 900px) {
+    .product-detail-container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .product-gallery,
+    .product-info {
+        max-width: 100%;
+    }
+
+    .additional-photos {
+        justify-content: flex-start;
+    }
+}

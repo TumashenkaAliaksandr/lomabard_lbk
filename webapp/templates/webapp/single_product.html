@@ -2,28 +2,39 @@
 
 {% block content %}
 <div class="product-detail-container">
-    <h1 class="product-name">{{ product.name }}</h1>
+    <div class="product-gallery">
+        {% if product.main_photo %}
+            <img src="{{ product.main_photo }}" alt="{{ product.name }}" class="main-photo" />
+        {% else %}
+            <div class="photo-placeholder">Нет изображения</div>
+        {% endif %}
 
-    {% if product.main_photo %}
-        <img src="{{ product.main_photo }}" alt="{{ product.name }}" class="product-image" />
-    {% else %}
-        <div class="product-image-placeholder">Нет изображения</div>
-    {% endif %}
+        <div class="additional-photos">
+            {% for photo in product.photos.all %}
+                {% if not photo.is_main %}
+                    <img src="{{ photo.image.url }}" alt="{{ product.name }} - дополнительное фото" class="additional-photo" />
+                {% endif %}
+            {% empty %}
+                <p>Дополнительных фото нет</p>
+            {% endfor %}
+        </div>
+    </div>
 
     <div class="product-info">
+        <h1 class="product-name">{{ product.name }}</h1>
         <p class="product-price">🏷️ Цена: <span>{{ product.price }} BYN</span></p>
         {% if product.phone %}
-            <p class="product-phone">☎️ Телефон: <a href="tel:{{ product.phone|default_if_none:'' }}">{{ product.phone }}</a></p>
+            <p class="product-phone">☎️ Телефон: <a href="tel:{{ product.phone }}">{{ product.phone }}</a></p>
         {% endif %}
         {% if product.description %}
             <div class="product-description">
-                <h2>Описание</h2>
+                <h2>📋 Описание:</h2>
                 <p>{{ product.description }}</p>
             </div>
         {% endif %}
         {% if product.characteristics %}
             <div class="product-characteristics">
-                <h2>Характеристики</h2>
+                <h2>ℹ️ Характеристики:</h2>
                 <p>{{ product.characteristics }}</p>
             </div>
         {% endif %}
