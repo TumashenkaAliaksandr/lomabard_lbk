@@ -153,6 +153,19 @@ body.light-theme .footer {
     transition: transform 0.3s ease;
 }
 
+.top-bar-link {
+    color: #121212;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.top-bar-link:hover {
+    color: #b8860b;
+    text-decoration: none;
+}
+
+
 /* Фиксированное меню при прокрутке */
 header.header {
     position: fixed;
@@ -202,6 +215,49 @@ header.header {
 .nav-link:hover, .nav-link:focus {
     color: #ffd700 !important;
 }
+
+.breadcrumb-container {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.breadcrumb-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 83px;
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.breadcrumb-item {
+    color: #555;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›"; /* стрелочка-разделитель */
+    margin: 0 8px;
+    color: #999;
+}
+
+.breadcrumb-item a {
+    color: #d0a207;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #ffc500;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #ffd700;
+    font-weight: 600;
+}
+
 
 /* Убираем outline у точек слайдера */
 .slider-nav .nav-dot {

@@ -28,5 +28,13 @@ def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
     return render(request, 'webapp/single_product.html', {'product': product})
 
+
+def action(request):
+    """
+    Страница акций
+    """
+    return render(request, 'webapp/action.html')
+
+
 def custom_404_view(request, exception):
     return render(request, 'webapp/404.html', status=404)
