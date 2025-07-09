@@ -14,6 +14,10 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+html, body {
+    overflow-x: hidden; /* Отключает горизонтальную прокрутку */
+}
+
 
 body.light-theme .main-bg {
     padding: 35px 0 35px;
@@ -691,7 +695,7 @@ body.light-theme .services-title {
     text-transform: uppercase;
     letter-spacing: 2px;
     user-select: none;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
 }
 
 .services-title {
@@ -702,7 +706,7 @@ body.light-theme .services-title {
     text-transform: uppercase;            /* заглавные буквы */
     letter-spacing: 2px;                  /* увеличенный межбуквенный интервал */
     user-select: none;                    /* запрет выделения */
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .icon-wrapper {
@@ -1057,7 +1061,7 @@ body.light-theme .product-card:hover {
     letter-spacing: 2px;
     color: #d4af37;
     user-select: none;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 body.light-theme .about-us-title {
@@ -1075,26 +1079,104 @@ body.light-theme .about-us-title {
 .about-us-row {
     display: flex;
     align-items: center; /* Вертикальное выравнивание по центру */
-    gap: 40px; /* Расстояние между текстом и фото */
+    gap: 30px; /* Расстояние между текстом и фото */
 }
 
-.about-us-content,
-.about-us-image {
-    flex: 0 0 50%; /* не растут и не сжимаются, ширина 50% */
-}
+/*.about-us-content,*/
+/*.about-us-image {*/
+/*    flex: 0 0 50%; !* не растут и не сжимаются, ширина 50% *!*/
+/*}*/
 
 .about-us-image {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: relative; /* создаём контекст позиционирования */
+    display: inline-block; /* чтобы размер контейнера подогнался под картинку */
+    max-width: 100%; /* адаптивность */
 }
 
 .about-us-image img {
-    max-width: 100%;
-    height: 333px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    width: 100%; /* или фиксированная ширина по необходимости */
+    height: auto;
+    border-radius: 12px; /* если нужно скругление */
 }
+
+.about-us-image h3 {
+    position: relative;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 8px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffd700;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 10;
+}
+.about-us-image h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  user-select: none;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 21px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.9);
+  outline: none;
+}
+
+/* Фоновые изображения иконок (можно заменить на свои пути) */
+.social-icon.vk {
+    background-image: url('../img/vk.svg');
+}
+
+.social-icon.instagram {
+    background-image: url('../img/instagram.svg');
+}
+
+.social-icon.telegram {
+    background-image: url('../img/telegram.svg');
+}
+
+/* Эффект при наведении */
+.social-icon:hover,
+.social-icon:focus {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.8));
+    outline: none;
+}
+
+
+
+
 
 
 
@@ -1115,6 +1197,14 @@ body.light-theme .about-us-title {
 }
 .about-us-content {
     background-color: rgba(212, 175, 55, 0.15);
+    padding: 20px 30px;
+    border-radius: 12px; /* скругленные углы для всего блока */
+    color: #d4af37;
+    line-height: 1.6;
+}
+
+body.light-theme .about-us-content {
+    background-color: rgb(228 235 226 / 50%);
     padding: 20px 30px;
     border-radius: 12px; /* скругленные углы для всего блока */
     color: #d4af37;
@@ -1168,10 +1258,128 @@ body.light-theme .learn-more-link {
 }
 
 .loan-info-section {
-  max-width: 700px;
+  max-width: 1200px;
   margin: 0 auto;
   color: rgb(70, 70, 70);
 }
+
+.info-zaim {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-dop {
+    flex: 0 0 450px;
+    background: rgba(212, 175, 55, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    color: #d4af37;
+    /*font-family: 'Cormorant Garamond', serif;*/
+}
+
+body.light-theme .info-dop {
+    flex: 0 0 450px;
+    background: rgb(228 235 226 / 50%);
+    padding: 20px;
+    border-radius: 12px;
+    color: #686868;
+    /*font-family: 'Cormorant Garamond', serif;*/
+}
+
+.info-dop h3 {
+    font-size: 1.7rem;
+    color: rgb(255 215 0);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+body.light-theme .info-dop h3 {
+    font-size: 1.7rem;
+    color: #686868;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1))
+}
+
+.info-dop p {
+    font-size: 1.2rem;
+    color: rgb(255 215 0);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+body.light-theme .info-dop p {
+    font-size: 1.2rem;
+    color: #7a7a7a;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    filter: invert(1);
+}
+
+.info-size {
+    list-style-type: none; /* убираем маркеры у списка */
+    padding-left: 0;       /* убираем отступ слева */
+    margin: 0 auto;        /* центрируем список по горизонтали */
+    display: flex;         /* используем flex для горизонтального расположения */
+    flex-direction: column; /* если хотите вертикальный список, иначе уберите */
+    align-items: center;   /* центрируем элементы по горизонтали */
+    max-width: 400px;      /* желаемая ширина, можно изменить */
+}
+
+.info-size li {
+    font-size: 19px;
+    color: rgb(255 215 0);
+    margin-top: 10px;
+    padding-left: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    right: 0; /* убираем сдвиг вправо */
+    width: 100%; /* чтобы тень и фон занимали всю ширину li */
+}
+
+
+
+body.light-theme .info-size li {
+    font-size: 19px;
+    color: #5c5c5c;
+    margin-top: 10px;
+    padding-left: 10px;
+    list-style-type: none;
+    filter: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5), 0 0 20px 4px rgb(255 249 230);
+        transform: translateY(-3px) scale(1.03);
+    }
+    50% {
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6), 0 0 28px 6px rgb(255 249 230);
+        transform: translateY(-5px) scale(1.05);
+    }
+}
+
+.info-size li.phone-item:hover {
+    animation: pulseGlow 2s infinite ease-in-out;
+    color: #fffacd;
+    text-shadow: 0 0 10px rgb(255 249 230);
+    cursor: pointer;
+}
+
+
 
 .tabs-pagination {
   display: flex;
@@ -1186,7 +1394,7 @@ body.light-theme .learn-more-link {
   background: none;
   border: none;
   border-bottom: 3px solid transparent;
-  font-size: 18px;
+  font-size: 21px;
   color: rgba(240, 230, 210, 0.75);
   cursor: pointer;
   transition: color 0.3s, border-color 0.3s;
@@ -1204,9 +1412,33 @@ body.light-theme .learn-more-link {
 }
 
 .tabs-content {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.6;
   color: rgb(255 211 5);
+}
+
+body.light-theme .tabs-content {
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgb(69, 69, 69);
+}
+
+body.light-theme .tab-button.active {
+  color: rgb(104, 104, 104);
+    border-bottom-color: rgb(97, 97, 97);
+  font-weight: 700;
+}
+
+body.light-theme .tab-button {
+  flex: 1;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 18px;
+  color: rgba(97, 97, 97, 0.75);
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
 }
 
 .tab-content {
