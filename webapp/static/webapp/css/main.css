@@ -102,7 +102,7 @@ body.light-theme .nav-link:focus {
 }
 
 body.light-theme .gold-text {
-    color: #fff7d5;
+    color: #fffcef;
     text-shadow: none;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
@@ -317,7 +317,7 @@ body.light-theme .breadcrumb-item.active {
     box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    width: 38%;
+    width: fit-content;
     display: block;       /* обязательно для margin auto */
     margin: 0 auto;       /* центрируем по горизонтали */
 }
@@ -465,6 +465,29 @@ body.light-theme .breadcrumb-item.active {
     color: darkgoldenrod;
 }
 
+.shop-button {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    box-shadow: 0 0 2px #ffd700, 0 0 7px #fff700;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: 50px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.shop-button:hover,
+.shop-button:focus {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+
 /* Слайдер */
 .hero-slider {
   position: relative;
@@ -584,7 +607,7 @@ body.light-theme .hero-slider {
   justify-content: center;
   align-items: center;
   gap: 40px; /* равные горизонтальные отступы между service-item */
-  padding: 20px 0;
+  padding: 33px 0;
 }
 
 .service-item {
@@ -786,7 +809,7 @@ body.light-theme .section-divider {
 }
 
 .products-section {
-    padding: 20px 20px;
+    padding: 20px 20px 0;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1020,17 +1043,60 @@ body.light-theme .product-card:hover {
     margin: 0 auto;
 }
 
+.container-about {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .about-us-title {
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #d4af37;
     user-select: none;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
 }
+
+body.light-theme .about-us-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #6d6c65;
+    user-select: none;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.about-us-row {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+    gap: 40px; /* Расстояние между текстом и фото */
+}
+
+.about-us-content,
+.about-us-image {
+    flex: 0 0 50%; /* не растут и не сжимаются, ширина 50% */
+}
+
+.about-us-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: 333px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 
 .about-us-content p {
     font-size: 1.4rem;
@@ -1039,8 +1105,57 @@ body.light-theme .product-card:hover {
     color: #d4af37;
 }
 
+.about-us-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #d4af37;
+    padding: 10px 10px;
+
+}
+.about-us-content {
+    background-color: rgba(212, 175, 55, 0.15);
+    padding: 20px 30px;
+    border-radius: 12px; /* скругленные углы для всего блока */
+    color: #d4af37;
+    line-height: 1.6;
+}
+
+
+
+.about-us-content p::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(212, 175, 55, 0.1);
+    clip-path: polygon(
+        5% 0%, 95% 0%, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%, 0% 10%
+    );
+    z-index: -1;
+    filter: drop-shadow(2px 2px 2px rgba(212, 175, 55, 0.2));
+}
+
+
+body.light-theme .about-us-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #6d6c65;
+}
+
 .learn-more-link {
     color: #e2d384; /* золотистый цвет */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+body.light-theme .learn-more-link {
+    color: #6d6c65;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -1052,6 +1167,72 @@ body.light-theme .product-card:hover {
     text-decoration: none;
 }
 
+.loan-info-section {
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgb(70, 70, 70);
+}
+
+.tabs-pagination {
+  display: flex;
+  border-bottom: 3px solid rgb(142 142 142 / 22%);
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 18px;
+  color: rgba(240, 230, 210, 0.75);
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.tab-button:hover {
+  color: rgb(255 255 255);
+  border-bottom-color: rgba(246, 246, 246, 0.6);
+}
+
+.tab-button.active {
+  color: rgb(255 215 0);
+    border-bottom-color: rgb(255 239 0);
+  font-weight: 700;
+}
+
+.tabs-content {
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgb(255 211 5);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.tabs-content ul {
+    margin: 0;
+    list-style-type: none; /* Убираем маркеры */
+    margin-left: 0; /* Убираем отступ слева */
+    padding-left: 0; /* Убираем внутренний отступ слева */
+}
+
+.tabs-content li {
+  margin-bottom: 10px;
+}
 
 
 
