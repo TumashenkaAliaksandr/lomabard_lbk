@@ -1,32 +1,62 @@
 {% load static %}
 
-<section class="hero-slider">
-    <!-- Радио-кнопки для переключения слайдов -->
+<section class="hero-section">
+  <!-- Основной слайдер слева -->
+  <section class="hero-slider">
     {% for slide in slides %}
-        <input type="radio" name="slider" id="slide{{ forloop.counter }}" {% if forloop.first %}checked{% endif %} hidden>
+      <input type="radio" name="slider" id="slide{{ forloop.counter }}" {% if forloop.first %}checked{% endif %} hidden>
     {% endfor %}
 
     <div class="slides">
-        {% for slide in slides %}
-            <div class="slide">
-                {% if slide.image %}
-                    <img src="{{ slide.image.url }}" alt="{{ slide.title }}">
-                {% endif %}
-                <h2 class="hero-title gold-text">{{ slide.title }}</h2>
-                <p class="hero-subtitle">{{ slide.subtitle }}</p>
-                {% if slide.button_text and slide.button_link %}
-                    <a href="{{ slide.button_link }}" class="btn gold-btn">{{ slide.button_text }}</a>
-                {% endif %}
-            </div>
-        {% endfor %}
+      {% for slide in slides %}
+        <div class="slide">
+          {% if slide.image %}
+            <img src="{{ slide.image.url }}" alt="{{ slide.title }}">
+          {% endif %}
+          <h2 class="hero-title gold-text">{{ slide.title }}</h2>
+          <p class="hero-subtitle">{{ slide.subtitle }}</p>
+          {% if slide.button_text and slide.button_link %}
+            <a href="{{ slide.button_link }}" class="btn gold-btn">{{ slide.button_text }}</a>
+          {% endif %}
+        </div>
+      {% endfor %}
     </div>
 
-    <!-- Навигация -->
     <div class="slider-nav">
-        {% for slide in slides %}
-            <label for="slide{{ forloop.counter }}" class="nav-dot"></label>
-        {% endfor %}
+      {% for slide in slides %}
+        <label for="slide{{ forloop.counter }}" class="nav-dot"></label>
+      {% endfor %}
     </div>
+  </section>
+
+  <!-- Новый слайдер-коллаж справа -->
+  <section class="collage-slider">
+    {% for i in "1234" %}
+      <input type="radio" name="collage-slider" id="collage-slide{{ forloop.counter }}" {% if forloop.first %}checked{% endif %} hidden>
+    {% endfor %}
+      <div class="collage-slides">
+          {% comment %} Здесь 4 картинки коллажа, замените пути и ссылки на свои {% endcomment %}
+          <div class="collage-slide">
+              <a href="{% url 'about' %}">
+                  <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Коллаж 1">
+              </a>
+          </div>
+          <div class="collage-slide">
+              <a href="{% url 'about' %}">
+                  <img src="{% static 'webapp/img/collage2.jpg' %}" alt="Коллаж 2">
+              </a>
+          </div>
+          <div class="collage-slide">
+              <a href="{% url 'about' %}">
+                  <img src="{% static 'webapp/img/collage3.jpg' %}" alt="Коллаж 3">
+              </a>
+          </div>
+          <div class="collage-slide">
+              <a href="{% url 'about' %}">
+                  <img src="{% static 'webapp/img/collage4.jpg' %}" alt="Коллаж 4">
+              </a>
+          </div>
+      </div>
+
+  </section>
 </section>
-
-
