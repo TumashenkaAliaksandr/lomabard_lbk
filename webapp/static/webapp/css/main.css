@@ -180,11 +180,6 @@ header.header {
     box-shadow: 0 2px 10px rgba(212, 175, 55, 0.7);
 }
 
-.had-phone {
-    color: #ffd700;
-    margin-right: 3px;
-}
-
 /* Логотип */
 .logo {
     font-size: 1.5rem;
@@ -201,7 +196,7 @@ header.header {
 }
 
 .padding-menu {
-    margin-right: 10px !important;
+    margin-right: 25px !important;
 }
 
 /* Навигация */
@@ -301,7 +296,8 @@ body.light-theme .breadcrumb-item.active {
     border: none;
     width: 240px;
     font-size: 15px !important;
-    margin-left: 250px;
+    margin-left: 450px;
+    position: absolute;
 }
 
 .btn-callback:hover {
@@ -329,28 +325,154 @@ body.light-theme .breadcrumb-item.active {
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
 }
-
-/* Телефон и почта в меню справа */
+/* Контейнер с контактной информацией */
 .contact-info {
     color: #f0e6d2;
     font-weight: 600;
     font-size: 1rem;
     user-select: none;
     margin-left: 30px;
+    position: relative; /* добавлено для контекста абсолютного позиционирования, если нужно */
 }
 
+/* Ссылки в контактной информации */
 .contact-info a {
     color: #ffd700;
     text-decoration: none;
-    margin-left: 3px;
+    margin-left: 6px;
     transition: color 0.3s ease;
-    position: absolute;
+    /* Убираем абсолютное позиционирование, чтобы не было скачков */
+    position: static; /* или просто удалить position: absolute */
     filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
 }
 
+/* Ховер для ссылок */
 .contact-info a:hover {
     color: #fff700;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* Светлая тема - базовые цвета для ссылок */
+body.light-theme .contact-info a {
+    color: #121212;
+    text-decoration: none;
+    margin-left: 6px;
+    transition: color 0.3s ease;
+    position: static; /* обязательно, чтобы совпадало с базовым */
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+/* Ховер для ссылок в светлой теме */
+body.light-theme .contact-info a:hover {
+    color: #494646;
+    text-decoration: none;
+}
+
+/* Стили для телефона и почты */
+.had-phone,
+.had-mail {
+    color: #ffd700;
+    margin-right: 3px;
+    transition: color 0.3s, text-shadow 0.3s;
+    cursor: pointer;
+    display: inline-block; /* важно для корректного выравнивания */
+    vertical-align: middle; /* выравнивание по центру строки */
+}
+
+/* Ховер для телефона и почты */
+.had-phone:hover,
+.had-mail:hover {
+    color: #fff700;
+    text-shadow: 0 0 8px #ffd700, 0 0 16px #fff700;
+}
+/* Контейнер соцсетей — вертикальный стек */
+.social-icons-had {
+  margin-left: 15px;
+  display: flex;
+  /*flex-direction: column; !* вертикальное расположение *!*/
+  gap: 15px;              /* расстояние между иконками */
+  align-items: center;    /* центрируем иконки по горизонтали */
+}
+
+/* Стили для иконок */
+.social-icon-had {
+  color: #ffd700;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+}
+
+body.light-theme .social-icon-had {
+  color: #ffd700;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Эффект при наведении и фокусе */
+.social-icon-had:hover,
+.social-icon-had:focus {
+  color: #fff700;
+  box-shadow: 0 0 10px #ffd700, 0 0 20px #fff700;
+  transform: scale(1.15);
+  outline: none;
+}
+
+body.light-theme .social-icon-had:hover, .social-icon-had:focus {
+    color: #f9e79f;
+    box-shadow: 0 0 10px #f9e79f, 0 0 20px #f1f1f0;
+    transform: scale(1.15);
+    outline: none;
+}
+
+
+/* Светлая тема для соцсетей */
+body.light-theme .social-icon {
+  color: #121212;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
+}
+
+body.light-theme .social-icon:hover,
+body.light-theme .social-icon:focus {
+  color: #b8860b;
+  box-shadow: 0 0 8px #b8860b, 0 0 15px #b8860b;
+  transform: scale(1.15);
+}
+
+
+/* Светлая тема - базовые цвета */
+body.light-theme .had-phone,
+body.light-theme .had-mail {
+    color: #121212;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Светлая тема - ховер для почты */
+body.light-theme .had-mail:hover {
+    color: #75684f;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+    text-shadow: 0 0 2px whitesmoke, 0 0 35px #717052;
+}
+
+/* Светлая тема - ховер для телефона */
+body.light-theme .had-phone:hover {
+    color: #75684f;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+    text-shadow: 0 0 2px whitesmoke, 0 0 35px #717052;
 }
 
 /* Ховер эффект для золотого текста */
@@ -1117,6 +1239,7 @@ body.light-theme .about-us-title {
     pointer-events: none;
     white-space: nowrap;
     z-index: 10;
+    margin-bottom: 5px;
 }
 
 body.light-theme .about-us-image h3 {
@@ -1166,8 +1289,8 @@ body.light-theme .social-icons {
 }
 
 .social-icon {
-    width: 35px;
-    height: 35px;
+    width: 34px;
+    height: 34px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -1206,6 +1329,18 @@ body.light-theme .social-icon:hover,
     background-image: url('../img/telegram.svg');
 }
 
+.social-icon-had.vk {
+    background-image: url('../img/vk.svg');
+}
+
+.social-icon-had.instagram {
+    background-image: url('../img/instagram.svg');
+}
+
+.social-icon-had.telegram {
+    background-image: url('../img/telegram.svg');
+}
+
 /* Эффект при наведении */
 .social-icon:hover,
 .social-icon:focus {
@@ -1227,7 +1362,7 @@ body.light-theme .social-icon:hover,
     line-height: 1.6;
     margin-bottom: 0;
     color: #d4af37;
-    padding: 7px 5px;
+    padding: 10px 5px;
 
 }
 
@@ -1406,9 +1541,16 @@ body.light-theme .info-size li {
     }
 }
 
+body.light-theme .info-size li.phone-item:hover {
+    animation: pulseGlow 2s infinite ease-in-out;
+    color: #000000;
+    text-shadow: 0 0 10px rgb(255 249 230);
+    cursor: pointer;
+}
+
 .info-size li.phone-item:hover {
     animation: pulseGlow 2s infinite ease-in-out;
-    color: #fffacd;
+    color: #ffffff;
     text-shadow: 0 0 10px rgb(255 249 230);
     cursor: pointer;
 }
