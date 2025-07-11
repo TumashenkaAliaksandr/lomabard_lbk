@@ -325,6 +325,7 @@ body.light-theme .breadcrumb-item.active {
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
 }
+
 /* Контейнер с контактной информацией */
 .contact-info {
     color: #f0e6d2;
@@ -385,51 +386,52 @@ body.light-theme .contact-info a:hover {
     color: #fff700;
     text-shadow: 0 0 8px #ffd700, 0 0 16px #fff700;
 }
+
 /* Контейнер соцсетей — вертикальный стек */
 .social-icons-had {
-  margin-left: 15px;
-  display: flex;
-  /*flex-direction: column; !* вертикальное расположение *!*/
-  gap: 15px;              /* расстояние между иконками */
-  align-items: center;    /* центрируем иконки по горизонтали */
+    margin-left: 15px;
+    display: flex;
+    /*flex-direction: column; !* вертикальное расположение *!*/
+    gap: 15px; /* расстояние между иконками */
+    align-items: center; /* центрируем иконки по горизонтали */
 }
 
 /* Стили для иконок */
 .social-icon-had {
-  color: #ffd700;
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+    color: #ffd700;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
 }
 
 body.light-theme .social-icon-had {
-  color: #ffd700;
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+    color: #ffd700;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
 }
 
 /* Эффект при наведении и фокусе */
 .social-icon-had:hover,
 .social-icon-had:focus {
-  color: #fff700;
-  box-shadow: 0 0 10px #ffd700, 0 0 20px #fff700;
-  transform: scale(1.15);
-  outline: none;
+    color: #fff700;
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #fff700;
+    transform: scale(1.15);
+    outline: none;
 }
 
 body.light-theme .social-icon-had:hover, .social-icon-had:focus {
@@ -442,15 +444,15 @@ body.light-theme .social-icon-had:hover, .social-icon-had:focus {
 
 /* Светлая тема для соцсетей */
 body.light-theme .social-icon {
-  color: #121212;
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
+    color: #121212;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1));
 }
 
 body.light-theme .social-icon:hover,
 body.light-theme .social-icon:focus {
-  color: #b8860b;
-  box-shadow: 0 0 8px #b8860b, 0 0 15px #b8860b;
-  transform: scale(1.15);
+    color: #b8860b;
+    box-shadow: 0 0 8px #b8860b, 0 0 15px #b8860b;
+    transform: scale(1.15);
 }
 
 
@@ -611,153 +613,156 @@ body.light-theme .had-phone:hover {
 
 /* Контейнер для обоих слайдеров в строку */
 .hero-section {
-  display: flex;
-  gap: 20px;
-  max-width: 1350px;
-  margin: 5% auto 0;
+    display: flex;
+    gap: 20px;
+    max-width: 1350px;
+    margin: 5% auto 0;
 }
 
 /* --- Основной слайдер (ваш существующий) --- */
 .hero-slider {
-  position: relative;
-  width: 65%; /* примерно 2/3 ширины */
-  height: 400px;
-  overflow: hidden;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #1f1f1f 0%, #3a2f00 100%);
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+    position: relative;
+    width: 65%; /* примерно 2/3 ширины */
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #1f1f1f 0%, #3a2f00 100%);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
 }
 
 .hero-slider input[type="radio"] {
-  display: none;
+    display: none;
 }
 
 .slides {
-  display: flex;
-  width: 300%; /* по количеству слайдов */
-  height: 100%;
-  transition: transform 0.6s ease-in-out;
+    display: flex;
+    width: 300%; /* по количеству слайдов */
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
 }
 
 .slide {
-  position: relative;
-  flex: 0 0 33.3333%;
-  padding: 60px 40px;
-  box-sizing: border-box;
-  color: #f0e6d2;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
+    position: relative;
+    flex: 0 0 33.3333%;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    color: #f0e6d2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .slide img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.1;
-  z-index: 0;
-  pointer-events: none;
-  user-select: none;
-  border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    border-radius: 15px;
 }
 
 .slide > *:not(img) {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 #slide1:checked ~ .slides {
-  transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 #slide2:checked ~ .slides {
-  transform: translateX(-33.3333%);
+    transform: translateX(-33.3333%);
 }
 
 #slide3:checked ~ .slides {
-  transform: translateX(-66.6666%);
+    transform: translateX(-66.6666%);
 }
 
 .slider-nav {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
-  text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-dot {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 0 8px;
-  background-color: #d4af37;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 0 8px #d4af37;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 8px;
+    background-color: #d4af37;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 8px #d4af37;
 }
 
 #slide1:checked ~ .slider-nav label[for="slide1"],
 #slide2:checked ~ .slider-nav label[for="slide2"],
 #slide3:checked ~ .slider-nav label[for="slide3"] {
-  background-color: #fff700;
-  box-shadow: 0 0 15px #fff700;
+    background-color: #fff700;
+    box-shadow: 0 0 15px #fff700;
 }
 
 /* --- Новый слайдер-коллаж справа --- */
 .collage-slider {
-  position: relative;
-  width: 33%; /* примерно 1/3 ширины */
-  height: 400px;
-  overflow: hidden;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #3a2f00 0%, #1f1f1f 100%);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    position: relative;
+    width: 33%; /* примерно 1/3 ширины */
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #3a2f00 0%, #1f1f1f 100%);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
 }
 
 .collage-slider input[type="radio"] {
-  display: none;
+    display: none;
 }
 
 .collage-slides {
-  display: flex;
-  width: 400%; /* 4 слайда */
-  height: 100%;
-  transition: transform 0.6s ease-in-out;
+    display: flex;
+    width: 400%; /* 4 слайда */
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
 }
 
 .collage-slide {
-  flex: 0 0 25%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
+    flex: 0 0 25%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
 .collage-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 /* Переключение слайдов коллажа */
 #collage-slide1:checked ~ .collage-slides {
-  transform: translateX(0%);
+    transform: translateX(0%);
 }
+
 #collage-slide2:checked ~ .collage-slides {
-  transform: translateX(-25%);
+    transform: translateX(-25%);
 }
+
 #collage-slide3:checked ~ .collage-slides {
-  transform: translateX(-50%);
+    transform: translateX(-50%);
 }
+
 #collage-slide4:checked ~ .collage-slides {
-  transform: translateX(-75%);
+    transform: translateX(-75%);
 }
 
 
@@ -1399,8 +1404,8 @@ body.light-theme .social-icon:hover,
 
 .about-us-content p {
     font-size: 1.4rem;
-    line-height: 1.6;
-    margin-bottom: 0;
+    line-height: 1.5;
+    /*margin-bottom: 0;*/
     color: #d4af37;
     padding: 10px 5px;
 
@@ -1688,6 +1693,137 @@ body.light-theme .tab-button {
 
 .tabs-content li {
     margin-bottom: 10px;
+}
+
+.Services {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* чуть больше отступ между текстом и квадратами */
+    justify-content: space-evenly;; /* центрируем содержимое по горизонтали */
+    padding: 20px; /* можно добавить отступы вокруг */
+    flex-wrap: wrap; /* чтобы на маленьких экранах не ломалось */
+}
+
+/* Текстовый блок */
+.section-text {
+    max-width: 700px; /* увеличил ширину для баланса с большими квадратами */
+    flex: 1 1 600px; /* позволяет тексту занимать место, но с минимальной шириной */
+    color: #d4af37; /* цвет текста */
+    /*margin-right: 20px;*/
+}
+
+.section-text .h2 {
+    font-size: 2.5rem; /* чуть крупнее заголовок */
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    text-transform: uppercase;
+}
+
+.section-text .section-p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #f3cd01;
+    font-size: 21px;
+    background: rgba(212, 175, 55, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.BtnBlue {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 700;
+    border-radius: 6px;
+    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    display: inline-block;
+    padding: 12px 28px; /* увеличены отступы для кнопки */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.BtnBlue:hover,
+.BtnBlue:focus {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+/* Контейнер квадратов */
+.squares-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* увеличен отступ между строками квадратов */
+    flex-shrink: 0; /* чтобы не сжимался */
+}
+
+/* Строки квадратов */
+.squares-wrapper .row {
+    display: -webkit-box;
+    gap: 15px; /* увеличен отступ между квадратами */
+}
+
+/* Верхняя строка — 2 квадрата, выравнивание вправо */
+.squares-wrapper .top-row {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/* Нижняя строка — 3 квадрата, выравнивание влево */
+.squares-wrapper .bottom-row {
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Квадраты */
+.square {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 5px;
+    margin-top: 65px;
+}
+
+.square:hover,
+.square:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 768px) {
+    .Services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .squares-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .squares-wrapper .row {
+        justify-content: center !important;
+        width: auto;
+    }
+
+    .square {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 

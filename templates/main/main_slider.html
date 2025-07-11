@@ -1,62 +1,68 @@
 {% load static %}
 
 <section class="hero-section">
-  <!-- Основной слайдер слева -->
-  <section class="hero-slider">
-    {% for slide in slides %}
-      <input type="radio" name="slider" id="slide{{ forloop.counter }}" {% if forloop.first %}checked{% endif %} hidden>
-    {% endfor %}
+    <!-- Основной слайдер слева -->
+    <section class="hero-slider">
+        {% for slide in slides %}
+            <input type="radio" name="slider" id="slide{{ forloop.counter }}" {% if forloop.first %}checked{% endif %}
+                   hidden>
+        {% endfor %}
 
-    <div class="slides">
-      {% for slide in slides %}
-        <div class="slide">
-          {% if slide.image %}
-            <img src="{{ slide.image.url }}" alt="{{ slide.title }}">
-          {% endif %}
-          <h2 class="hero-title gold-text">{{ slide.title }}</h2>
-          <p class="hero-subtitle">{{ slide.subtitle }}</p>
-          {% if slide.button_text and slide.button_link %}
-            <a href="{{ slide.button_link }}" class="btn gold-btn">{{ slide.button_text }}</a>
-          {% endif %}
+        <div class="slides">
+            {% for slide in slides %}
+                <div class="slide">
+                    {% if slide.image %}
+                        <img src="{{ slide.image.url }}" alt="{{ slide.title }}">
+                    {% endif %}
+                    <h2 class="hero-title gold-text">{{ slide.title }}</h2>
+                    <p class="hero-subtitle">{{ slide.subtitle }}</p>
+                    {% if slide.button_text and slide.button_link %}
+                        <a href="{{ slide.button_link }}" class="btn gold-btn">{{ slide.button_text }}</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
         </div>
-      {% endfor %}
-    </div>
 
-    <div class="slider-nav">
-      {% for slide in slides %}
-        <label for="slide{{ forloop.counter }}" class="nav-dot"></label>
-      {% endfor %}
-    </div>
-  </section>
+        <div class="slider-nav">
+            {% for slide in slides %}
+                <label for="slide{{ forloop.counter }}" class="nav-dot"></label>
+            {% endfor %}
+        </div>
+    </section>
 
-  <!-- Новый слайдер-коллаж справа -->
-  <section class="collage-slider">
+    <!-- Новый слайдер-коллаж справа -->
+<section class="collage-slider">
     {% for i in "1234" %}
-      <input type="radio" name="collage-slider" id="collage-slide{{ forloop.counter }}" {% if forloop.first %}checked{% endif %} hidden>
+        <input type="radio" name="collage-slider" id="collage-slide{{ forloop.counter }}"
+               {% if forloop.first %}checked{% endif %} hidden>
     {% endfor %}
-      <div class="collage-slides">
-          {% comment %} Здесь 4 картинки коллажа, замените пути и ссылки на свои {% endcomment %}
-          <div class="collage-slide">
-              <a href="{% url 'about' %}">
-                  <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Коллаж 1">
-              </a>
-          </div>
-          <div class="collage-slide">
-              <a href="{% url 'about' %}">
-                  <img src="{% static 'webapp/img/collage2.jpg' %}" alt="Коллаж 2">
-              </a>
-          </div>
-          <div class="collage-slide">
-              <a href="{% url 'about' %}">
-                  <img src="{% static 'webapp/img/collage3.jpg' %}" alt="Коллаж 3">
-              </a>
-          </div>
-          <div class="collage-slide">
-              <a href="{% url 'about' %}">
-                  <img src="{% static 'webapp/img/collage4.jpg' %}" alt="Коллаж 4">
-              </a>
-          </div>
-      </div>
+    <div class="collage-slides">
+        {# Выводим первые 4 продукта #}
+        {% for product in products|slice:":4" %}
+            <div class="collage-slide">
+                <a href="{{ product.get_absolute_url }}">
+                    {% if product.main_photo %}
+                        <img src="{{ product.main_photo }}" alt="{{ product.name }}">
+                    {% else %}
+                        <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Нет изображения">
+                    {% endif %}
+                </a>
+            </div>
+        {% endfor %}
 
-  </section>
+        {# Если продуктов меньше 4, добавляем дефолтные слайды #}
+        {% with missing=4|add:"-products|length" %}
+            {% if missing > 0 %}
+                {% for _ in missing|make_list %}
+                    <div class="collage-slide">
+                        <a href="{% url 'about' %}">
+                            <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Дефолтное изображение">
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+</section>
+
 </section>
