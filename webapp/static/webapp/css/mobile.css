@@ -89,3 +89,32 @@
         justify-content: flex-start;
     }
 }
+/* Адаптив для маленьких экранов */
+@media (max-width: 768px) {
+    .Services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .squares-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .squares-wrapper .row {
+        justify-content: center !important;
+        width: auto;
+    }
+
+    .square {
+        width: 60px;
+        height: 60px;
+    }
+}

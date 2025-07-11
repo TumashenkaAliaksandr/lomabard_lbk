@@ -549,7 +549,7 @@ body.light-theme .had-phone:hover {
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.3rem;
     margin-bottom: 20px;
     color: #ffd700;
 }
@@ -1266,6 +1266,7 @@ body.light-theme .about-us-title {
     width: 100%; /* или фиксированная ширина по необходимости */
     height: auto;
     border-radius: 12px; /* если нужно скругление */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .about-us-image h3 {
@@ -1294,7 +1295,7 @@ body.light-theme .about-us-image h3 {
     transform: translateX(-50%);
     margin: 0;
     padding: 8px 15px;
-    background-color: rgb(219 221 203 / 50%);
+    background-color: rgb(248 248 248 / 45%);
     color: #6d6c65;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
@@ -1303,6 +1304,7 @@ body.light-theme .about-us-image h3 {
     pointer-events: none;
     white-space: nowrap;
     z-index: 10;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .about-us-image h2 {
@@ -1312,7 +1314,7 @@ body.light-theme .about-us-image h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
     user-select: none;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
 }
 
 .social-icons {
@@ -1329,8 +1331,9 @@ body.light-theme .social-icons {
     justify-content: center;
     gap: 25px;
     margin-top: 15px;
-    background-color: rgb(219 221 203 / 50%);
+    background-color: rgb(248 248 248 / 45%);
     color: #6d6c65;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .social-icon {
@@ -1496,11 +1499,11 @@ body.light-theme .learn-more-link {
 
 body.light-theme .info-dop {
     flex: 0 0 450px;
-    background: rgb(228 235 226 / 50%);
+    background: rgb(248 248 248 / 45%);
     padding: 20px;
     border-radius: 12px;
     color: #686868;
-    /*font-family: 'Cormorant Garamond', serif;*/
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .info-dop h3 {
@@ -1518,7 +1521,7 @@ body.light-theme .info-dop h3 {
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 700;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1))
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.1))
 }
 
 .info-dop p {
@@ -1641,11 +1644,12 @@ body.light-theme .tabs-content {
     font-size: 20px;
     line-height: 1.6;
     color: rgb(69, 69, 69);
-    background-color: rgb(228 235 226 / 50%);
+    background-color: rgb(248 248 248 / 45%);
     border-radius: 8px;
     padding-left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 body.light-theme .tab-button.active {
@@ -1711,6 +1715,12 @@ body.light-theme .tab-button {
     color: #d4af37; /* цвет текста */
     /*margin-right: 20px;*/
 }
+body.light-theme .section-text {
+    max-width: 700px; /* увеличил ширину для баланса с большими квадратами */
+    flex: 1 1 600px; /* позволяет тексту занимать место, но с минимальной шириной */
+    color: #d4af37; /* цвет текста */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
 
 .section-text .h2 {
     font-size: 2.5rem; /* чуть крупнее заголовок */
@@ -1719,15 +1729,36 @@ body.light-theme .tab-button {
     text-transform: uppercase;
 }
 
+body.light-theme .section-text .h2 {
+    font-size: 2.5rem; /* чуть крупнее заголовок */
+    margin-bottom: 15px;
+    filter: none;
+    text-transform: uppercase;
+    color: #68675f;
+}
+
 .section-text .section-p {
-    margin-bottom: 20px;
-    line-height: 1.5;
-    color: #f3cd01;
-    font-size: 21px;
     background: rgba(212, 175, 55, 0.15);
     padding: 15px;
     border-radius: 12px;
+    font-size: 1.2rem;
+    color: rgb(255 215 0);
+    margin-top: 0;
+    margin-bottom: 15px;
     font-weight: 600;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+body.light-theme .section-text .section-p {
+    background: rgb(248 248 248 / 45%);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: rgb(73, 70, 70);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    filter: none;
 }
 
 .BtnBlue {
@@ -1785,8 +1816,13 @@ body.light-theme .tab-button {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-right: 5px;
     margin-top: 65px;
+    position: relative; /* важно для позиционирования подписи */
+    display: flex;
+    align-items: flex-start; /* чтобы подпись была сверху */
+    justify-content: center;
+    padding-top: 8px; /* отступ сверху для подписи */
+    text-transform: uppercase;
 }
 
 .square:hover,
@@ -1796,35 +1832,45 @@ body.light-theme .tab-button {
     outline: none;
 }
 
-/* Адаптив для маленьких экранов */
-@media (max-width: 768px) {
-    .Services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-text {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .squares-wrapper {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .squares-wrapper .row {
-        justify-content: center !important;
-        width: auto;
-    }
-
-    .square {
-        width: 60px;
-        height: 60px;
-    }
+.square-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0,0,0,0.61);
+    color: #ffd700;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px 4px 4px 4px;
+    border-radius: 8px 8px 0 0;
+    letter-spacing: 0.01em;
+    pointer-events: none; /* чтобы клик шел по квадрату */
+    user-select: none;
+    box-sizing: border-box;
 }
+
+body.light-theme .square-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background: rgb(91 82 42 / 55%);
+    color: whitesmoke;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px 4px 4px 4px;
+    border-radius: 8px 8px 0 0;
+    letter-spacing: 0.01em;
+    pointer-events: none; /* чтобы клик шел по квадрату */
+    user-select: none;
+    box-sizing: border-box;
+}
+
+
 
 
 /* Футер */
