@@ -33,9 +33,12 @@ body .main-bg {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%; /* или 95% — подберите комфортное значение */
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Кнопка переключения темы - справа вверху */
@@ -206,7 +209,7 @@ header.header {
     transition: color 0.3s ease;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .nav-link:hover, .nav-link:active, .nav-link:focus {
@@ -294,10 +297,10 @@ body.light-theme .breadcrumb-item.active {
     box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    width: 240px;
-    font-size: 15px !important;
-    margin-left: 450px;
     position: absolute;
+    width: 230px;
+    font-size: 14px !important;
+    margin-left: 365px;
 }
 
 .btn-callback:hover {
@@ -332,7 +335,7 @@ body.light-theme .breadcrumb-item.active {
     font-weight: 600;
     font-size: 1rem;
     user-select: none;
-    margin-left: 30px;
+    margin-left: 15px;
     position: relative; /* добавлено для контекста абсолютного позиционирования, если нужно */
 }
 
@@ -403,8 +406,8 @@ body.light-theme .contact-info a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
@@ -518,7 +521,7 @@ body.light-theme .had-phone:hover {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 /* Навигация */
@@ -1715,6 +1718,7 @@ body.light-theme .tab-button {
     color: #d4af37; /* цвет текста */
     /*margin-right: 20px;*/
 }
+
 body.light-theme .section-text {
     max-width: 700px; /* увеличил ширину для баланса с большими квадратами */
     flex: 1 1 600px; /* позволяет тексту занимать место, но с минимальной шириной */
@@ -1723,7 +1727,7 @@ body.light-theme .section-text {
 }
 
 .section-text .h2 {
-    font-size: 2.5rem; /* чуть крупнее заголовок */
+    font-size: 2rem; /* чуть крупнее заголовок */
     margin-bottom: 15px;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     text-transform: uppercase;
@@ -1747,6 +1751,20 @@ body.light-theme .section-text .h2 {
     margin-bottom: 15px;
     font-weight: 600;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    width: 90%;
+}
+
+.section-text .section-p-calc {
+    background: rgba(212, 175, 55, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: rgb(255 215 0);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 300;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    width: 100%;
 }
 
 body.light-theme .section-text .section-p {
@@ -1808,15 +1826,16 @@ body.light-theme .section-text .section-p {
 
 /* Квадраты */
 .square {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
+    right: 25px;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 65px;
+    margin-top: 55px;
     position: relative; /* важно для позиционирования подписи */
     display: flex;
     align-items: flex-start; /* чтобы подпись была сверху */
@@ -1838,7 +1857,7 @@ body.light-theme .section-text .section-p {
     left: 0;
     width: 100%;
     z-index: 2;
-    background: rgba(0,0,0,0.61);
+    background: rgba(0, 0, 0, 0.61);
     color: #ffd700;
     font-size: 0.8rem;
     font-weight: 600;
@@ -1869,7 +1888,280 @@ body.light-theme .square-label {
     user-select: none;
     box-sizing: border-box;
 }
+.Section5Сalculator {
+    padding: 40px 20px;
+    color: #f3cd01;
+}
 
+.glassCards {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.glassCards > p.h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    text-transform: uppercase;
+    color: #d4af37;
+}
+
+.row-SectionCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(15px, 3vw, 40px);
+    justify-content: space-between;
+}
+
+.Section5-left,
+.Section5-right {
+    flex: 1 1 45%;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Section5-left-top {
+    display: flex;
+    gap: clamp(10px, 2vw, 30px);
+    margin-bottom: 30px;
+}
+
+.Section5-left-top > div {
+    flex: 1 1 0;
+}
+
+.cardGlass {
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(243, 205, 1, 0.5);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Убираем подчеркивание у текста внутри карточек, если там ссылки */
+    text-decoration: none;
+    color: inherit;
+}
+
+.cardGlass-two {
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(243, 205, 1, 0.5);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Убираем подчеркивание у текста внутри карточек, если там ссылки */
+    text-decoration: none;
+    color: inherit;
+    height: 345px !important;
+    width: 535px;
+}
+
+.cardGlass-two:hover,
+.cardGlass-two:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(243, 205, 1, 0.9);
+    outline: none;
+}
+
+.cardGlass-two p.h3 {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    margin: 0;
+    font-weight: 550;
+    color: #f3cd01;
+    text-transform: uppercase;
+}
+
+.cardGlass:hover,
+.cardGlass:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(243, 205, 1, 0.9);
+    outline: none;
+}
+
+.cardGlass p.h3 {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    margin: 0;
+    font-weight: 550;
+    color: #f3cd01;
+    text-transform: uppercase;
+}
+
+.section-text p.section-p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #f3cd01;
+}
+
+.cardGlass.calculator-devices,
+.cardGlass.Calculator-car-card {
+    position: relative;
+    color: #f3cd01;
+}
+
+.cardGlass.calculator-devices::before,
+.cardGlass.Calculator-car-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* затемнение */
+    border-radius: 15px;
+    z-index: 0;
+}
+
+.cardGlass.calculator-devices p.h3,
+.cardGlass.Calculator-car-card p.h3 {
+    position: relative;
+    z-index: 1;
+}
+
+.cardGlass.calculator-devices,
+.cardGlass.Calculator-car-card,
+.cardGlass.Calculator-jewellery-card {
+    position: relative;
+    color: #f3cd01;
+    overflow: hidden; /* чтобы псевдоэлемент не выходил за границы */
+}
+
+/* Постоянное базовое затемнение */
+.cardGlass.calculator-devices::before,
+.cardGlass.Calculator-car-card::before,
+.cardGlass.Calculator-jewellery-card::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0, 0, 0, 0.5); /* базовое затемнение */
+    border-radius: 15px; /* если есть скругления */
+    z-index: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Текст поверх затемнения */
+.cardGlass.calculator-devices p.h3,
+.cardGlass.Calculator-car-card p.h3,
+.cardGlass.Calculator-jewellery-card p.h3 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Усиление затемнения при наведении */
+.cardGlass.calculator-devices:hover::before,
+.cardGlass.Calculator-car-card:hover::before,
+.cardGlass.Calculator-jewellery-card:hover::before {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/*----*/
+.cardGlass-two p.h3 {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    margin: 0;
+    font-weight: 550;
+    color: #f3cd01;
+    text-transform: uppercase;
+}
+
+.cardGlass-two.calculator-devices,
+.cardGlass-two.Calculator-car-card {
+    position: relative;
+    color: #f3cd01;
+}
+
+.cardGlass-two.calculator-devices::before,
+.cardGlass-two.Calculator-car-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* затемнение */
+    border-radius: 15px;
+    z-index: 0;
+}
+
+.cardGlass-two.calculator-devices p.h3,
+.cardGlass-two.Calculator-car-card p.h3 {
+    position: relative;
+    z-index: 1;
+}
+
+.cardGlass-two.calculator-devices,
+.cardGlass-two.Calculator-car-card,
+.cardGlass-two.Calculator-jewellery-card {
+    position: relative;
+    color: #f3cd01;
+    overflow: hidden; /* чтобы псевдоэлемент не выходил за границы */
+}
+
+/* Постоянное базовое затемнение */
+.cardGlass-two.calculator-devices::before,
+.cardGlass-two.Calculator-car-card::before,
+.cardGlass-two.Calculator-jewellery-card::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0, 0, 0, 0.5); /* базовое затемнение */
+    border-radius: 15px; /* если есть скругления */
+    z-index: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Текст поверх затемнения */
+.cardGlass-two.calculator-devices p.h3,
+.cardGlass-two.Calculator-car-card p.h3,
+.cardGlass-two.Calculator-jewellery-card p.h3 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Усиление затемнения при наведении */
+.cardGlass-two.calculator-devices:hover::before,
+.cardGlass-two.Calculator-car-card:hover::before,
+.cardGlass-two.Calculator-jewellery-card:hover::before {
+    background: rgba(0, 0, 0, 0.75);
+}
+/*----*/
+
+/* Кнопка */
+.MainBtn {
+    display: inline-block;
+    color: #121212;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 7px;
+    text-decoration: none; /* Убираем подчеркивание */
+    text-align: center;
+    user-select: none;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MainBtn:hover,
+.MainBtn:focus {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+/* Правый блок занимает всю высоту и центрирует содержимое */
+.Section5-right {
+    height: 527px; /* как у вас */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Section5-right .cardGlass {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
 
 
 
@@ -1882,4 +2174,13 @@ body.light-theme .square-label {
     margin-top: 50px;
     font-size: 0.9rem;
     color: #a89e7e;
+}
+
+
+a, a:visited, a:hover, a:focus, a:active,
+.MainBtn, .MainBtn:visited, .MainBtn:hover, .MainBtn:focus, .MainBtn:active {
+    text-decoration: none !important;
+    outline: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
