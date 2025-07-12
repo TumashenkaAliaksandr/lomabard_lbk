@@ -298,7 +298,7 @@ body.light-theme .breadcrumb-item.active {
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
     position: absolute;
-    width: 230px;
+    width: 224px;
     font-size: 14px !important;
     margin-left: 365px;
 }
@@ -312,15 +312,18 @@ body.light-theme .breadcrumb-item.active {
 .btn-consultations {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 7px;
-    padding: 8px 25px;
-    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    padding: 8px 8px;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    width: fit-content;
-    display: block; /* обязательно для margin auto */
-    margin: 0 auto; /* центрируем по горизонтали */
+    width: 415px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 2px #ffd700, 0 0 7px #fff700;
+    font-size: 14px !important;
+    text-align: center;
+    position: relative;
 }
 
 .btn-consultations:hover {
@@ -395,7 +398,7 @@ body.light-theme .contact-info a:hover {
     margin-left: 15px;
     display: flex;
     /*flex-direction: column; !* вертикальное расположение *!*/
-    gap: 15px; /* расстояние между иконками */
+    gap: 10px; /* расстояние между иконками */
     align-items: center; /* центрируем иконки по горизонтали */
 }
 
@@ -420,8 +423,8 @@ body.light-theme .social-icon-had {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
@@ -566,12 +569,12 @@ body.light-theme .had-phone:hover {
 /* Кнопка */
 .btn {
     padding: 15px 40px;
-    font-size: 1.2rem;
+    font-size: 14px;
     border: none;
     border-radius: 7px;
     cursor: pointer;
     transition: background 0.3s ease, box-shadow 0.3s ease;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -579,11 +582,12 @@ body.light-theme .had-phone:hover {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
     box-shadow: 0 0 2px #ffd700, 0 0 7px #fff700;
-    width: 300px;
+    width: 227px;
     text-align: center;
     position: relative;
     display: block;
     margin: 0 auto;
+    font-size: 14px;
 }
 
 .gold-btn:hover {
@@ -596,7 +600,7 @@ body.light-theme .had-phone:hover {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
     box-shadow: 0 0 2px #ffd700, 0 0 7px #fff700;
-    width: 300px;
+    width: 250px;
     text-align: center;
     position: relative;
     display: block;
@@ -605,6 +609,9 @@ body.light-theme .had-phone:hover {
     text-decoration: none;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .shop-button:hover,
@@ -722,8 +729,8 @@ body.light-theme .had-phone:hover {
     height: 400px;
     overflow: hidden;
     border-radius: 15px;
-    background: linear-gradient(135deg, #3a2f00 0%, #1f1f1f 100%);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+    background: linear-gradient(135deg, #716747 0%, #f8f8f8 100%);
+    box-shadow: 0 0 25px rgb(43 43 41 / 46%);
 }
 
 .collage-slider input[type="radio"] {
@@ -771,8 +778,8 @@ body.light-theme .had-phone:hover {
 
 /* Светлая тема */
 body.light-theme .hero-slider {
-    background: linear-gradient(135deg, #dddbd4 0%, #a37e05 100%);
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #716747 0%, #f8f8f8 100%);
+    box-shadow: 0 0 25px rgb(43 43 41 / 46%);
 }
 
 .services-icons {
@@ -1060,10 +1067,10 @@ body.light-theme .product-card:hover {
 
 .product-button {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 8px 15px;
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     border-radius: 7px;
     text-decoration: none;
@@ -1071,6 +1078,7 @@ body.light-theme .product-card:hover {
     box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
+    font-size: 14px;
 }
 
 .product-button:hover {
@@ -1223,8 +1231,8 @@ body.light-theme .product-card:hover {
 }
 
 .about-us-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 50px;
     text-transform: uppercase;
@@ -1235,8 +1243,8 @@ body.light-theme .product-card:hover {
 }
 
 body.light-theme .about-us-title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -1249,7 +1257,7 @@ body.light-theme .about-us-title {
 .about-us-row {
     display: flex;
     align-items: center; /* Вертикальное выравнивание по центру */
-    gap: 30px; /* Расстояние между текстом и фото */
+    gap: 19px; /* Расстояние между текстом и фото */
 }
 
 /*.about-us-content,*/
@@ -1270,11 +1278,12 @@ body.light-theme .about-us-title {
     height: auto;
     border-radius: 12px; /* если нужно скругление */
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    margin-top: 7px;
 }
 
 .about-us-image h3 {
     position: relative;
-    top: -5px;
+    top: 1px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -1293,7 +1302,7 @@ body.light-theme .about-us-title {
 
 body.light-theme .about-us-image h3 {
     position: relative;
-    top: -12px;
+    top: 1px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -1333,7 +1342,7 @@ body.light-theme .social-icons {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 15px;
+    margin-top: 5px;
     background-color: rgb(248 248 248 / 45%);
     color: #6d6c65;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
@@ -1404,13 +1413,13 @@ body.light-theme .social-icon:hover,
 .about-us-content p {
     font-size: 1.4rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     color: #d4af37;
 }
 
 .about-us-content p {
     font-size: 1.4rem;
-    line-height: 1.5;
+    line-height: 1.4;
     /*margin-bottom: 0;*/
     color: #d4af37;
     padding: 10px 5px;
@@ -1453,7 +1462,7 @@ body.light-theme .about-us-content {
 body.light-theme .about-us-content p {
     font-size: 1.4rem;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #6d6c65;
 }
 
@@ -1731,10 +1740,11 @@ body.light-theme .section-text {
     margin-bottom: 15px;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     text-transform: uppercase;
+    margin-left: 21px;
 }
 
 body.light-theme .section-text .h2 {
-    font-size: 2.5rem; /* чуть крупнее заголовок */
+    font-size: 2rem; /* чуть крупнее заголовок */
     margin-bottom: 15px;
     filter: none;
     text-transform: uppercase;
@@ -1752,6 +1762,7 @@ body.light-theme .section-text .h2 {
     font-weight: 600;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     width: 90%;
+    margin-left: 21px;
 }
 
 .section-text .section-p-calc {
@@ -1764,6 +1775,19 @@ body.light-theme .section-text .h2 {
     margin-bottom: 15px;
     font-weight: 300;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    width: 100%;
+}
+
+body.light-theme .section-text .section-p-calc {
+    background: rgba(212, 175, 55, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: rgb(73 70 70);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 300;
+     filter: none;
     width: 100%;
 }
 
@@ -1786,9 +1810,11 @@ body.light-theme .section-text .section-p {
     border-radius: 6px;
     box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
     display: inline-block;
-    padding: 12px 28px; /* увеличены отступы для кнопки */
+    padding: 12px 13px; /* увеличены отступы для кнопки */
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-left: 21px;
+    font-size: 14px;
 }
 
 .BtnBlue:hover,
@@ -1828,7 +1854,7 @@ body.light-theme .section-text .section-p {
 .square {
     width: 140px;
     height: 140px;
-    right: 25px;
+    right: 40px;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -1901,10 +1927,10 @@ body.light-theme .square-label {
 .glassCards > p.h2 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     text-transform: uppercase;
-    color: #d4af37;
+    color: #68675f;
 }
 
 .row-SectionCards {
@@ -1926,7 +1952,7 @@ body.light-theme .square-label {
 .Section5-left-top {
     display: flex;
     gap: clamp(10px, 2vw, 30px);
-    margin-bottom: 30px;
+    margin-bottom: 21px;
 }
 
 .Section5-left-top > div {
@@ -1946,10 +1972,38 @@ body.light-theme .square-label {
     color: inherit;
 }
 
+body.light-theme .cardGlass {
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgb(43 43 41 / 46%);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Убираем подчеркивание у текста внутри карточек, если там ссылки */
+    text-decoration: none;
+    color: inherit;
+}
+
 .cardGlass-two {
     background: rgba(255 255 255 / 0.1);
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(243, 205, 1, 0.5);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Убираем подчеркивание у текста внутри карточек, если там ссылки */
+    text-decoration: none;
+    color: inherit;
+    height: 345px !important;
+    width: 535px;
+}
+
+body.light-theme .cardGlass-two {
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgb(43 43 41 / 46%);
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
@@ -1988,6 +2042,14 @@ body.light-theme .square-label {
     margin: 0;
     font-weight: 550;
     color: #f3cd01;
+    text-transform: uppercase;
+}
+
+body.light-theme .cardGlass p.h3 {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    margin: 0;
+    font-weight: 550;
+    color: whitesmoke;
     text-transform: uppercase;
 }
 
@@ -2062,6 +2124,14 @@ body.light-theme .square-label {
     margin: 0;
     font-weight: 550;
     color: #f3cd01;
+    text-transform: uppercase;
+}
+
+body.light-theme .cardGlass-two p.h3 {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    margin: 0;
+    font-weight: 550;
+    color: whitesmoke;
     text-transform: uppercase;
 }
 
