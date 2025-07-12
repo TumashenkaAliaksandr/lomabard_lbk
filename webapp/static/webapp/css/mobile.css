@@ -134,3 +134,29 @@
     margin-top: 30px;
   }
 }
+
+
+@media (max-width: 991px) {
+  .Section10CollateralItems .row {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+  .Section10CollateralItems .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Section10CollateralItems .title {
+    font-size: 2rem;
+  }
+  .blur-card, .Section10CollateralItems .section-text {
+    padding: 18px 10px;
+    min-height: 120px;
+    border-radius: 12px;
+  }
+  .change-high {
+    min-height: 160px;
+  }
+}
