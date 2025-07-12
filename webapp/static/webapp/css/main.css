@@ -190,16 +190,18 @@ header.header {
     color: #ffd700;
     user-select: none;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    margin-right: 30px;
 }
 
 .logo .gold-text {
     color: #fff700;
-    text-shadow: 0 0 2px #fff700, 0 0 5px #FFD700, 0 0 0px #ffec8b;
+    text-shadow: 0 0 2px #fff700, 0 0 5px #FFD700, 0 0 0 #ffec8b;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .padding-menu {
     margin-right: 25px !important;
+    margin-left: 10px;
 }
 
 /* Навигация */
@@ -209,7 +211,7 @@ header.header {
     transition: color 0.3s ease;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .nav-link:hover, .nav-link:active, .nav-link:focus {
@@ -1925,6 +1927,15 @@ body.light-theme .square-label {
 }
 
 .glassCards > p.h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    text-transform: uppercase;
+    color: #d4af37;
+}
+
+body.light-theme .glassCards > p.h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 30px;
