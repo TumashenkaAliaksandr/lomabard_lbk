@@ -1730,6 +1730,13 @@ body.light-theme .tab-button {
     /*margin-right: 20px;*/
 }
 
+.section-text-zalog {
+    max-width: 700px; /* увеличил ширину для баланса с большими квадратами */
+    flex: 1 1 400px; /* позволяет тексту занимать место, но с минимальной шириной */
+    color: #d4af37; /* цвет текста */
+    /*margin-right: 20px;*/
+}
+
 body.light-theme .section-text {
     max-width: 700px; /* увеличил ширину для баланса с большими квадратами */
     flex: 1 1 600px; /* позволяет тексту занимать место, но с минимальной шириной */
@@ -1743,6 +1750,28 @@ body.light-theme .section-text {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     text-transform: uppercase;
     margin-left: 21px;
+}
+
+.section-text-zalog .h2 {
+    font-size: 2rem; /* чуть крупнее заголовок */
+    margin-bottom: 15px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    text-transform: uppercase;
+    margin-left: 0;
+}
+
+.section-text-zalog .section-p {
+    background: rgba(212, 175, 55, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: rgb(255 215 0);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    width: 90%;
+    /*margin-left: 21px;*/
 }
 
 body.light-theme .section-text .h2 {
@@ -1815,13 +1844,34 @@ body.light-theme .section-text .section-p {
     padding: 12px 13px; /* увеличены отступы для кнопки */
     text-decoration: none;
     transition: background-color 0.3s ease;
-    /*margin-left: 21px;*/
+    margin-left: 21px;
     font-size: 14px;
     text-transform: uppercase;
 }
 
 .BtnBlue:hover,
 .BtnBlue:focus {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+.Btnyellow {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 700;
+    border-radius: 6px;
+    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    display: inline-block;
+    padding: 12px 13px; /* увеличены отступы для кнопки */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.Btnyellow:hover,
+.Btnyellow:focus {
     background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
@@ -2390,11 +2440,45 @@ body.light-theme .cardGlass-two p.h3 {
     padding: 32px 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     min-height: 210px;
     /*box-shadow: 0 0 12px rgba(243, 205, 1, 0.10);*/
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+.Section10CollateralItems .section-text-zalog {
+    background: rgba(243, 205, 1, 0.08);
+    border-radius: 18px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    min-height: 210px;
+    /*box-shadow: 0 0 12px rgba(243, 205, 1, 0.10);*/
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+.Section10CollateralItems .section-text-zalog .h2 {
+    color: #d4af37;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.Section10CollateralItems .section-text-zalog .section-p {
+    color: #f3cd01;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 18px;
+    line-height: 1.4;
+    width: 100%;
+    margin-left: 0;
+    padding: 7px;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .Section10CollateralItems .section-text .h2 {
