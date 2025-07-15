@@ -61,8 +61,67 @@
                             <a class="nav-link {% if request.resolver_match.url_name == 'store' %}active{% endif %}"
                                href="{% url 'store' %}">Магазин</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+
+                        <!-- Пункт с выпадающим списком -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownServices" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Услуги
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownServices">
+
+                                <!-- Подменю Займы -->
+                                <li class="dropdown-submenu dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="/zajmy-pod-zalog/" id="submenuLoans"
+                                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Займы
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="submenuLoans">
+                                        <li><a class="dropdown-item" href="/zajm-pod-zalog-zolota-i-serebra/">Драгоценные
+                                            металлы</a></li>
+                                        <li><a class="dropdown-item" href="/tekhnika-pod-zalog/">Электроника</a></li>
+                                        <li><a class="dropdown-item" href="/bytovaya-tekhnika-pod-zalog/">Бытовая
+                                            техника</a></li>
+                                        <li><a class="dropdown-item" href="/stroitelnyj-instrument-pod-zalog/">Инструменты</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/avtolombard/">Автомобиль</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a class="dropdown-item" href="/uslugi-po-prodazhe-nevostrebovannogo-imushchestva/">Продажа</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/komissionnyj-magazin/">Комиссия</a></li>
+                                <li><a class="dropdown-item" href="/online-ocenka/">Оценка</a></li>
+
+                                <!-- Второе вложенное подменю -->
+                                <li class="dropdown-submenu dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="https://visem.by/cdat-pod-zalog/"
+                                       id="submenuPawn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Сдать под залог
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="submenuPawn">
+                                        <li><a class="dropdown-item" href="/cdat-yuvelirnye-izdeliya/">Сдать ювелирные
+                                            изделия под залог</a></li>
+                                        <li><a class="dropdown-item" href="/cdat-zoloto/">Сдать золото под залог</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/cdat-serebro/">Сдать серебро под залог</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/cdat-chasy/">Сдать часы под залог</a></li>
+                                        <li><a class="dropdown-item" href="/cdat-telefon/">Сдать телефон под залог</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="/cdat-noutbuk/">Сдать ноутбук под залог</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><a class="dropdown-item" href="/calculator/">Калькулятор</a></li>
+                                <li><a class="dropdown-item" href="/avtolombard/">Автоломбард</a></li>
+                            </ul>
+                        </li>
+
+
                         <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
+
                         <li class="nav-item">
                             <a class="nav-link {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}"
                                href="{% url 'contacts' %}">Адреса Ломбардов</a>
@@ -97,11 +156,10 @@
                             </a>
                         </div>
 
-
                         <button class="btn btn-callback" type="button">Обратный Звонок</button>
                     </div>
-
                 </div>
+
             </div>
         </nav>
     </header>
@@ -166,4 +224,5 @@
 <script src="{% static 'webapp/js/prices-metals.js' %}"></script>
 <script src="{% static 'webapp/js/news.js' %}"></script>
 <script src="{% static 'webapp/js/maps.js' %}"></script>
+<script src="{% static 'webapp/js/down_menu.js' %}"></script>
 

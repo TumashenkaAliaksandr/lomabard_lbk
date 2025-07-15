@@ -170,6 +170,138 @@ body.light-theme .footer {
     text-decoration: none;
 }
 
+/* Родительский пункт */
+.nav-item.dropdown {
+  position: relative; /* Обязательно */
+}
+
+/* Основное выпадающее меню */
+.nav-item.dropdown > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;   /* сразу под пунктом меню */
+  left: 0;
+  background: #1f1f1f;
+  min-width: 180px;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+/* Показать меню при наведении либо на родителя, либо на меню */
+.nav-item.dropdown:hover > .dropdown-menu,
+.nav-item.dropdown:focus-within > .dropdown-menu {
+  display: block;
+}
+
+/* Каждый пункт меню */
+.dropdown-menu .dropdown-item {
+  color: #a89e7e;
+  padding: 10px 15px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: #ffd700;
+  color: #010a29;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Вложенный блок с позиционированием каждого саб-меню */
+.sub-dropdown-section {
+  position: relative; /* Родитель вложенного подменю */
+}
+
+/* Вложенное подменю */
+.sub-dropdown-list {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;   /* справа от родителя */
+  background: #1f1f1f;
+  min-width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 0;
+  z-index: 1050;
+}
+
+/* Показываем вложенное меню при наведении на родительский блок */
+.sub-dropdown-section:hover > .sub-dropdown-list,
+.sub-dropdown-section:focus-within > .sub-dropdown-list {
+  display: block;
+}
+
+/* Ссылки вложенного меню — такие же стили */
+.sub-dropdown-list .dropdown-item {
+  color: #a89e7e;
+  padding: 10px 15px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+.sub-dropdown-list .dropdown-item:hover,
+.sub-dropdown-list .dropdown-item:focus {
+  background-color: #ffd700;
+  color: #010a29;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Чтобы pointer был от крестика */
+.sub-dropdown-toggle {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0 5px;
+  color: inherit;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+/* Чтобы родительский .dropdown-submenu позиционировался и предоставлял место для подменю */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Подменю выпадающего списка, отображаются справа */
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    position: absolute;
+    background: #1f1f1f;
+    min-width: 180px;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+/* При наведении показываем подменю */
+.dropdown-submenu:hover > .dropdown-menu,
+.dropdown-submenu:focus-within > .dropdown-menu {
+  display: block;
+}
+
+/* Чтобы избежать конфликтов со стандартным display:none у bootstrap, делаем !important */
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  position: absolute;
+}
+
+/* Для плавного поведения */
+.dropdown-menu {
+  transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+
+
 
 /* Фиксированное меню при прокрутке */
 header.header {
@@ -3036,10 +3168,7 @@ body.light-theme .news-item {
 }
 
 
-
-
 /* Футер */
-/* Общий стиль футера */
 .footer {
   background-color: #1f1f1f;       /* тёмный фон */
   border-top: 2px solid #ffd700;   /* золотая линия сверху */
