@@ -316,7 +316,7 @@ body.light-theme .breadcrumb-item.active {
     color: #121212;
     font-weight: 600;
     border-radius: 7px;
-    padding: 8px 8px;
+    padding: 2px 8px;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
     width: 415px;
@@ -326,6 +326,7 @@ body.light-theme .breadcrumb-item.active {
     font-size: 14px !important;
     text-align: center;
     position: relative;
+    height: 54px;
 }
 
 .btn-consultations:hover {
@@ -609,11 +610,12 @@ body.light-theme .had-phone:hover {
     margin: 50px auto;
     border-radius: 5px;
     text-decoration: none;
-    padding-top: 10px;
+    padding-top: 17px;
     padding-bottom: 10px;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
+    height: 56px;
 }
 
 .shop-button:hover,
@@ -1774,6 +1776,20 @@ body.light-theme .section-text {
     /*margin-left: 21px;*/
 }
 
+body.light-theme .section-text-zalog .section-p {
+    background: rgba(193, 193, 193, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: rgb(255 215 0);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    width: 90%;
+    /*margin-left: 21px;*/
+}
+
 body.light-theme .section-text .h2 {
     font-size: 2rem; /* чуть крупнее заголовок */
     margin-bottom: 15px;
@@ -1810,7 +1826,7 @@ body.light-theme .section-text .h2 {
 }
 
 body.light-theme .section-text .section-p-calc {
-    background: rgba(212, 175, 55, 0.15);
+    background: rgb(217 220 214);
     padding: 15px;
     border-radius: 12px;
     font-size: 1.2rem;
@@ -1818,8 +1834,9 @@ body.light-theme .section-text .section-p-calc {
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 300;
-    filter: none;
     width: 100%;
+    filter: none;
+
 }
 
 body.light-theme .section-text .section-p {
@@ -1830,8 +1847,8 @@ body.light-theme .section-text .section-p {
     color: rgb(73, 70, 70);
     margin-top: 0;
     margin-bottom: 15px;
-    font-weight: 600;
-    filter: none;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .BtnBlue {
@@ -1841,7 +1858,7 @@ body.light-theme .section-text .section-p {
     border-radius: 6px;
     box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
     display: inline-block;
-    padding: 12px 13px; /* увеличены отступы для кнопки */
+    padding: 13px 13px; /* увеличены отступы для кнопки */
     text-decoration: none;
     transition: background-color 0.3s ease;
     margin-left: 21px;
@@ -1914,13 +1931,14 @@ body.light-theme .section-text .section-p {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 55px;
+    margin-top: 58px;
     position: relative; /* важно для позиционирования подписи */
     display: flex;
     align-items: flex-start; /* чтобы подпись была сверху */
     justify-content: center;
     padding-top: 8px; /* отступ сверху для подписи */
     text-transform: uppercase;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .square:hover,
@@ -1955,7 +1973,7 @@ body.light-theme .square-label {
     left: 0;
     width: 100%;
     z-index: 2;
-    background: rgb(91 82 42 / 55%);
+    background: rgb(80 73 44 / 58%);
     color: whitesmoke;
     font-size: 0.8rem;
     font-weight: 600;
@@ -1991,7 +2009,7 @@ body.light-theme .glassCards > p.h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 30px;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
     text-transform: uppercase;
     color: #68675f;
 }
@@ -2046,12 +2064,13 @@ body.light-theme .cardGlass {
     /* Убираем подчеркивание у текста внутри карточек, если там ссылки */
     text-decoration: none;
     color: inherit;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .cardGlass-two {
     background: rgba(255 255 255 / 0.1);
     border-radius: 15px;
-    box-shadow: 0 0 25px rgba(243, 205, 1, 0.5);
+    box-shadow: 0 0 10px rgba(243, 205, 1, 0.5);
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
@@ -2061,12 +2080,13 @@ body.light-theme .cardGlass {
     color: inherit;
     height: 345px !important;
     width: 535px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 body.light-theme .cardGlass-two {
     background: rgba(255 255 255 / 0.1);
     border-radius: 15px;
-    box-shadow: 0 0 25px rgb(43 43 41 / 46%);
+    box-shadow: 0 0 10px rgb(43 43 41 / 46%);
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
@@ -2196,6 +2216,7 @@ body.light-theme .cardGlass-two p.h3 {
     font-weight: 550;
     color: whitesmoke;
     text-transform: uppercase;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
 .cardGlass-two.calculator-devices,
@@ -2235,7 +2256,7 @@ body.light-theme .cardGlass-two p.h3 {
     content: "";
     position: absolute;
     inset: 0; /* top:0; right:0; bottom:0; left:0; */
-    background: rgba(0, 0, 0, 0.5); /* базовое затемнение */
+    background: rgb(25 25 25 / 69%); /* базовое затемнение */
     border-radius: 5px; /* если есть скругления */
     z-index: 0;
     transition: background-color 0.3s ease;
@@ -2460,7 +2481,21 @@ body.light-theme .Section10CollateralItems .title {
 }
 
 .Section10CollateralItems .section-text-zalog {
-    background: rgba(243, 205, 1, 0.08);
+    background: rgba(212, 175, 55, 0.15);
+    border-radius: 18px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    min-height: 210px;
+    /*box-shadow: 0 0 12px rgba(243, 205, 1, 0.10);*/
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+
+body.light-theme .Section10CollateralItems .section-text-zalog {
+    background: rgb(217 220 214);
     border-radius: 18px;
     padding: 32px 24px;
     display: flex;
@@ -2555,5 +2590,5 @@ a, a:visited, a:hover, a:focus, a:active,
     text-decoration: none !important;
     outline: none !important;
     border-bottom: none !important;
-    box-shadow: none !important;
+    /*box-shadow: none !important;*/
 }
