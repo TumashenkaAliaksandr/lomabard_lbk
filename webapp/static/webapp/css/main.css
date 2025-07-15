@@ -2573,6 +2573,108 @@ body.light-theme .Section10CollateralItems .section-text-zalog .section-p {
 }
 
 
+.section-prices {
+  padding: 40px 0;
+}
+
+.container-metally {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title-metal-prices {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+body.light-theme .section-title-metal-prices {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: rgb(104 103 95);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.prices-block {
+  margin-bottom: 50px;
+  background: rgb(255 255 255 / 34%);
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgb(0 0 0 / 0.1);
+  padding: 20px;
+}
+
+.prices-subtitle {
+    font-size: 1.5rem;
+    color: rgb(255 215 0);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+body.light-theme .prices-subtitle {
+    font-size: 1.5rem;
+    color: rgb(104 103 95);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+  color: #222;
+}
+
+.price-table thead {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #debe13);
+    color: #000000;
+}
+
+.price-table thead th {
+  padding: 12px 8px;
+  font-weight: 700;
+}
+
+.price-table tbody th {
+    background-color: #c6c3b4;
+    padding: 12px 8px;
+    font-weight: 600;
+    text-align: left;
+    width: 180px;
+}
+
+.price-table td {
+  padding: 12px 8px;
+  border: 1px solid #ccc;
+  min-width: 70px;
+}
+
+.price-cell {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Подсветка при наведении на строку */
+.price-table tbody tr:hover {
+  background-color: #c6c3b4;
+}
+
+
+
 /* Футер */
 .footer {
     background-color: #1f1f1f;

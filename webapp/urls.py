@@ -3,6 +3,7 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+from .views import MetalsPriceProbasAPIView
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -11,6 +12,7 @@ urlpatterns = [
     path('store/', views.store, name='store'),
     path('contacts/', views.contacts, name='contacts'),
     path('action/', views.action, name='action'),
+    path('api/metals-price-probas/', MetalsPriceProbasAPIView.as_view(), name='metals_price_probas'),
 
     ]
 
