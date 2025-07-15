@@ -325,9 +325,9 @@
 
                 <!-- Блок с ценами на серебро -->
                 <div class="prices-block">
-                    <h3 class="prices-subtitle">🏷️ Цены на серебро</h3>
+                    <h3 class="prices-subtitle-silver">🏷️ Цены на серебро</h3>
                     <table class="price-table" aria-label="Таблица цен на серебро">
-                        <thead>
+                        <thead class="silver">
                         <tr>
                             <th scope="col">🔘 Проба</th>
                             <th scope="col">750*</th>
@@ -368,13 +368,16 @@
                         <h3 class="news-title">Новость 1: Lorem ipsum dolor sit amet</h3>
                         <p class="news-description">Краткое описание новости 1, чтобы заинтересовать пользователя
                             прочитать подробнее.</p>
+                        <p class="news-description">Дата: 13.09.2025.г</p>
                         <a href="#" class="news-link" aria-label="Перейти к новости 1">Перейти →</a>
                     </div>
 
-                    <div class="news-item">
+                     <div class="news-item">
                         <img src="https://via.placeholder.com/220x130" alt="Новость 2" class="news-image"/>
-                        <h3 class="news-title">Новость 2: Consectetur adipiscing elit</h3>
-                        <p class="news-description">Краткое описание новости 2 с важной информацией.</p>
+                        <h3 class="news-title">Новость 2: Lorem ipsum dolor sit amet</h3>
+                        <p class="news-description">Краткое описание новости 2, чтобы заинтересовать пользователя
+                            прочитать подробнее.</p>
+                        <p class="news-description">Дата: 13.09.2025.г</p>
                         <a href="#" class="news-link" aria-label="Перейти к новости 2">Перейти →</a>
                     </div>
 
@@ -382,6 +385,7 @@
                         <img src="https://via.placeholder.com/220x130" alt="Новость 3" class="news-image"/>
                         <h3 class="news-title">Новость 3: Integer nec odio</h3>
                         <p class="news-description">Краткое описание новости 3 для привлечения внимания.</p>
+                        <p class="news-description">Дата: 13.09.2025.г</p>
                         <a href="#" class="news-link" aria-label="Перейти к новости 3">Перейти →</a>
                     </div>
 
@@ -389,6 +393,7 @@
                         <img src="https://via.placeholder.com/220x130" alt="Новость 4" class="news-image"/>
                         <h3 class="news-title">Новость 4: Integer nec odio</h3>
                         <p class="news-description">Краткое описание новости 4 для привлечения внимания.</p>
+                        <p class="news-description">Дата: 13.09.2025.г</p>
                         <a href="#" class="news-link" aria-label="Перейти к новости 4">Перейти →</a>
                     </div>
 
@@ -396,6 +401,7 @@
                         <img src="https://via.placeholder.com/220x130" alt="Новость 5" class="news-image"/>
                         <h3 class="news-title">Новость 5: Integer nec odio</h3>
                         <p class="news-description">Краткое описание новости 5 для привлечения внимания.</p>
+                        <p class="news-description">Дата: 13.09.2025.г</p>
                         <a href="#" class="news-link" aria-label="Перейти к новости 5">Перейти →</a>
                     </div>
 
@@ -403,6 +409,66 @@
 
                 </div>
                 <button class="slider-btn slider-next" aria-label="Следующие новости">&gt;</button>
+            </div>
+        </div>
+        <hr class="section-divider">
+
+        <div class="addresses-map-main-bg">
+            <div class="container container-big">
+                <h2 class="section-title-map gold-text">📍 Наши адреса</h2>
+                <button class="address-toggle-btn gold-btn" id="addressToggleBtn" aria-expanded="false">
+                    Посмотреть адреса 👇
+                </button>
+                <div class="address-dropdown" id="addressDropdown">
+                    <div class="address-city">
+                        <button class="city-btn" data-city="minsk" aria-expanded="false">👀 Минск</button>
+                        <div class="city-addresses" data-city-addresses="minsk">
+                            <div class="address-block" data-coords="53.9018,27.5619">
+                                <span class="address-label">ул. Комсомольская, 15а</span>
+                                <span>9:00 – 20:00 (без обеда и выходных)</span>
+                                <span class="address-contact">Тел.: <a href="tel:+375291848032">+375 (29) 184-80-32</a></span>
+                                <span class="address-contact">E-mail: <a href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                            </div>
+                            <div class="address-block" data-coords="53.8745,27.5810">
+                                <span class="address-label">ул. Сурганова, 52</span>
+                                <span>9:00 – 21:00 (без обеда и выходных)</span>
+                                <span class="address-contact">Тел.: <a href="tel:+375297228421">+375 (29) 722-84-21</a></span>
+                                <span class="address-contact">E-mail: <a href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                            </div>
+                            <div class="address-block" data-coords="53.9034,27.5558">
+                                <span class="address-label">ул. З. Бядули, д.3</span>
+                                <span>9:00 – 20:00 (без обеда и выходных)</span>
+                                <span class="address-contact">Тел.: <a href="tel:+375291757591">+375 (29) 175-75-91</a></span>
+                                <span class="address-contact">E-mail: <a href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                            </div>
+                            <div class="address-block" data-coords="53.9001,27.5600">
+                                <span class="address-label">ул. Московская, д.20</span>
+                                <span>9:00 – 20:00 (без обеда, пон.–субб.; воскресенье и праздничные дни выходной)</span>
+                                <span class="address-contact">Тел.: <a href="tel:+375291848062">+375 (29) 184-80-62</a></span>
+                                <span class="address-contact">E-mail: <a href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address-city">
+                        <button class="city-btn" data-city="dzerzhinsk" aria-expanded="false">👀 Держинск</button>
+                        <div class="city-addresses wizz" data-city-addresses="dzerzhinsk">
+                            <div class="address-block" data-coords="53.5367,28.2054">
+                                <span class="address-label">ул. Советская, д.1</span>
+                                <span>9:00 – 20:00 (без обеда и выходных)</span>
+                                <span class="address-contact">Тел.: <a href="tel:+375291848126">+375 (29) 184-81-26</a></span>
+                                <span class="address-contact">E-mail: <a href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карта Google Maps, по умолчанию первая координата -->
+                <div class="address-map-real">
+                    <iframe
+                            id="mapIframe"
+                            src="https://www.google.com/maps/embed/v1/place?key=ВАШ_GOOGLE_MAPS_API_КЛЮЧ&q=53.9018,27.5619&zoom=16"
+                            frameborder="0" allowfullscreen loading="lazy" title="Карта адресов"
+                            style="width:100%; height:420px; border-radius: 12px;"></iframe>
+                </div>
             </div>
         </div>
 
