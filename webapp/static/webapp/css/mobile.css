@@ -160,3 +160,20 @@
     min-height: 160px;
   }
 }
+
+
+/* На экранах md и выше - горизонтальный flex */
+@media(min-width: 768px) {
+  .footer > .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+@media(min-width: 768px) {
+  .footer-copy {
+    margin-top: 0;
+    text-align: right;
+  }
+}

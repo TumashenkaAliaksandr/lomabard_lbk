@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     block.addEventListener('click', () => {
       const coords = block.getAttribute('data-coords');
       if (!coords) return;
-      const apiKey = "ВАШ_GOOGLE_MAPS_API_KEY"; // замените на ваш ключ
+      const apiKey = "AIzaSyD2eymFRSREnWqpQojPCHQi8Wmij5aFn20"; // замените на ваш ключ
       const srcUrl = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(coords)}`;
       mapIframe.src = srcUrl;
       addressBlocks.forEach(el => el.classList.remove('selected'));
