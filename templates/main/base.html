@@ -57,9 +57,23 @@
                             <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
                                href="{% url 'about' %}">О нас</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'store' %}active{% endif %}"
-                               href="{% url 'store' %}">Магазин</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'store' %}active{% endif %}"
+                               href="{% url 'store' %}">Магазин
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownContacts">
+                                <li><a class="dropdown-item" href="#">Драгоценные металлы</a></li>
+                                <li><a class="dropdown-item" href="#">Бытовая техника</a></li>
+                                <li><a class="dropdown-item" href="#">Электроника</a></li>
+                                <li><a class="dropdown-item" href="#">Инструменты</a></li>
+                                <li><a class="dropdown-item" href="#">Спорт и туризм</a></li>
+                                <li><a class="dropdown-item" href="#">Детское</a></li>
+                                <li><a class="dropdown-item" href="#">Телевизоры</a></li>
+                                <li><a class="dropdown-item" href="#">Ноутбуки</a></li>
+                                <li><a class="dropdown-item" href="#">Часы</a></li>
+                                <li><a class="dropdown-item" href="#">Золотые изделия</a></li>
+                                <li><a class="dropdown-item" href="#">Другое</a></li>
+                            </ul>
                         </li>
 
                         <!-- Пункт с выпадающим списком -->
@@ -122,10 +136,17 @@
 
                         <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
 
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}"
-                               href="{% url 'contacts' %}">Адреса Ломбардов</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}"
+                               href="{% url 'contacts' %}">
+                                Адреса Ломбардов
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownContacts">
+                                <li><a class="dropdown-item" href="/city1/">Минск</a></li>
+                                <li><a class="dropdown-item" href="/komissionnyj-magazin/">Дзержинск</a></li>
+                            </ul>
                         </li>
+
                     </ul>
 
                     <div class="d-flex align-items-center gap-3 flex-wrap">
@@ -190,21 +211,18 @@
                 <a href="https://vk.com/yourpage" target="_blank" aria-label="ВКонтакте" class="social-link">
                     <i class="fab fa-vk"></i>
                 </a>
-                <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook" class="social-link">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
                 <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram" class="social-link">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter" class="social-link">
-                    <i class="fab fa-twitter"></i>
+                <a href="https://t.me/yourpage" target="_blank" aria-label="Telegram" class="social-link">
+                    <i class="fab fa-telegram-plane"></i>
                 </a>
             </div>
         </div>
 
         <!-- Копирайт -->
         <div class="footer-copy text-center text-md-end text-muted mt-3">
-            © 2015-<span id="currentYear"></span> Ломбард ЛБК г.Минск. Все права защищены.
+            © 2015-<span id="currentYear"></span> Ломбард ЛБК г.Минск. Все права защищены. Design PhoenixPegasus  ®
         </div>
     </footer>
 

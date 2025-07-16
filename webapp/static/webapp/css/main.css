@@ -190,6 +190,9 @@ body.light-theme .footer {
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   z-index: 1000;
 }
+body.light-theme .dropdown-menu {
+    background: whitesmoke!important;
+}
 
 /* Показать меню при наведении либо на родителя, либо на меню */
 .nav-item.dropdown:hover > .dropdown-menu,
@@ -200,11 +203,28 @@ body.light-theme .footer {
 /* Каждый пункт меню */
 .dropdown-menu .dropdown-item {
   color: #a89e7e;
-  padding: 10px 15px;
+  padding: 5px 15px;
   font-weight: 500;
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease;
+}
+
+body.light-theme .dropdown-menu .dropdown-item {
+    color: #595957;
+    padding: 10px 15px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+body.light-theme .dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: #ffd700;
+  color: #010a29;
+  outline: none;
+  text-decoration: none;
 }
 
 .dropdown-menu .dropdown-item:hover,
@@ -329,7 +349,7 @@ header.header {
 
 .logo .gold-text {
     color: #fff700!important;
-    text-shadow: 0 0 2px #fff700, 0 0 5px #FFD700, 0 0 0 #ffec8b;
+    text-shadow: 0 0 2px #fff700, 0 0 4px #FFD700, 0 0 0 #ffec8b;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
@@ -556,12 +576,10 @@ body.light-theme .contact-info a:hover {
     color: #ffd700;
     font-size: 1.6rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 7px;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
 }
@@ -3077,19 +3095,22 @@ body.light-theme .news-item {
 }
 
 .address-toggle-btn {
-  background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
-  color: #121212;
-  font-weight: 600;
-  border-radius: 8px;
-  font-size: 15px;
-  padding: 13px 38px;
-  margin: 0 auto 28px auto;
-  display: block;
-  box-shadow: 0 0 7px #ffd700;
-  transition: background .3s, box-shadow .3s, color .3s;
-  border: none;
-  width: 270px;
-  text-transform: uppercase;
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 13px 38px;
+    margin: 0 auto 28px auto;
+    display: block;
+    box-shadow: 0 0 7px #ffd700;
+    transition: background .3s, box-shadow .3s, color .3s;
+    border: none;
+    width: 270px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 112px;
+    top: 112px;
 }
 
 .address-block.selected {
@@ -3106,21 +3127,21 @@ body.light-theme .news-item {
 }
 
 .address-dropdown {
-  position: absolute;
-  top: 130px; /* Позиция от верхнего края контейнера (под заголовком и кнопкой) */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 950px;
-  background-color: rgb(146 137 57 / 27%);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 35px rgba(255, 215, 0, 0.3);
-  z-index: 1000;
-  display: none;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+    position: absolute;
+    top: 112px;
+    left: 38.6%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 950px;
+    background-color: rgb(146 137 57 / 27%);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 35px rgba(255, 215, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .address-dropdown.active {
@@ -3248,14 +3269,15 @@ body.light-theme .news-item {
 
 /* Контейнер футера - flex-раскладка */
 .footer > .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem; /* расстояние между элементами (для вертикали на мобилках) */
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; /* расстояние между элементами (для вертикали на мобилках) */
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 35px 15px;
+    height: 55px;
 }
 
 /* Логотип футера */
