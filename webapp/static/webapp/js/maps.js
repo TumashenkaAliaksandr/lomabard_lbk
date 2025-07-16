@@ -3,85 +3,116 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdown = document.getElementById('addressDropdown');
   const cityBtns = document.querySelectorAll('.city-btn');
   const mapIframe = document.querySelector('.address-map-real iframe');
+  const closeDropdownBtn = document.getElementById('closeDropdownBtn');
 
-  // Показать город и обновить карту
+  // Показывает адреса выбранного города, подсвечивает первый адрес и выставляет карту
   function showCity(btn) {
     const city = btn.getAttribute('data-city');
 
-    // Деактивируем все секции адресов и сбрасываем aria-expanded
     document.querySelectorAll('.city-addresses').forEach(section => {
       section.classList.remove('active');
+      section.hidden = true;
     });
     cityBtns.forEach(b => b.setAttribute('aria-expanded', 'false'));
 
-    // Активируем выбранный город
     btn.setAttribute('aria-expanded', 'true');
+
     const section = document.querySelector(`.city-addresses[data-city-addresses="${city}"]`);
-    if (section) {
-      section.classList.add('active');
+    if (!section) return;
 
-      // Показываем первый адрес данного города и ставим карту по нему
-      const firstAddress = section.querySelector('.address-block');
-      if (firstAddress) {
-        updateMap(firstAddress.getAttribute('data-map-src'));
-        // Также выделим этот адрес активным (опционально)
-        highlightAddress(firstAddress);
-      }
+    section.classList.add('active');
+    section.hidden = false;
+
+    const firstAddress = section.querySelector('.address-block');
+    if (firstAddress) {
+      highlightAddress(firstAddress);
+      updateMap(firstAddress.getAttribute('data-map-src'));
     }
   }
 
-  // Обновление src iframe карты
+  // Обновляет src iframe карты с минимизацией моргания
   function updateMap(src) {
-    if (mapIframe && src) {
-      mapIframe.src = src;
+    if (!src || mapIframe.src === src) return;
+
+    // Скрываем iframe перед сменой src
+    mapIframe.style.visibility = 'hidden';
+    mapIframe.style.opacity = '0';
+
+    // Обработчик загрузки карты — показываем iframe обратно
+    function onLoadHandler() {
+      mapIframe.style.transition = 'opacity 0.3s ease';
+      mapIframe.style.opacity = '1';
+      mapIframe.style.visibility = 'visible';
+      mapIframe.removeEventListener('load', onLoadHandler);
     }
+    mapIframe.addEventListener('load', onLoadHandler);
+
+    // Меняем src
+    mapIframe.src = src;
   }
 
-  // Выделение активного адреса (добавим класс и уберём у остальных)
-  function highlightAddress(activeAddress) {
+  // Подсвечивает выбранный адрес
+  function highlightAddress(addrEl) {
     document.querySelectorAll('.address-block').forEach(block => {
       block.classList.remove('active');
     });
-    activeAddress.classList.add('active');
+    addrEl.classList.add('active');
   }
 
-  // Скрыть/показать весь список адресов при клике на кнопку
   toggleBtn.addEventListener('click', () => {
     const isActive = dropdown.classList.toggle('active');
     toggleBtn.setAttribute('aria-expanded', isActive);
 
     if (isActive) {
-      // При открытии показываем дефолтный город — Минск
-      showCity(cityBtns[0]);
+      cityBtns.forEach(b => b.setAttribute('aria-expanded', 'false'));
+      document.querySelectorAll('.city-addresses').forEach(ca => {
+        ca.classList.remove('active');
+        ca.hidden = true;
+      });
     }
   });
 
-  // Обработка клика по кнопке выбора города
   cityBtns.forEach(btn => {
-    btn.addEventListener('click', () => showCity(btn));
+    btn.addEventListener('click', () => {
+      showCity(btn);
+    });
   });
 
-  // Обработка клика по отдельному адресу
   document.querySelectorAll('.address-block').forEach(block => {
     block.style.cursor = 'pointer';
     block.addEventListener('click', () => {
       updateMap(block.getAttribute('data-map-src'));
       highlightAddress(block);
-
-
     });
   });
 
-  // При загрузке страницы сразу показываем Минск и первый адрес с картой
-  if (cityBtns.length) {
+  closeDropdownBtn.addEventListener('click', () => {
+    dropdown.classList.remove('active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    document.querySelectorAll('.city-addresses').forEach(ca => {
+      ca.classList.remove('active');
+      ca.hidden = true;
+    });
+    cityBtns.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+  });
+
+  document.addEventListener('click', e => {
+    if (!dropdown.contains(e.target) && !toggleBtn.contains(e.target) && !closeDropdownBtn.contains(e.target)) {
+      dropdown.classList.remove('active');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      document.querySelectorAll('.city-addresses').forEach(ca => {
+        ca.classList.remove('active');
+        ca.hidden = true;
+      });
+      cityBtns.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+    }
+  });
+
+  // Инициализация: показать первый город и адрес
+  if (cityBtns.length > 0) {
     showCity(cityBtns[0]);
   }
 
-  // Закрываем дропдаун если клик вне его
-  document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target) && !toggleBtn.contains(e.target)) {
-      dropdown.classList.remove('active');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-    }
-  });
+  // Аппаратные ускорения для плавности справа в CSS:
+  // .address-map-real { transform: translate3d(0,0,0); }
 });

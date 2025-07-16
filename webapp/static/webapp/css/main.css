@@ -174,40 +174,41 @@ body.light-theme .footer {
 
 /* Родительский пункт */
 .nav-item.dropdown {
-  position: relative; /* Обязательно */
+    position: relative; /* Обязательно */
 }
 
 /* Основное выпадающее меню */
 .nav-item.dropdown > .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;   /* сразу под пунктом меню */
-  left: 0;
-  background: #1f1f1f;
-  min-width: 180px;
-  padding: 0;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 100%; /* сразу под пунктом меню */
+    left: 0;
+    background: #1f1f1f;
+    min-width: 180px;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
 }
+
 body.light-theme .dropdown-menu {
-    background: whitesmoke!important;
+    background: whitesmoke !important;
 }
 
 /* Показать меню при наведении либо на родителя, либо на меню */
 .nav-item.dropdown:hover > .dropdown-menu,
 .nav-item.dropdown:focus-within > .dropdown-menu {
-  display: block;
+    display: block;
 }
 
 /* Каждый пункт меню */
 .dropdown-menu .dropdown-item {
-  color: #a89e7e;
-  padding: 5px 15px;
-  font-weight: 500;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
+    color: #a89e7e;
+    padding: 5px 15px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
 body.light-theme .dropdown-menu .dropdown-item {
@@ -221,75 +222,77 @@ body.light-theme .dropdown-menu .dropdown-item {
 
 body.light-theme .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
-  background-color: #ffd700;
-  color: #010a29;
-  outline: none;
-  text-decoration: none;
+    background-color: #ffd700;
+    color: #010a29;
+    outline: none;
+    text-decoration: none;
 }
 
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
-  background-color: #ffd700;
-  color: #010a29;
-  outline: none;
-  text-decoration: none;
+    background-color: #ffd700;
+    color: #010a29;
+    outline: none;
+    text-decoration: none;
 }
 
 /* Вложенный блок с позиционированием каждого саб-меню */
 .sub-dropdown-section {
-  position: relative; /* Родитель вложенного подменю */
+    position: relative; /* Родитель вложенного подменю */
 }
 
 /* Вложенное подменю */
 .sub-dropdown-list {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;   /* справа от родителя */
-  background: #1f1f1f;
-  min-width: 180px;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  padding: 0;
-  z-index: 1050;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* справа от родителя */
+    background: #1f1f1f;
+    min-width: 180px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    z-index: 1050;
 }
 
 /* Показываем вложенное меню при наведении на родительский блок */
 .sub-dropdown-section:hover > .sub-dropdown-list,
 .sub-dropdown-section:focus-within > .sub-dropdown-list {
-  display: block;
+    display: block;
 }
 
 /* Ссылки вложенного меню — такие же стили */
 .sub-dropdown-list .dropdown-item {
-  color: #a89e7e;
-  padding: 10px 15px;
-  font-weight: 500;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
+    color: #a89e7e;
+    padding: 10px 15px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
 }
+
 .sub-dropdown-list .dropdown-item:hover,
 .sub-dropdown-list .dropdown-item:focus {
-  background-color: #ffd700;
-  color: #010a29;
-  outline: none;
-  text-decoration: none;
+    background-color: #ffd700;
+    color: #010a29;
+    outline: none;
+    text-decoration: none;
 }
 
 /* Чтобы pointer был от крестика */
 .sub-dropdown-toggle {
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0 5px;
-  color: inherit;
-  vertical-align: middle;
-  margin-left: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0 5px;
+    color: inherit;
+    vertical-align: middle;
+    margin-left: 5px;
 }
+
 /* Чтобы родительский .dropdown-submenu позиционировался и предоставлял место для подменю */
 .dropdown-submenu {
-  position: relative;
+    position: relative;
 }
 
 /* Подменю выпадающего списка, отображаются справа */
@@ -309,20 +312,19 @@ body.light-theme .dropdown-menu .dropdown-item:hover,
 /* При наведении показываем подменю */
 .dropdown-submenu:hover > .dropdown-menu,
 .dropdown-submenu:focus-within > .dropdown-menu {
-  display: block;
+    display: block;
 }
 
 /* Чтобы избежать конфликтов со стандартным display:none у bootstrap, делаем !important */
 .dropdown-submenu > .dropdown-menu {
-  display: none;
-  position: absolute;
+    display: none;
+    position: absolute;
 }
 
 /* Для плавного поведения */
 .dropdown-menu {
-  transition: visibility 0.2s ease, opacity 0.2s ease;
+    transition: visibility 0.2s ease, opacity 0.2s ease;
 }
-
 
 
 /* Фиксированное меню при прокрутке */
@@ -348,7 +350,7 @@ header.header {
 }
 
 .logo .gold-text {
-    color: #fff700!important;
+    color: #fff700 !important;
     text-shadow: 0 0 2px #fff700, 0 0 4px #FFD700, 0 0 0 #ffec8b;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
@@ -359,8 +361,8 @@ header.header {
     color: #ffd700;
     user-select: none;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
-    position: relative;   /* заменил 'inherit' на 'relative', т.к. inherit может вызвать неожиданные эффекты */
-    right: 100px;            /* смещение слева */
+    position: relative; /* заменил 'inherit' на 'relative', т.к. inherit может вызвать неожиданные эффекты */
+    right: 100px; /* смещение слева */
     display: inline-block; /* чтобы позиционирование и отступы работали корректно */
 }
 
@@ -745,6 +747,14 @@ body.light-theme .had-phone:hover {
     text-transform: uppercase;
 }
 
+.city-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+
 .gold-btn {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
@@ -1072,7 +1082,7 @@ body.light-theme .services-title {
 body.light-theme .services-title-footer {
     font-size: 1.2rem;
     color: #68675f;
-    text-align: center;            /* Центрируем текст внутри блока */
+    text-align: center; /* Центрируем текст внутри блока */
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -2782,13 +2792,13 @@ body.light-theme .Section10CollateralItems .section-text-zalog .section-p {
 
 
 .section-prices {
-  padding: 40px 0;
+    padding: 40px 0;
 }
 
 .container-metally {
-  max-width: 1350px;
-  margin: 0 auto;
-  padding: 0 15px;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .section-title-metal-prices {
@@ -2814,11 +2824,11 @@ body.light-theme .section-title-metal-prices {
 }
 
 .prices-block {
-  margin-bottom: 50px;
-  background: rgb(255 255 255 / 34%);
-  border-radius: 7px;
-  box-shadow: 0 6px 14px rgb(0 0 0 / 0.1);
-  padding: 20px;
+    margin-bottom: 50px;
+    background: rgb(255 255 255 / 34%);
+    border-radius: 7px;
+    box-shadow: 0 6px 14px rgb(0 0 0 / 0.1);
+    padding: 20px;
 }
 
 .prices-subtitle {
@@ -2840,11 +2850,11 @@ body.light-theme .prices-subtitle {
 }
 
 .price-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  font-size: 1rem;
-  color: #222;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1rem;
+    color: #222;
 }
 
 .price-table thead {
@@ -2876,8 +2886,8 @@ body.light-theme .prices-subtitle-silver {
 }
 
 .price-table thead th {
-  padding: 12px 8px;
-  font-weight: 700;
+    padding: 12px 8px;
+    font-weight: 700;
 }
 
 .price-table tbody th {
@@ -2889,19 +2899,19 @@ body.light-theme .prices-subtitle-silver {
 }
 
 .price-table td {
-  padding: 12px 8px;
-  border: 1px solid #ccc;
-  min-width: 70px;
+    padding: 12px 8px;
+    border: 1px solid #ccc;
+    min-width: 70px;
 }
 
 .price-cell {
-  font-weight: 600;
-  color: #333;
+    font-weight: 600;
+    color: #333;
 }
 
 /* Подсветка при наведении на строку */
 .price-table tbody tr:hover {
-  background-color: #c6c3b4;
+    background-color: #c6c3b4;
 }
 
 .news-section {
@@ -2942,24 +2952,24 @@ body.light-theme .news-item {
 }
 
 .news-slider-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .news-slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-  gap: 15px;
-  padding: 10px 0;
-  flex-grow: 1;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    gap: 15px;
+    padding: 10px 0;
+    flex-grow: 1;
 }
 
 .news-slider::-webkit-scrollbar {
-  display: none; /* Chrome, Safari и Opera */
+    display: none; /* Chrome, Safari и Opera */
 }
 
 .news-item {
@@ -3002,8 +3012,8 @@ body.light-theme .news-item {
 }
 
 .slider-btn:disabled {
-  background-color: #cccccc;
-  cursor: default;
+    background-color: #cccccc;
+    cursor: default;
 }
 
 /*.slider-btn:hover:not(:disabled) {*/
@@ -3011,11 +3021,11 @@ body.light-theme .news-item {
 /*}*/
 
 .slider-prev {
-  order: 0;
+    order: 0;
 }
 
 .slider-next {
-  order: 2;
+    order: 2;
 }
 
 .news-item {
@@ -3030,25 +3040,25 @@ body.light-theme .news-item {
 }
 
 .news-image {
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 4px;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .news-title {
-  font-size: 18px;
-  color: #222;
-  margin: 0;
-  line-height: 1.2;
-  flex-grow: 0;
+    font-size: 18px;
+    color: #222;
+    margin: 0;
+    line-height: 1.2;
+    flex-grow: 0;
 }
 
 .news-description {
-  font-size: 14px;
-  color: #555;
-  flex-grow: 1;
-  margin: 0;
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1;
+    margin: 0;
 }
 
 .news-link {
@@ -3077,25 +3087,25 @@ body.light-theme .news-item {
 
 
 .addresses-map-main-bg {
-  color: #ffd700;
-  padding: 48px 0 56px 0;
-  position: relative; /* для позиционирования выпадашки */
+    color: #ffd700;
+    padding: 48px 0 56px 0;
+    position: relative; /* для позиционирования выпадашки */
 }
 
 .container.container-big {
-  max-width: 1320px;
-  width: 95%;
-  margin: 0 auto;
-  padding: 0 12px;
+    max-width: 1320px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 12px;
 }
 
 .section-title-map {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  margin-bottom: 24px;
-  color: #ffd700;
-  text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+    color: #ffd700;
+    text-align: center;
 }
 
 .address-toggle-btn {
@@ -3118,16 +3128,16 @@ body.light-theme .news-item {
 }
 
 .address-block.selected {
-  background-color: rgba(255, 215, 0, 0.15);
-  border-left-color: #ffd700;
-  cursor: default;
+    background-color: rgba(255, 215, 0, 0.15);
+    border-left-color: #ffd700;
+    cursor: default;
 }
 
 .address-toggle-btn[aria-expanded="true"],
 .address-toggle-btn:hover {
-  background: linear-gradient(45deg,#ffd700,#fff700,#b8860b);
-  box-shadow: 0 0 15px #fff700, 0 0 30px #ffd700;
-  color: #5c4500;
+    background: linear-gradient(45deg, #ffd700, #fff700, #b8860b);
+    box-shadow: 0 0 15px #fff700, 0 0 30px #ffd700;
+    color: #5c4500;
 }
 
 .address-dropdown {
@@ -3149,46 +3159,65 @@ body.light-theme .news-item {
 }
 
 .address-dropdown.active {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 42px;
-  justify-content: center;
-  animation: fade-in-maps 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+    justify-content: center;
+    animation: fade-in-maps 0.5s;
 }
 
-@keyframes fade-in-maps { from {opacity:0;} to {opacity:1;} }
+@keyframes fade-in-maps {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .address-city {
-  flex: 1 1 380px;
-  min-width: 340px;
-  max-width: 420px;
-  margin-bottom: 12px;
+    flex: 1 1 380px;
+    min-width: 340px;
+    max-width: 420px;
+    margin-bottom: 12px;
 }
 
 .city-btn {
-  width: 100%;
-  background: linear-gradient(90deg, #ffec8b 60%, #ffd700 100%);
-  color: #333111;
-  border: none;
-  border-radius: 11px;
-  padding: 13px 22px;
-  font-size: 19px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-align: left;
-  cursor: pointer;
-  transition: background .18s;
+    width: 100%;
+    background: linear-gradient(90deg, #ffec8b 60%, #ffd700 100%);
+    color: #333111;
+    border: none;
+    border-radius: 11px;
+    padding: 13px 22px;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: background .18s;
+    display: flex;
 }
 
 .city-btn:hover,
 .city-btn[aria-expanded="true"] {
-  background: linear-gradient(90deg,#fff700 60%,#fffbe5 100%);
+    background: linear-gradient(90deg, #fff700 60%, #fffbe5 100%);
+}
+
+.cities-panel {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет кнопкам переходить на новую строку при малой ширине */
+    gap: 12px; /* Расстояние между кнопками */
+    justify-content: center; /* Выравнивание по центру (можно заменить на flex-start или space-between) */
+    margin-bottom: 15px;
 }
 
 /* Основные исправления для вывода адресов по 2 в строке */
 .city-addresses {
-  display: none;           /* скрытый по умолчанию */
-  margin-top: 8px;
+    display: none; /* скрытый по умолчанию */
+    margin-top: 8px;
+    position: absolute;
+    top: 90px;
+
 }
 
 .city-addresses.active {
@@ -3197,55 +3226,58 @@ body.light-theme .news-item {
     gap: 12px; /* промежуток между адресами */
     width: 688px;
 }
+
 .city-addresses.wizz {
-    width: 420px!important;
+    width: 420px !important;
 }
+
 /* По 2 адреса в строке */
 .address-block {
-  background: #22200f;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255,215,0,0.07);
-  padding: 13px 16px 8px 16px;
-  /* Убираем margin-bottom, чтобы gap управлял вертикальными отступами */
-  margin-bottom: 0;
-  color: #ffd700;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  border-left: 4px solid #ffd700;
-  flex: 1 1 calc(50% - 12px); /* ширина около 50% минус gap */
-  box-sizing: border-box; /* чтобы паддинги не ломали ширину */
-  cursor: pointer;
-  min-width: 150px; /* минимальная ширина для кроссбраузерности */
+    background: #22200f;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255, 215, 0, 0.07);
+    padding: 13px 16px 8px 16px;
+    /* Убираем margin-bottom, чтобы gap управлял вертикальными отступами */
+    margin-bottom: 0;
+    color: #ffd700;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    border-left: 4px solid #ffd700;
+    flex: 1 1 calc(50% - 12px); /* ширина около 50% минус gap */
+    box-sizing: border-box; /* чтобы паддинги не ломали ширину */
+    cursor: pointer;
+    min-width: 150px; /* минимальная ширина для кроссбраузерности */
 }
 
 .address-label {
-  font-weight: 800;
-  font-size: 17px;
-  color: #fffbe5;
-  margin-bottom: 3px;
+    font-weight: 800;
+    font-size: 17px;
+    color: #fffbe5;
+    margin-bottom: 3px;
+    text-transform: uppercase;
 }
 
 .address-contact a {
-  color: #fff700;
-  text-decoration: underline dotted;
-  transition: color 0.2s;
-  font-weight: 600;
+    color: #fff700;
+    text-decoration: underline dotted;
+    transition: color 0.2s;
+    font-weight: 600;
 }
 
 .address-contact a:hover {
-  color: #b8860b;
-  text-decoration: underline solid;
+    color: #b8860b;
+    text-decoration: underline solid;
 }
 
 .address-map-real {
-  margin-top: 30px;
-  width: 100%;
-  min-height: 380px;
-  border-radius: 12px;
-  box-shadow: 0 8px 45px 0 rgba(255,215,0,0.22);
-  overflow: hidden;
-  background: #1f1f1f;
+    margin-top: 30px;
+    width: 100%;
+    min-height: 380px;
+    border-radius: 12px;
+    box-shadow: 0 8px 45px 0 rgba(255, 215, 0, 0.22);
+    overflow: hidden;
+    background: #1f1f1f;
 }
 
 .address-map-real iframe {
@@ -3259,16 +3291,33 @@ body.light-theme .news-item {
     background: transparent;
 }
 
+.close-dropdown-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    color: #ff2f00;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1100;
+    transition: color 0.3s ease;
+}
+
+.close-dropdown-btn:hover {
+    color: #fff;
+}
 
 
 /* Футер */
 .footer {
-  background-color: #1f1f1f;       /* тёмный фон */
-  border-top: 2px solid #ffd700;   /* золотая линия сверху */
-  padding: 0 0;                 /* вертикальные отступы */
-  font-size: 0.9rem;               /* размер шрифта */
-  color: #a89e7e;                 /* основной цвет текста */
-  margin-top: 0;
+    background-color: #1f1f1f; /* тёмный фон */
+    border-top: 2px solid #ffd700; /* золотая линия сверху */
+    padding: 0 0; /* вертикальные отступы */
+    font-size: 0.9rem; /* размер шрифта */
+    color: #a89e7e; /* основной цвет текста */
+    margin-top: 0;
 }
 
 /* Контейнер футера - flex-раскладка */
@@ -3286,81 +3335,77 @@ body.light-theme .news-item {
 
 /* Логотип футера */
 .footer-logo img {
-  height: 50px;
-  display: block;
-  max-width: 100%;
-  object-fit: contain;
+    height: 50px;
+    display: block;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* Меню футера */
 .footer-nav ul {
-    list-style: none;        /* убираем маркеры */
+    list-style: none; /* убираем маркеры */
     padding: 0;
-    margin: 0 auto;          /* авто отступы слева и справа для центрирования */
+    margin: 0 auto; /* авто отступы слева и справа для центрирования */
     display: flex;
     gap: 20px;
     justify-content: center; /* центрируем пункты меню по горизонтали */
-    position: static;        /* position: revert-layer; заменяем на static — более предсказуемо */
-    width: fit-content;      /* ширина по контенту, чтобы не растягивать на всю строку */
+    position: static; /* position: revert-layer; заменяем на static — более предсказуемо */
+    width: fit-content; /* ширина по контенту, чтобы не растягивать на всю строку */
     margin-right: 60px;
 }
 
 
 /* Ссылки меню */
 .footer-nav a {
-  color: #a89e7e;            /* основной цвет */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+    color: #a89e7e; /* основной цвет */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .footer-nav a:hover,
 .footer-nav a:focus {
-  color: #ffd700;            /* цвет при наведении */
-  text-decoration: underline;
-  outline: none;
+    color: #ffd700; /* цвет при наведении */
+    text-decoration: underline;
+    outline: none;
 }
 
 /* Копирайт */
 .footer-copy {
-  background-color: #2c2c2c; /* новый фон для копирайта, например темно-серый */
-  color: #f0e6c8 !important; /* светлый текст */
-  font-size: 0.9rem;
-  text-align: center!important;
-  user-select: none;
-  font-weight: 400;
-  padding: 10px 15px;         /* внутренние отступы для удобства */
-  margin-top: 10px;
-  border-radius: 4px;         /* опционально, чтобы фон смотрелся аккуратно */
+    background-color: #2c2c2c; /* новый фон для копирайта, например темно-серый */
+    color: #f0e6c8 !important; /* светлый текст */
+    font-size: 0.9rem;
+    text-align: center !important;
+    user-select: none;
+    font-weight: 400;
+    padding: 10px 15px; /* внутренние отступы для удобства */
+    margin-top: 10px;
+    border-radius: 4px; /* опционально, чтобы фон смотрелся аккуратно */
 }
 
 
 /* Социальные сети - контейнер */
 .footer-social {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
 /* Ссылки соцсетей - иконки */
 .footer-social .social-link {
-  color: #a89e7e;
-  font-size: 1.4rem;
-  transition: color 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    color: #a89e7e;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-social .social-link:hover,
 .footer-social .social-link:focus {
-  color: #ffd700;
-  outline: none;
+    color: #ffd700;
+    outline: none;
 }
-
-
-
-
 
 
 a, a:visited, a:hover, a:focus, a:active,
