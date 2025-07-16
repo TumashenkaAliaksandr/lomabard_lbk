@@ -3317,6 +3317,63 @@ body.light-theme .news-item {
 }
 
 
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.categories-burger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  user-select: none;
+  color: #ffd700;
+  transition: color 0.3s ease;
+}
+
+.categories-burger:hover,
+.categories-burger[aria-expanded="true"] {
+  color: #fff700;
+}
+
+.categories-menu {
+  display: none;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
+.categories-menu.active {
+  display: block;
+}
+
+.categories-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories-menu li {
+  margin: 8px 0;
+}
+
+.categories-menu a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.categories-menu a:hover {
+  text-decoration: underline;
+}
+
+
+
 /* Футер */
 .footer {
     background-color: #1f1f1f; /* тёмный фон */

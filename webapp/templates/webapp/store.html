@@ -2,18 +2,54 @@
 {% load static %}
 
 {% block content %}
-    <nav aria-label="breadcrumb" class="breadcrumb-container">
-        <ol class="breadcrumb-list">
-            <li class="breadcrumb-item"><a href="/">Главная</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Магазин</li>
-        </ol>
-    </nav>
+<nav aria-label="breadcrumb" class="breadcrumb-container">
+    <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Магазин</li>
+    </ol>
+</nav>
 
-    <section>
-        <div class="title-decor">
-            <h2>Тут пока ни чего.</h2>
+<main class="main-bg main-content">
+    <section class="products-section">
+        <div class="products-header">
+            <h2 class="services-title">Товары</h2>
+            <button id="categoriesBurger" class="categories-burger" aria-label="Выбор категории" aria-expanded="false" aria-controls="categoriesMenu">
+                &#9776; <!-- Бургер-иконка -->
+            </button>
+        </div>
+
+        <!-- Меню категорий (скрыто по умолчанию) -->
+        <nav id="categoriesMenu" class="categories-menu" aria-hidden="true">
+            <ul>
+                {% for category in categories %}
+                    <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+                {% empty %}
+                    <li>Категории не найдены</li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <!-- Сетка с товарами -->
+        <div class="products-grid">
+            {% for product in products|slice:":6" %}
+                <div class="product-card">
+                    {% if product.main_photo %}
+                        <img src="{{ product.main_photo }}" alt="{{ product.name }}" class="product-image"/>
+                    {% else %}
+                        <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Нет изображения" class="product-image"/>
+                    {% endif %}
+                    <h3 class="product-title">{{ product.name }}</h3>
+                    <p class="product-price">{{ product.price|floatformat:2 }} BYN</p>
+                    <a href="{{ product.get_absolute_url }}" class="product-button">Перейти</a>
+                </div>
+            {% empty %}
+                <p>Продукты не найдены.</p>
+            {% endfor %}
+        </div>
+
+        <div class="shop-button-wrapper">
+            <a href="{% url 'store' %}" class="shop-button">Перейти в магазин 🛍️</a>
         </div>
     </section>
-
-
+</main>
 {% endblock %}
