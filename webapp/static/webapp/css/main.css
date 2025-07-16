@@ -106,9 +106,11 @@ body.light-theme .nav-link:focus {
 }
 
 body.light-theme .gold-text {
-    color: #fffcef;
+    color: #68675f;
     text-shadow: none;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 body.light-theme .btn-callback {
@@ -2734,7 +2736,7 @@ body.light-theme .section-title-metal-prices {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 500;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 .prices-block {
@@ -2998,6 +3000,8 @@ body.light-theme .news-item {
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
 }
+
+
 .addresses-map-main-bg {
   color: #ffd700;
   padding: 48px 0 56px 0;

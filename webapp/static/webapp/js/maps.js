@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
   let scrollPosition = 0;
 
   toggleBtn.addEventListener('click', () => {
-    // Сохраняем текущий скролл
     scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
     const isActive = dropdown.classList.toggle('active');
     toggleBtn.setAttribute('aria-expanded', isActive);
 
-    if (isActive && cityBtns.length) showCity(cityBtns[0]);
+    if (isActive && cityBtns.length) {
+      showCity(cityBtns[0]);
+    }
 
-    // Восстанавливаем скролл страницы сразу, чтобы избежать скачка вниз
     window.scrollTo({ top: scrollPosition, behavior: 'auto' });
   });
 
@@ -25,28 +25,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function showCity(btn) {
-    cityBtns.forEach(b => b.setAttribute('aria-expanded', 'false'));
-    btn.setAttribute('aria-expanded', 'true');
     const city = btn.getAttribute('data-city');
+
     document.querySelectorAll('.city-addresses').forEach(section => {
-      if (section.getAttribute('data-city-addresses') === city) {
-        section.classList.add('active');
-      } else {
-        section.classList.remove('active');
-      }
+      section.classList.remove('active');
     });
+
+    cityBtns.forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+    btn.setAttribute('aria-expanded', 'true');
+    const section = document.querySelector(`.city-addresses[data-city-addresses="${city}"]`);
+    if (section) section.classList.add('active');
   }
 
   addressBlocks.forEach(block => {
     block.style.cursor = 'pointer';
     block.addEventListener('click', () => {
-      const coords = block.getAttribute('data-coords');
-      if (!coords) return;
-      const apiKey = "AIzaSyD2eymFRSREnWqpQojPCHQi8Wmij5aFn20"; // замените на ваш ключ
-      const srcUrl = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(coords)}`;
-      mapIframe.src = srcUrl;
-      addressBlocks.forEach(el => el.classList.remove('selected'));
-      block.classList.add('selected');
+      const mapSrc = block.getAttribute('data-map-src');
+      if (!mapSrc) return;
+
+      mapIframe.src = mapSrc;
+
+
+      const mapSection = document.querySelector('.address-map-real');
+      if (mapSection) {
+        mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
+
+  // ✅ Закрытие при клике вне блока
+  document.addEventListener('click', (e) => {
+    const isClickInside = dropdown.contains(e.target) || toggleBtn.contains(e.target);
+    if (!isClickInside && dropdown.classList.contains('active')) {
+      dropdown.classList.remove('active');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // ✅ Свернуть выпадающий список после выбора
+    dropdown.classList.remove('active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
 });
