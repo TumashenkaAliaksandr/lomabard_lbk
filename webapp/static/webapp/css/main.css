@@ -106,7 +106,7 @@ body.light-theme .nav-link:focus {
 }
 
 body.light-theme .gold-text {
-    color: #68675f;
+    color: #5b5a58;
     text-shadow: none;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
     text-transform: uppercase;
@@ -490,7 +490,7 @@ body.light-theme .breadcrumb-item.active {
     width: 415px;
     display: block;
     margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0#3b3416;
     font-size: 14px !important;
     text-align: center;
     position: relative;
@@ -509,7 +509,7 @@ body.light-theme .btn-consultations {
     width: 415px;
     display: block;
     margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #dfddbd;
     font-size: 14px !important;
     text-align: center;
     position: relative;
@@ -518,6 +518,12 @@ body.light-theme .btn-consultations {
 
 
 .btn-consultations:hover {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+body.light-theme .btn-consultations:hover {
     background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
@@ -780,7 +786,7 @@ body.light-theme .had-phone:hover {
 .gold-btn {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #362b09;
     width: 227px;
     text-align: center;
     position: relative;
@@ -789,7 +795,64 @@ body.light-theme .had-phone:hover {
     font-size: 14px;
 }
 
+body.light-theme .gold-btn {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #f6f5f5;
+    width: 227px;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+body.light-theme .gold-btn-map {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #f6f5f5;
+    width: 260px;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+body.light-theme .address-toggle-btn {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 13px 38px;
+    margin: 0 auto 28px auto;
+    display: block;
+    box-shadow: 0 0 7px #ffd700;
+    transition: background .3s, box-shadow .3s, color .3s;
+    border: none;
+    width: 270px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 112px;
+    top: 112px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    z-index: 10;
+}
+
 .gold-btn:hover {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+body.light-theme .gold-btn:hover {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+body.light-theme .gold-btn-map:hover {
     background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
@@ -798,7 +861,7 @@ body.light-theme .had-phone:hover {
 .shop-button {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #382e0b;
     width: 250px;
     text-align: center;
     position: relative;
@@ -824,7 +887,7 @@ body.light-theme .had-phone:hover {
 body.light-theme .shop-button {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e2e5d6;
     width: 250px;
     text-align: center;
     position: relative;
@@ -863,7 +926,8 @@ body.light-theme .shop-button:hover,
     overflow: hidden;
     border-radius: 15px;
     background: linear-gradient(135deg, #1f1f1f 0%, #3a2f00 100%);
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+    /*box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);*/
+    box-shadow: 0 0 25px rgb(17 15 1 / 68%);
 }
 
 .hero-slider input[type="radio"] {
@@ -999,7 +1063,7 @@ body.light-theme .shop-button:hover,
     position: absolute;
     top: 20px;
     left: 35px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 25px rgb(17 15 1 / 68%);
 }
 
 body.light-theme .collage-slide img {
@@ -1024,7 +1088,7 @@ body.light-theme .collage-slide img {
     right: 39px;
     color: #dab702;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
     background: linear-gradient(45deg, black, transparent);
     border-radius: 15px 15px 0 0;
     padding: 13px;
@@ -1083,7 +1147,7 @@ body.light-theme .collage-slide img {
 
 /* Светлая тема */
 body.light-theme .hero-slider {
-    background: linear-gradient(135deg, #b6af97 0%, #c2c3ae 100%);
+    background: linear-gradient(135deg, #c8c5ba 0%, #8b8b7e 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
 }
 
@@ -1358,7 +1422,7 @@ body.light-theme .section-divider {
 
 
 .product-card {
-    background-color: #42370e94;
+    background-color: #27210794;
     border-radius: 7px;
     box-shadow: 0 2px 8px rgb(255 244 0 / 59%);
     display: flex;
@@ -2245,7 +2309,30 @@ body.light-theme .section-text .section-p {
     margin-left: 21px;
     font-size: 14px;
     text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #42360d;
+}
+
+body.light-theme .BtnBlue {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 700;
+    border-radius: 6px;
+    /* box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700; */
+    display: inline-block;
+    padding: 13px 13px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 21px;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e5e9e8;
+}
+
+body.light-theme .BtnBlue:hover,
+.BtnBlue:focus {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
 }
 
 .BtnBlue:hover,
@@ -2260,7 +2347,7 @@ body.light-theme .section-text .section-p {
     color: #121212;
     font-weight: 700;
     border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #584816;
     display: inline-block;
     padding: 12px 13px; /* увеличены отступы для кнопки */
     text-decoration: none;
@@ -2269,7 +2356,30 @@ body.light-theme .section-text .section-p {
     text-transform: uppercase;
 }
 
+body.light-theme .Btnyellow {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 700;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #d8dbd4;
+    display: inline-block;
+    padding: 12px 13px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+
 .Btnyellow:hover,
+.Btnyellow:focus {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+body.light-theme .Btnyellow:hover,
 .Btnyellow:focus {
     background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
@@ -2673,8 +2783,30 @@ body.light-theme .cardGlass-two p.h3 {
     user-select: none;
     text-transform: uppercase;
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #42360d;
     transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-theme .MainBtn {
+    display: inline-block;
+    color: #121212;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 7px;
+    text-decoration: none;
+    text-align: center;
+    user-select: none;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e6ebeb;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-theme .MainBtn:hover,
+.MainBtn:focus {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
 }
 
 .MainBtn:hover,
@@ -3019,7 +3151,7 @@ body.light-theme .prices-subtitle {
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 700;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.0));
 }
 
 .price-table {
@@ -3055,7 +3187,7 @@ body.light-theme .prices-subtitle-silver {
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 700;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.0));
 }
 
 .price-table thead th {
@@ -3109,7 +3241,7 @@ body.light-theme .section-title-news {
     margin-bottom: 15px;
     color: #68675f;
     font-weight: 600;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.0));
 }
 
 body.light-theme .news-item {

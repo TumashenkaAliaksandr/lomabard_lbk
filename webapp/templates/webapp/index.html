@@ -15,29 +15,7 @@
 
         <hr class="section-divider">
 
-        <section class="products-section">
-            <h2 class="services-title">Товары</h2>
-            <div class="products-grid">
-                {% for product in products %}
-                    <div class="product-card">
-                        {% if product.main_photo %}
-                            <img src="{{ product.main_photo }}" alt="{{ product.name }}" class="product-image"/>
-                        {% else %}
-                            <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Нет изображения"
-                                 class="product-image"/>
-                        {% endif %}
-                        <h3 class="product-title">{{ product.name }}</h3>
-                        <p class="product-price">{{ product.price|floatformat:2 }} BYN</p>
-                        <a href="{{ product.get_absolute_url }}" class="product-button">Перейти</a>
-                    </div>
-                {% empty %}
-                    <p>Продукты не найдены.</p>
-                {% endfor %}
-            </div>
-            <div class="shop-button-wrapper">
-                <a href="{% url 'store' %}" class="shop-button">Перейти в магазин 🛍️</a>
-            </div>
-        </section>
+        {% include 'webapp/sections_main/products_section.html' %}
 
         <hr class="section-divider">
 
@@ -418,7 +396,7 @@
         <div class="addresses-map-main-bg">
             <div class="container container-big">
                 <h2 class="section-title-map gold-text">📍 Наши адреса</h2>
-                <button class="address-toggle-btn gold-btn" id="addressToggleBtn" aria-expanded="false">
+                <button class="address-toggle-btn gold-btn-map" id="addressToggleBtn" aria-expanded="false">
                     Посмотреть адреса 👇
                 </button>
 
