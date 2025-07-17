@@ -1,3 +1,5 @@
+/*For menu Activ, tab content*/
+
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.tab-button');
   const contents = document.querySelectorAll('.tab-content');

@@ -203,7 +203,7 @@ body.light-theme .dropdown-menu {
 
 /* Каждый пункт меню */
 .dropdown-menu .dropdown-item {
-    color: #a89e7e;
+    color: whitesmoke;
     padding: 5px 15px;
     font-weight: 500;
     text-decoration: none;
@@ -1225,9 +1225,11 @@ body.light-theme .section-divider {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 карточек в строке */
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
+    justify-content: center; /* Центрирует grid-элементы по горизонтали */
 }
+
 
 .product-card {
     background-color: #42370e94;
@@ -1337,12 +1339,16 @@ body.light-theme .product-card:hover {
 }
 
 .main-photo {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    object-fit: contain;
-    margin-bottom: 20px;
+  display: block;
+  max-width: 350px;     /* максимальная ширина — подберите под ваш дизайн */
+  width: 100%;          /* фото будет по ширине блока-родителя, но не шире max-width */
+  height: auto;         /* высота автоматически, чтобы сохранять пропорции */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  margin-bottom: 20px;
 }
+
 
 .photo-placeholder {
     width: 100%;
@@ -3478,4 +3484,31 @@ a, a:visited, a:hover, a:focus, a:active,
     outline: none !important;
     border-bottom: none !important;
     /*box-shadow: none !important;*/
+}
+
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none; /* скрыта по умолчанию */
+  background-color: #ffd700;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  color: #121212;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+  z-index: 1050;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top-btn:hover {
+  background-color: #fff700;
+  color: #000;
 }
