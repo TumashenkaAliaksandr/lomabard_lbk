@@ -1815,6 +1815,7 @@ body.light-theme .social-icon:hover,
     border-radius: 12px; /* скругленные углы для всего блока */
     color: #d4af37;
     line-height: 1.1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0px #3c320a;
 }
 
 body.light-theme .about-us-content {
@@ -1823,6 +1824,7 @@ body.light-theme .about-us-content {
     border-radius: 12px; /* скругленные углы для всего блока */
     color: #d4af37;
     line-height: 1.1;
+    box-shadow: 0 1px 3px rgb(139 139 139 / 50%), 0 0 0px 0px #7c7c7c;
 }
 
 
@@ -2744,6 +2746,7 @@ body.light-theme .Section10CollateralItems .title {
     flex-direction: column;
     align-items: stretch;
     /*margin-bottom: 32px;*/
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .blur-card {
@@ -2990,7 +2993,15 @@ body.light-theme .section-title-metal-prices {
     background: rgb(255 255 255 / 34%);
     border-radius: 7px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e0f0ff;
+}
+
+body.light-theme .prices-block {
+    margin-bottom: 50px;
+    background: rgb(255 255 255 / 34%);
+    border-radius: 7px;
+    padding: 20px;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e0f0ff;*/
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .prices-subtitle {
@@ -3082,6 +3093,7 @@ body.light-theme .prices-subtitle-silver {
     max-width: 1320px;
     margin: 0 auto;
     border-radius: 7px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .section-title-news {
@@ -3288,6 +3300,8 @@ body.light-theme .news-item {
     position: absolute;
     right: 112px;
     top: 112px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    z-index: 10;
 }
 
 .address-block.selected {
@@ -3359,6 +3373,7 @@ body.light-theme .news-item {
     cursor: pointer;
     transition: background .18s;
     display: flex;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .city-btn:hover,
@@ -3441,6 +3456,7 @@ body.light-theme .news-item {
     box-shadow: 0 8px 45px 0 rgba(255, 215, 0, 0.22);
     overflow: hidden;
     background: #1f1f1f;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .address-map-real iframe {
@@ -3638,6 +3654,27 @@ a, a:visited, a:hover, a:focus, a:active,
 
 
 .scroll-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none; /* скрыта по умолчанию */
+  background-color: #ffd700;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  color: #121212;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #ffffff;
+  z-index: 1050;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.light-theme .scroll-top-btn {
   position: fixed;
   bottom: 40px;
   right: 40px;
