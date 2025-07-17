@@ -2562,7 +2562,7 @@ body.light-theme .cardGlass {
 .cardGlass-two {
     background: rgba(255 255 255 / 0.1);
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(243, 205, 1, 0.5);
+    box-shadow: 0 0 25px rgba(243, 205, 1, 0.3);
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
@@ -2752,6 +2752,18 @@ body.light-theme .cardGlass-two p.h3 {
     border-radius: 5px; /* если есть скругления */
     z-index: 0;
     transition: background-color 0.3s ease;
+    /*background: linear-gradient(to right, #d9dcd6, #af9d5da6);*/
+}
+
+body.light-theme .cardGlass-two.Calculator-jewellery-card::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    /*background: rgb(25 25 25 / 69%); !* базовое затемнение *!*/
+    border-radius: 5px; /* если есть скругления */
+    z-index: 0;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(to right, #d9dcd6, #af9d5da6);
 }
 
 /* Текст поверх затемнения */
