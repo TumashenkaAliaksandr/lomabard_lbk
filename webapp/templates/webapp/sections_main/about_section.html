@@ -1,0 +1,37 @@
+{% load static %}
+
+
+{% block content %}
+    <section class="about-us-section">
+        <div class="container-about">
+            <h2 class="about-us-title">О нас</h2>
+            <div class="about-us-row">
+                <div class="about-us-content">
+                    <h3>Ломбард ЛБК</h3>
+                    <p>Команда профессионалов, которая занимается предоставлением качественных услуг и
+                        товаров.
+                        Миссия Ломбардов ЛБК находит свое отражение в девизе компании «Ценим самое дорогое»</p>
+                    <p>За годы работы мы заработали доверие сотен клиентов и постоянно совершенствуемся, чтобы
+                        соответствовать самым высоким стандартам.</p>
+                    <p>Обратившись в ломбард ЛБК, вы сможете быстро получить наличные деньги и с легкостью решить
+                        временные финансовые проблемы.</p>
+                    <a href="{% url 'about' %}" class="learn-more-link">Узнать больше..</a>
+                </div>
+                <div class="about-us-image">
+                    <h3>📍 Главный офис: Минск, ул. Комсомольская, д. 15А</h3>
+                    <img src="{% static 'webapp/img/lbk.png' %}" alt="Ломбард ЛБК"/>
+                    <div class="social-icons">
+                        <h2 id="info">Наши Соцсети: </h2>
+                        <a href="https://vk.com/yourpage" target="_blank" rel="noopener" aria-label="ВКонтакте"
+                           class="social-icon vk"></a>
+                        <a href="https://instagram.com/yourpage" target="_blank" rel="noopener"
+                           aria-label="Instagram" class="social-icon instagram"></a>
+                        <a href="https://t.me/yourpage" target="_blank" rel="noopener" aria-label="Telegram"
+                           class="social-icon telegram"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

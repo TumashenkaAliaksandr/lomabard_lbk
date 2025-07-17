@@ -1,0 +1,99 @@
+{% load static %}
+
+
+{% block content %}
+    <div class="addresses-map-main-bg">
+        <div class="container container-big">
+            <h2 class="section-title-map gold-text">📍 Наши адреса</h2>
+            <button class="address-toggle-btn gold-btn-map" id="addressToggleBtn" aria-expanded="false">
+                Посмотреть адреса 👇
+            </button>
+
+            <div class="address-dropdown" id="addressDropdown" aria-expanded="false">
+                <button id="closeDropdownBtn" aria-label="Закрыть адреса" class="close-dropdown-btn">×</button>
+                <!-- Навигация городов в одну строку -->
+                <div class="cities-panel">
+                    <button class="city-btn" data-city="minsk" aria-expanded="false">🏙️ 👀 Минск</button>
+                </div>
+                <div class="cities-panel">
+                    <button class="city-btn" data-city="dzerzhinsk" aria-expanded="false">🏙️ 👀 Дзержинск</button>
+                </div>
+
+                <!-- Адреса для Минска -->
+                <div class="city-addresses" data-city-addresses="minsk" aria-hidden="true">
+                    <div
+                            class="address-block"
+                            data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.6707067937073!2d27.550864776654944!3d53.9020565724557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfea319cb621%3A0x38d8391cc3905d06!2z0YPQuy4g0JrQvtC80YHQvtC80L7Qu9GM0YHQutCw0Y8gMTXQsCwg0JzQuNC90YHQuiwg0JzQuNC90YHQutCw0Y8g0L7QsdC70LDRgdGC0YwgMjIwMDE4LCDQkdC10LvQsNGA0YPRgdGM!5e0!3m2!1sru!2sca!4v1752644553988!5m2!1sru!2sca"
+                    >
+                        <span class="address-label">📍 ул. Комсомольская, 15а</span>
+                        <span>🕒 9:00 – 20:00 (без обеда и выходных)</span>
+                        <span class="address-contact">☎️ Тел.: <a
+                                href="tel:+375291848032">+375 (29) 184-80-32</a></span>
+                        <span class="address-contact">📧 E-mail: <a
+                                href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                    </div>
+                    <div
+                            class="address-block"
+                            data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.132188187708!2d27.582905876656678!3d53.929395372464114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf7342ee2b1f%3A0x64000f2183d33bdf!2z0YPQuy4g0KHRg9GA0LPQsNC90L7QstCwIDUyLCDQnNC40L3RgdC6LCDQnNC40L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0JHQtdC70LDRgNGD0YHRjA!5e0!3m2!1sru!2sca!4v1752645182802!5m2!1sru!2sca"
+                    >
+                        <span class="address-label">📍 ул. Сурганова, 52</span>
+                        <span>🕒 9:00 – 21:00 (без обеда и выходных)</span>
+                        <span class="address-contact">☎️ Тел.: <a
+                                href="tel:+375297228421">+375 (29) 722-84-21</a></span>
+                        <span class="address-contact">📧 E-mail: <a
+                                href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                    </div>
+                    <div
+                            class="address-block"
+                            data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2350.406836827663!2d27.578966690216493!3d53.906746101440014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcfb0a1b78e45%3A0xcf52e1db722734b8!2z0YPQu9C40YbQsCDQl9C80LjRgtGA0L7QutCwINCR0Y_QtNGD0LvQuCAzLCDQnNC40L3RgdC6LCDQnNC40L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0JHQtdC70LDRgNGD0YHRjA!5e0!3m2!1sru!2sca!4v1752656167730!5m2!1sru!2sca"
+                    >
+                        <span class="address-label">📍 ул. З. Бядули, д.3</span>
+                        <span>🕒 9:00 – 20:00 (без обеда и выходных)</span>
+                        <span class="address-contact">☎️ Тел.: <a
+                                href="tel:+375291757591">+375 (29) 175-75-91</a></span>
+                        <span class="address-contact">
+                                📧 E-mail: <a href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a>
+                            </span>
+                    </div>
+                    <div
+                            class="address-block"
+                            data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.5255331523267!2d27.53397357665386!3d53.88686257245107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbd01fcdec5cb3%3A0x9dcb1bb7d75cab33!2z0YPQuy4g0JzQvtGB0LrQvtCy0YHQutCw0Y8gMjAsINCc0LjQvdGB0LosINCc0LjQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMIDIyMDA4OSwg0JHQtdC70LDRgNGD0YHRjA!5e0!3m2!1sru!2sca!4v1752645356416!5m2!1sru!2sca"
+                    >
+                        <span class="address-label">📍 ул. Московская, д.20</span>
+                        <span>🕒 9:00 – 20:00 (без обеда, пон.–субб.; воскресенье и праздничные дни выходной)</span>
+                        <span class="address-contact">☎️ Тел.: <a
+                                href="tel:+375291848062">+375 (29) 184-80-62</a></span>
+                        <span class="address-contact">📧 E-mail: <a
+                                href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                    </div>
+                </div>
+
+                <!-- Адреса для Дзержинска -->
+                <div class="city-addresses" data-city-addresses="dzerzhinsk" aria-hidden="true">
+                    <div
+                            class="address-block"
+                            data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2362.8080900917107!2d27.128693476641082!3d53.686045672389795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d9641930cdd915%3A0xd343e95a46d9d6c!2z0YPQu9C40YbQsCDQodC-0LLQtdGC0YHQutCw0Y8gMSwg0JTQt9C10YDQttC40L3RgdC6LCDQnNC40L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCAyMjI3MTIsINCR0LXQu9Cw0YDRg9GB0Yw!5e0!3m2!1sru!2sca!4v1752645759589!5m2!1sru!2sca"
+                    >
+                        <span class="address-label">📍 ул. Советская, д.1</span>
+                        <span>🕒 9:00 – 20:00 (без обеда и выходных)</span>
+                        <span class="address-contact">☎️ Тел.: <a
+                                href="tel:+375291848126">+375 (29) 184-81-26</a></span>
+                        <span class="address-contact">📧 E-mail: <a
+                                href="mailto:lombard_lbk@mail.ru">lombard_lbk@mail.ru</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="address-map-real">
+                <iframe
+                        src=""
+                        frameborder="0"
+                        loading="lazy"
+                        allowfullscreen=""
+                        aria-label="Карта адресов"
+                        style="width: 100%; height: 420px; border-radius: 12px;"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}

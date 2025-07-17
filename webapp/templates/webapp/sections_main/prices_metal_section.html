@@ -1,0 +1,73 @@
+{% load static %}
+
+
+{% block content %}
+    <div class="section-prices">
+        <div class="container-metally">
+            <h2 class="section-title-metal-prices">Цены на золото и серебро</h2>
+
+            <!-- Блок с ценами на золото -->
+            <div class="prices-block">
+                <h3 class="prices-subtitle">🏷️ Цены на золото</h3>
+                <table class="price-table" aria-label="Таблица цен на золото">
+                    <thead>
+                    <tr>
+                        <th scope="col">🧈 Проба</th>
+                        <th scope="col">375*</th>
+                        <th scope="col">500*</th>
+                        <th scope="col">583*</th>
+                        <th scope="col">750*</th>
+                        <th scope="col">900*</th>
+                        <th scope="col">916*</th>
+                        <th scope="col">950*</th>
+                        <th scope="col">958*</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Цена за 1 г 🧈 (BYN)</th>
+                        <td class="price-cell" data-rate="gold-375">-</td>
+                        <td class="price-cell" data-rate="gold-500">-</td>
+                        <td class="price-cell" data-rate="gold-583">-</td>
+                        <td class="price-cell" data-rate="gold-750">-</td>
+                        <td class="price-cell" data-rate="gold-900">-</td>
+                        <td class="price-cell" data-rate="gold-916">-</td>
+                        <td class="price-cell" data-rate="gold-950">-</td>
+                        <td class="price-cell" data-rate="gold-958">-</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Блок с ценами на серебро -->
+            <div class="prices-block">
+                <h3 class="prices-subtitle-silver">🏷️ Цены на серебро</h3>
+                <table class="price-table" aria-label="Таблица цен на серебро">
+                    <thead class="silver">
+                    <tr>
+                        <th scope="col">🔘 Проба</th>
+                        <th scope="col">750*</th>
+                        <th scope="col">800*</th>
+                        <th scope="col">875*</th>
+                        <th scope="col">916*</th>
+                        <th scope="col">925*</th>
+                        <th scope="col">960*</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Цена за 1 г 🔘 (BYN)</th>
+                        <td class="price-cell" data-rate="silver-750">-</td>
+                        <td class="price-cell" data-rate="silver-800">-</td>
+                        <td class="price-cell" data-rate="silver-875">-</td>
+                        <td class="price-cell" data-rate="silver-916">-</td>
+                        <td class="price-cell" data-rate="silver-925">-</td>
+                        <td class="price-cell" data-rate="silver-960">-</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
