@@ -490,12 +490,32 @@ body.light-theme .breadcrumb-item.active {
     width: 415px;
     display: block;
     margin: 0 auto;
-    box-shadow: 0 0 2px #ffd700, 0 0 7px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #fff700;
     font-size: 14px !important;
     text-align: center;
     position: relative;
     height: 54px;
 }
+
+
+body.light-theme .btn-consultations {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 2px 8px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    width: 415px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    font-size: 14px !important;
+    text-align: center;
+    position: relative;
+    height: 54px;
+}
+
 
 .btn-consultations:hover {
     background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
@@ -760,7 +780,7 @@ body.light-theme .had-phone:hover {
 .gold-btn {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
-    box-shadow: 0 0 2px #ffd700, 0 0 7px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
     width: 227px;
     text-align: center;
     position: relative;
@@ -778,7 +798,7 @@ body.light-theme .had-phone:hover {
 .shop-button {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     color: #121212;
-    box-shadow: 0 0 2px #ffd700, 0 0 7px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #fff700;
     width: 250px;
     text-align: center;
     position: relative;
@@ -795,6 +815,32 @@ body.light-theme .had-phone:hover {
 }
 
 .shop-button:hover,
+.shop-button:focus {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+body.light-theme .shop-button {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: 50px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    height: 56px;
+}
+
+body.light-theme .shop-button:hover,
 .shop-button:focus {
     background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
@@ -904,62 +950,141 @@ body.light-theme .had-phone:hover {
 
 /* --- Новый слайдер-коллаж справа --- */
 .collage-slider {
-    position: relative;
-    width: 33%; /* примерно 1/3 ширины */
-    height: 400px;
-    overflow: hidden;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #716747 0%, #f8f8f8 100%);
-    box-shadow: 0 0 25px rgb(43 43 41 / 46%);
+  position: relative;
+  width: 33%; /* примерно 1/3 ширины родителя */
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  /*background: linear-gradient(135deg, #716747 0%, #f8f8f8 100%);*/
+  /*box-shadow: 0 0 25px rgb(43 43 41 / 46%);*/
+  user-select: none;
 }
 
 .collage-slider input[type="radio"] {
-    display: none;
+  display: none;
 }
 
 .collage-slides {
-    display: flex;
-    width: 400%; /* 4 слайда */
-    height: 100%;
-    transition: transform 0.6s ease-in-out;
+  display: flex;
+  width: 400%; /* 4 слайда */
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  gap: 10px; /* расстояние между слайдами */
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .collage-slide {
-    flex: 0 0 25%;
+    flex: 0 0 calc(25% - 7.5px);
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 0;
+    padding: 125px;
+    /* background-color: #fff; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: none;
 }
 
+/* Изображение занимает всю доступную ширину/высоту контейнера, но кнопка и имя располагаются поверх */
 .collage-slide img {
-    width: 100%;
-    height: 100%;
+    width: 83%;
+    height: 90%;
     object-fit: cover;
     border-radius: 15px;
+    display: block;
+    user-select: none;
+    /* padding-bottom: 30px; */
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgba(255, 215, 0, 0.8);
 }
 
-/* Переключение слайдов коллажа */
+body.light-theme .collage-slide img {
+    width: 83%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    user-select: none;
+    /* padding-bottom: 30px; */
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
+}
+
+/* Название продукта — позиционируется абсолютно поверх фото */
+.product-name-slider {
+    position: absolute;
+    top: 19px;
+    left: 34px;
+    right: 39px;
+    color: #dab702;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, black, transparent);
+    border-radius: 15px 15px 0 0;
+    padding: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Кнопка "Перейти" — тоже поверх картинки, внизу справа */
+.product-link-slider-btn {
+    position: absolute;
+    top: 330px; /* фиксированное положение, можно подкорректировать */
+    left: 45px;
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #ffd700;
+    color: #121212;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
+}
+
+.product-link-slider-btn:hover {
+  background-color: #fff700;
+  color: #000;
+}
+
+/* Переключение слайдов коллажа - сдвиг контейнера */
 #collage-slide1:checked ~ .collage-slides {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 #collage-slide2:checked ~ .collage-slides {
-    transform: translateX(-25%);
+  transform: translateX(-25%);
 }
 
 #collage-slide3:checked ~ .collage-slides {
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 #collage-slide4:checked ~ .collage-slides {
-    transform: translateX(-75%);
+  transform: translateX(-75%);
 }
+
 
 
 /* Светлая тема */
 body.light-theme .hero-slider {
     background: linear-gradient(135deg, #b6af97 0%, #c2c3ae 100%);
-    box-shadow: 0 0 25px rgb(43 43 41 / 46%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
 }
 
 .services-icons {
@@ -1124,6 +1249,7 @@ body.light-theme .services-title-footer a {
     padding: 6px; /* внутренний отступ, чтобы иконка не прилегала к рамке */
     box-sizing: border-box; /* учитываем padding в размерах */
     transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
 }
 
 /* Можно добавить эффект при наведении */
@@ -1305,13 +1431,36 @@ body.light-theme .product-card:hover {
     border-radius: 7px;
     text-decoration: none;
     user-select: none;
-    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #fff700;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
     font-size: 14px;
 }
 
 .product-button:hover {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
+}
+
+
+body.light-theme .product-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 7px;
+    text-decoration: none;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    font-size: 14px;
+}
+
+body.light-theme .product-button:hover {
     background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
@@ -2086,7 +2235,7 @@ body.light-theme .section-text .section-p {
     color: #121212;
     font-weight: 700;
     border-radius: 6px;
-    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    /*box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;*/
     display: inline-block;
     padding: 13px 13px; /* увеличены отступы для кнопки */
     text-decoration: none;
@@ -2094,6 +2243,7 @@ body.light-theme .section-text .section-p {
     margin-left: 21px;
     font-size: 14px;
     text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
 }
 
 .BtnBlue:hover,
@@ -2108,7 +2258,7 @@ body.light-theme .section-text .section-p {
     color: #121212;
     font-weight: 700;
     border-radius: 6px;
-    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
     display: inline-block;
     padding: 12px 13px; /* увеличены отступы для кнопки */
     text-decoration: none;
@@ -2521,7 +2671,7 @@ body.light-theme .cardGlass-two p.h3 {
     user-select: none;
     text-transform: uppercase;
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
-    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -2839,8 +2989,8 @@ body.light-theme .section-title-metal-prices {
     margin-bottom: 50px;
     background: rgb(255 255 255 / 34%);
     border-radius: 7px;
-    box-shadow: 0 6px 14px rgb(0 0 0 / 0.1);
     padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e0f0ff;
 }
 
 .prices-subtitle {
@@ -2960,7 +3110,7 @@ body.light-theme .news-item {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     font-size: 21px;
     color: #68675f;
-    height: 220px;
+    height: 230px;
 }
 
 .news-slider-wrapper {
@@ -3083,7 +3233,7 @@ body.light-theme .news-item {
     border-radius: 7px;
     text-decoration: none;
     user-select: none;
-    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #fff700;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     border: none;
     font-size: 13px;
@@ -3500,7 +3650,7 @@ a, a:visited, a:hover, a:focus, a:active,
   font-size: 24px;
   color: #121212;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.6);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #ffffff;
   z-index: 1050;
   transition: opacity 0.3s ease;
   display: flex;

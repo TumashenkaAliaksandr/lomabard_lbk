@@ -31,38 +31,46 @@
     </section>
 
     <!-- Новый слайдер-коллаж справа -->
-<section class="collage-slider">
-    {% for i in "1234" %}
-        <input type="radio" name="collage-slider" id="collage-slide{{ forloop.counter }}"
-               {% if forloop.first %}checked{% endif %} hidden>
-    {% endfor %}
-    <div class="collage-slides">
-        {# Выводим первые 4 продукта #}
-        {% for product in products|slice:":4" %}
-            <div class="collage-slide">
-                <a href="{{ product.get_absolute_url }}">
-                    {% if product.main_photo %}
-                        <img src="{{ product.main_photo }}" alt="{{ product.name }}">
-                    {% else %}
-                        <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Нет изображения">
-                    {% endif %}
-                </a>
-            </div>
+    <section class="collage-slider">
+        {% for i in "1234" %}
+            <input type="radio" name="collage-slider" id="collage-slide{{ forloop.counter }}"
+                   {% if forloop.first %}checked{% endif %} hidden>
         {% endfor %}
+        <div class="collage-slides">
+            {# Выводим первые 4 продукта #}
+            {% for product in products|slice:":4" %}
+                <div class="collage-slide">
+                    <a href="{{ product.get_absolute_url }}">
+                        {% if product.main_photo %}
+                            <img src="{{ product.main_photo }}" alt="{{ product.name }}">
+                        {% else %}
+                            <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Нет изображения">
+                        {% endif %}
+                        <div class="collage-info">
+                            <h4 class="product-name-slider">{{ product.name }}</h4>
+                            <span class="product-link-slider-btn">Перейти</span>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
 
-        {# Если продуктов меньше 4, добавляем дефолтные слайды #}
-        {% with missing=4|add:"-products|length" %}
-            {% if missing > 0 %}
-                {% for _ in missing|make_list %}
-                    <div class="collage-slide">
-                        <a href="{% url 'about' %}">
-                            <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Дефолтное изображение">
-                        </a>
-                    </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </div>
-</section>
+            {# Если продуктов меньше 4, добавляем дефолтные слайды #}
+            {% with missing=4|add:"-products|length" %}
+                {% if missing > 0 %}
+                    {% for _ in missing|make_list %}
+                        <div class="collage-slide">
+                            <a href="{% url 'about' %}">
+                                <img src="{% static 'webapp/img/defoult_img.png' %}" alt="Дефолтное изображение">
+                                <div class="collage-info">
+                                    <h4 class="product-name-slider">Название отсутствует</h4>
+                                    <span class="product-link-slider-btn">Перейти</span>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </section>
 
 </section>

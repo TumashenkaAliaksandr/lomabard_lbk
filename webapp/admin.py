@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from .models import Slider, ServiceIcon, ProductPhoto, Product, ProductFlag
+from .models import Slider, ServiceIcon, ProductPhoto, Product
 
 
 @admin.register(Slider)
@@ -34,25 +34,65 @@ class ProductPhotoInline(admin.TabularInline):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'phone', 'get_flags', 'main_photo_tag')
+    list_display = (
+        'name',
+        'price',
+        'phone',
+        'flags_display',
+        'main_photo_tag',
+    )
     search_fields = ('name', 'description', 'characteristics')
-    list_filter = ('flags',)
+
+    # Фильтровать теперь по булевым полям нужно через list_filter с перечислением полей
+    list_filter = (
+        'is_main',
+        'is_precious_metals',
+        'is_home_appliances',
+        'is_electronics',
+        'is_tools',
+        'is_sport_tourism',
+        'is_children',
+        'is_laptops',
+        'is_watches',
+        'is_tv',
+        'is_other',
+    )
+
     inlines = [ProductPhotoInline]
 
-    def get_flags(self, obj):
-        return ", ".join(flag.name for flag in obj.flags.all())
-    get_flags.short_description = "Флаги"
+    def flags_display(self, obj):
+        flags = []
+        if obj.is_main:
+            flags.append("На главную")
+        if obj.is_precious_metals:
+            flags.append("Драгоценные металлы")
+        if obj.is_home_appliances:
+            flags.append("Бытовая техника")
+        if obj.is_electronics:
+            flags.append("Электроника")
+        if obj.is_tools:
+            flags.append("Инструменты")
+        if obj.is_sport_tourism:
+            flags.append("Спорт/Туризм")
+        if obj.is_children:
+            flags.append("Детское")
+        if obj.is_laptops:
+            flags.append("Ноутбуки")
+        if obj.is_watches:
+            flags.append("Часы")
+        if obj.is_tv:
+            flags.append("Телевизоры")
+        if obj.is_other:
+            flags.append("Другое")
+
+        return ", ".join(flags) if flags else "-"
+
+    flags_display.short_description = "Флаги"
 
     def main_photo_tag(self, obj):
         url = obj.main_photo()
         if url:
-            return format_html('<img src="{}" style="height:50px; border-radius: 4px;" />', url)
+            return format_html('<img src="{}" style="height:50px; border-radius:4px;" />', url)
         return "-"
+
     main_photo_tag.short_description = "Главное фото"
-    main_photo_tag.allow_tags = True  # В новых версиях Django не обязателен, но можно оставить
-
-
-@admin.register(ProductFlag)
-class ProductFlagAdmin(admin.ModelAdmin):
-    list_display = ('name', 'code')
-    search_fields = ('name', 'code')

@@ -33,34 +33,8 @@ class ServiceIcon(models.Model):
         return self.name
 
 
-class ProductFlag(models.Model):
-    code = models.CharField("Код", max_length=30, unique=True)
-    name = models.CharField("Название", max_length=50)
-
-    class Meta:
-        verbose_name = "Флаг продукта"
-        verbose_name_plural = "Флаги продуктов"
-
-    def __str__(self):
-        return self.name
-
 
 class Product(models.Model):
-    # Флаги категорий
-    FLAG_CHOICES = [
-        ('main', 'На главную'),
-        ('precious_metals', 'Драгоценные металлы'),
-        ('home_appliances', 'Бытовая техника'),
-        ('electronics', 'Электроника'),
-        ('tools', 'Инструменты'),
-        ('sport_tourism', 'Спорт/Туризм'),
-        ('children', 'Детское'),
-        ('laptops', 'Ноутбуки'),
-        ('watches', 'Часы'),
-        ('tv', 'Телевизоры'),
-        ('other', 'Другое'),
-    ]
-
     name = models.CharField("Название", max_length=255)
     slug = models.SlugField("Слаг", max_length=255, unique=True, default='default')
     description = models.TextField("Описание", blank=True)
@@ -80,15 +54,18 @@ class Product(models.Model):
         ],
     )
 
-
-
-    # Флаги — связь ManyToMany с моделью ProductFlag
-    flags = models.ManyToManyField(
-        ProductFlag,
-        verbose_name="Флаги",
-        blank=True,
-        related_name='products'
-    )
+    # Булевы поля вместо ManyToMany flags
+    is_main = models.BooleanField('На главную', default=False, blank=True)
+    is_precious_metals = models.BooleanField('Драгоценные металлы', default=False, blank=True)
+    is_home_appliances = models.BooleanField('Бытовая техника', default=False, blank=True)
+    is_electronics = models.BooleanField('Электроника', default=False, blank=True)
+    is_tools = models.BooleanField('Инструменты', default=False, blank=True)
+    is_sport_tourism = models.BooleanField('Спорт/Туризм', default=False, blank=True)
+    is_children = models.BooleanField('Детское', default=False, blank=True)
+    is_laptops = models.BooleanField('Ноутбуки', default=False, blank=True)
+    is_watches = models.BooleanField('Часы', default=False, blank=True)
+    is_tv = models.BooleanField('Телевизоры', default=False, blank=True)
+    is_other = models.BooleanField('Другое', default=False, blank=True)
 
     class Meta:
         verbose_name = "Продукт"
@@ -108,6 +85,7 @@ class Product(models.Model):
     def get_absolute_url(self):
         """Возвращает URL детальной страницы продукта"""
         return reverse('product_detail', kwargs={'slug': self.slug})
+
 
 
 class ProductPhoto(models.Model):

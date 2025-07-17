@@ -71,7 +71,7 @@ def index(request):
     """
     slides = Slider.objects.all()
     services = ServiceIcon.objects.all()
-    products = Product.objects.all().order_by('name')
+    products = Product.objects.filter(is_main=True).order_by('name')[:6]
     # Не ищем конкретный продукт по слагу, т.к. это главная страница
     context = {
         'slides': slides,

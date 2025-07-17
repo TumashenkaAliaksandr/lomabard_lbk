@@ -6,6 +6,7 @@
     <main class="main-bg main-content">
         <br><br>
         <h2 class="services-title"><a href="#info">💥 Оформи залог за 5 минут и получи до 97% от ее Оценочной стоимости! 👇👇👇</a></h2>
+
         {% include 'main/main_slider.html' %}
 
         <hr class="section-divider">
@@ -17,7 +18,7 @@
         <section class="products-section">
             <h2 class="services-title">Товары</h2>
             <div class="products-grid">
-                {% for product in products|slice:":6" %}
+                {% for product in products %}
                     <div class="product-card">
                         {% if product.main_photo %}
                             <img src="{{ product.main_photo }}" alt="{{ product.name }}" class="product-image"/>
@@ -370,7 +371,7 @@
                         <p class="news-description">Краткое описание новости 1, чтобы заинтересовать пользователя
                             прочитать подробнее.</p>
                         <p class="news-description">Дата: 13.09.2025.г</p>
-                        <a href="#" class="news-link" aria-label="Перейти к новости 1">Перейти →</a>
+                        <a href="#" class="news-link" aria-label="Перейти к новости 1">📖 Читать</a>
                     </div>
 
                     <div class="news-item">
@@ -379,7 +380,7 @@
                         <p class="news-description">Краткое описание новости 2, чтобы заинтересовать пользователя
                             прочитать подробнее.</p>
                         <p class="news-description">Дата: 13.09.2025.г</p>
-                        <a href="#" class="news-link" aria-label="Перейти к новости 2">Перейти →</a>
+                        <a href="#" class="news-link" aria-label="Перейти к новости 2">📖 Читать</a>
                     </div>
 
                     <div class="news-item">
@@ -387,7 +388,7 @@
                         <h3 class="news-title">Новость 3: Integer nec odio</h3>
                         <p class="news-description">Краткое описание новости 3 для привлечения внимания.</p>
                         <p class="news-description">Дата: 13.09.2025.г</p>
-                        <a href="#" class="news-link" aria-label="Перейти к новости 3">Перейти →</a>
+                        <a href="#" class="news-link" aria-label="Перейти к новости 3">📖 Читать</a>
                     </div>
 
                     <div class="news-item">
@@ -395,7 +396,7 @@
                         <h3 class="news-title">Новость 4: Integer nec odio</h3>
                         <p class="news-description">Краткое описание новости 4 для привлечения внимания.</p>
                         <p class="news-description">Дата: 13.09.2025.г</p>
-                        <a href="#" class="news-link" aria-label="Перейти к новости 4">Перейти →</a>
+                        <a href="#" class="news-link" aria-label="Перейти к новости 4">📖 Читать</a>
                     </div>
 
                     <div class="news-item">
@@ -403,7 +404,7 @@
                         <h3 class="news-title">Новость 5: Integer nec odio</h3>
                         <p class="news-description">Краткое описание новости 5 для привлечения внимания.</p>
                         <p class="news-description">Дата: 13.09.2025.г</p>
-                        <a href="#" class="news-link" aria-label="Перейти к новости 5">Перейти →</a>
+                        <a href="#" class="news-link" aria-label="Перейти к новости 5">📖 Читать</a>
                     </div>
 
                     <!-- Добавьте еще новости по шаблону -->
