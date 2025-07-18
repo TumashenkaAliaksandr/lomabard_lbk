@@ -9,10 +9,42 @@
         </ol>
     </nav>
 
-    <section>
-        <div class="title-decor">
-            <h2>Тут пока ни чего.</h2>
+    <section class="contact-bg">
+        {% include 'webapp/sections_main/adress_section.html' %}
+
+        <div class="lombard-addresses-item" itemscope itemtype="https://schema.org/LocalBusiness">
+
+            <div class="lombard-addresses-item-img">
+                <img src="{% static 'webapp/img/lbk.png' %}"
+                     alt="Фото к г. Минск, ул. Комсомольская, д.15а"
+                     loading="lazy" itemprop="photo"
+                     class="lombard-addresses-photo"/>
+            </div>
+
+            <div class="lombard-addresses-item-info">
+                <div class="lombard-addresses-item-address" itemprop="address" itemscope
+                     itemtype="https://schema.org/PostalAddress">
+                    <p>🏘️ г. <span itemprop="addressLocality">Минск</span> ул. <span itemprop="streetAddress">Комсомольская, д.15а</span>
+                    </p>
+                    <p>💡 вход в арку</p>
+                </div>
+                <div class="lombard-addresses-item-time">
+                    <h5 class="workhours-title-mobile">🕔 Время работы:</h5>
+                    <p>📅 Понедельник – Воскресенье: с 9:00 до 21:00</p>
+                    <p>🥪 Перерыв: с 13:30 до 14:00</p>
+                </div>
+            </div>
+
+            <div class="lombard-addresses-item-number">
+                <h5 class="workhours-title-mobile">📞 Телефоны:</h5>
+                <a class="lombard-addresses-phone" href="tel:+375445340544"><span
+                        itemprop="telephone">+375(44)5340544</span></a>
+                <a class="lombard-addresses-phone" href="tel:80173602623"><span itemprop="telephone">8(017)3602623</span></a>
+            </div>
+
         </div>
+
+
     </section>
 
 

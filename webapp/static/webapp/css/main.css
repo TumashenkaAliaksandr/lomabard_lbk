@@ -32,6 +32,21 @@ body .main-bg {
     color: #ffd700;
 }
 
+
+body .contact-bg {
+    padding: 35px 0 35px;
+    background: linear-gradient(to left, rgba(20, 20, 20, 0.98) 0%, /* очень тёмный почти чёрный слева */ rgba(60, 50, 10, 0.95) 45%, /* глубокий тёмно-золотистый в середине */ rgb(65 50 1 / 88%) 100% /* мягкий золотой справа */), url(../img/contacts_bg.jpg) center center / cover no-repeat fixed;
+    background-attachment: fixed;
+    color: #ffd700;
+}
+
+body.light-theme .contact-bg {
+    padding: 35px 0 35px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.85) 0%, rgba(236, 248, 249, 0.95) 45%, rgb(173 146 61 / 65%) 100%), url(../img/contacts_bg.jpg) center center / cover no-repeat fixed;
+    background-attachment: fixed;
+    color: #ffd700;
+}
+
 .container {
     width: 90%; /* или 95% — подберите комфортное значение */
     max-width: 1200px;
@@ -3762,6 +3777,104 @@ body.light-theme .news-item {
     margin-top: 10px;
     border-radius: 4px; /* опционально, чтобы фон смотрелся аккуратно */
 }
+.lombard-addresses-item {
+    display: flex;
+    background: linear-gradient(to right, #d3d3d34a, #dfcd8c4f);
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    margin: 18px 55px 25px;
+    padding: 30px 17px 30px;
+    align-items: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 1400px;
+    justify-content: flex-start;
+    height: 200px;
+}
+
+.lombard-addresses-item:hover {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.17);
+    transform: translateY(-3px) scale(1.012);
+}
+
+/* Квадратная обёртка для картинки */
+.lombard-addresses-item-img {
+    flex: 0 0 180px;
+    margin-right: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px; /* теперь высота равна ширине, чтобы держать картинку квадратной */
+}
+
+/* КВАДРАТНОЕ фото */
+.lombard-addresses-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 7px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+
+.lombard-addresses-item-info {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    gap: 5px; /* отступ между адресом и временем работы */
+    align-items: center;
+}
+
+.lombard-addresses-item-address,
+.lombard-addresses-item-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lombard-addresses-item-address {
+    flex: 2;
+    font-weight: bold;
+    font-size: 1.65em;
+    line-height: 1;
+}
+
+.lombard-addresses-item-time p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.lombard-addresses-item-time {
+    flex: 1.5;
+    color: #f0f0ef;
+    font-size: 1.3em;
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+}
+
+/* Контейнер контактов справа с отступом от времени работы */
+.lombard-addresses-item-number {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 40px;
+    font-size: 1.5em;
+    color: #eeefef;
+    line-height: 1;
+}
+
+/* Телефонные ссылки */
+.lombard-addresses-phone {
+    text-decoration: underline;
+    color: #eef0f1;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lombard-addresses-phone:hover {
+    color: #ffc500;
+}
+
+
 
 
 /* Социальные сети - контейнер */
