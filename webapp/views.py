@@ -94,7 +94,12 @@ def about(request):
     """
     Страница О нас
     """
-    return render(request, 'webapp/about.html')
+    services = ServiceIcon.objects.all()
+
+    context = {
+        'services': services,
+    }
+    return render(request, 'webapp/about.html', context=context)
 
 
 def store(request):
