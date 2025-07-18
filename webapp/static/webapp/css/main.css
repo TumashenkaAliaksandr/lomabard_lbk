@@ -3921,6 +3921,34 @@ body.light-theme .lombard-addresses-phone:hover {
     padding: 0 20px;
 }
 
+.sercives-info-left p{
+    font-size: 1.3em;
+    color: #b69e3e;
+    line-height: 1.15;
+    margin-bottom: 1em;
+}
+
+.sercives-info-left h5{
+    font-size: 1.4em;
+    color: #b69e3e;
+    line-height: 1.15;
+    margin-bottom: 1em;
+}
+
+body.light-theme .sercives-info-left h5{
+    font-size: 1.4em;
+    color: #68675f;
+    line-height: 1.15;
+    margin-bottom: 1em;
+}
+
+body.light-theme .sercives-info-left p{
+    font-size: 1.3em;
+    color: #68675f;
+    line-height: 1.15;
+    margin-bottom: 1em;
+}
+
 /* Обертка блока с изображением */
 .about-info-img {
     flex: 1 1 40%;      /* занимает 40% ширины контейнера */
@@ -3930,8 +3958,79 @@ body.light-theme .lombard-addresses-phone:hover {
 }
 
 .sercives-info-left p {
-    line-height: 1.8;
+    line-height: 1.3;
 }
+
+.tablet-text {
+    font-size: 1.1em;
+    color: #b69e3e;
+    line-height: 1.1;
+}
+
+body.light-theme .tablet-text {
+    font-size: 1.1em;
+    color: #68675f;
+    line-height: 1.1;
+}
+
+.steps {
+  padding: 40px 0 20px 0;
+}
+
+.steps h3 {
+  text-align: center;
+  font-size: 2.1em;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #272727;
+}
+
+.steps-items .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 0;
+  justify-content: center;
+}
+
+.step-item {
+  width: 100%;
+  max-width: 280px;
+  flex: 1 1 22%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.step-item-img {
+  margin-bottom: 18px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-item-img svg {
+  max-height: 100px;
+  width: auto;
+  display: block;
+}
+
+.step-item p {
+  font-size: 1.18em;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #313131;
+  margin: 0 0 0 0;
+  min-height: 48px; /* Можно увеличить для выравнивания */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 
 
@@ -4013,4 +4112,53 @@ body.light-theme .scroll-top-btn {
 .scroll-top-btn:hover {
   background-color: #fff700;
   color: #000;
+}
+
+.about-h3 {
+    line-height: 0.7;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.9rem;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+
+body.light-theme .about-h3 {
+    line-height: 0.7;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.9rem;
+    color: #68675f;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.sercives-info-left-two h3 {
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+body.light-theme .sercives-info-left-two h3 {
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #68675f;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
