@@ -44,7 +44,7 @@ body.light-theme .contact-bg {
     padding: 35px 0 35px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.85) 0%, rgba(236, 248, 249, 0.95) 45%, rgb(173 146 61 / 65%) 100%), url(../img/contacts_bg.jpg) center center / cover no-repeat fixed;
     background-attachment: fixed;
-    color: #ffd700;
+    color: #5b5a58;
 }
 
 .container {
@@ -3792,9 +3792,13 @@ body.light-theme .news-item {
 }
 
 .lombard-addresses-item:hover {
-    box-shadow: 0 8px 22px rgba(0,0,0,0.17);
-    transform: translateY(-3px) scale(1.012);
+    box-shadow: 0 8px 22px rgb(255, 255, 255);
 }
+
+.lombard-addresses-item:hover p h5 {
+    transform: none !important;
+}
+
 
 /* Квадратная обёртка для картинки */
 .lombard-addresses-item-img {
@@ -3851,6 +3855,15 @@ body.light-theme .news-item {
     left: 50%;
 }
 
+body.light-theme .lombard-addresses-item-time {
+    flex: 1.5;
+    color: #5b5a58;;
+    font-size: 1.3em;
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+}
+
 /* Контейнер контактов справа с отступом от времени работы */
 .lombard-addresses-item-number {
     display: flex;
@@ -3862,6 +3875,16 @@ body.light-theme .news-item {
     line-height: 1;
 }
 
+body.light-theme .lombard-addresses-item-number {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 40px;
+    font-size: 1.5em;
+    color: #5b5a58;;
+    line-height: 1;
+}
+
 /* Телефонные ссылки */
 .lombard-addresses-phone {
     text-decoration: underline;
@@ -3870,8 +3893,19 @@ body.light-theme .news-item {
     transition: color 0.2s;
 }
 
+body.light-theme .lombard-addresses-phone {
+    text-decoration: underline;
+    color: #5b5a58;;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
 .lombard-addresses-phone:hover {
     color: #ffc500;
+}
+
+body.light-theme .lombard-addresses-phone:hover {
+    color: #ffd700;
 }
 
 
