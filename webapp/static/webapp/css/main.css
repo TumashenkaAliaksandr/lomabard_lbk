@@ -3908,6 +3908,30 @@ body.light-theme .lombard-addresses-phone:hover {
     color: #ffd700;
 }
 
+.about-info {
+    max-width: 1400px; /* если нужно шире - увеличьте */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Обертка блока текста */
+.sercives-info-left {
+    flex: 1 1 60%;      /* занимает 60% ширины контейнера */
+    max-width: 60%;
+    padding: 0 20px;
+}
+
+/* Обертка блока с изображением */
+.about-info-img {
+    flex: 1 1 40%;      /* занимает 40% ширины контейнера */
+    max-width: 40%;
+    /* убедитесь, что высота и растяжка корректные */
+    height: auto;
+}
+
+.sercives-info-left p {
+    line-height: 1.8;
+}
 
 
 
