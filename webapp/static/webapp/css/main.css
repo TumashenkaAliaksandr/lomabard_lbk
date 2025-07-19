@@ -3993,7 +3993,7 @@ body.light-theme .tablet-text {
 }
 
 .step-item {
-  width: 100%;
+  /*width: 100%;*/
   max-width: 280px;
   flex: 1 1 22%;
   box-sizing: border-box;
@@ -4012,22 +4012,41 @@ body.light-theme .tablet-text {
   justify-content: center;
 }
 
-.step-item-img svg {
-  max-height: 100px;
-  width: auto;
-  display: block;
+.step-item-img img {
+    max-height: 100px;
+    width: auto;
+    display: block;
+    border-radius: 50px;
+    height: 75px;
+    margin-top: 17px;
+
 }
 
 .step-item p {
-  font-size: 1.18em;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #313131;
-  margin: 0 0 0 0;
-  min-height: 48px; /* Можно увеличить для выравнивания */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #b69e3e;
+    margin: 20px 10px 10px 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+
+
+body.light-theme .step-item p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #68675f;
+    margin: 20px 10px 10px 10px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
 }
 
 
