@@ -4053,6 +4053,118 @@ body.light-theme .step-item p {
 
 
 
+.lbk-disclosure-link-home {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.lbk-disclosure-main {
+    max-width: 1300px;
+    margin: 30px auto 40px auto;
+    padding: 0 15px;
+}
+
+.lbk-disclosure-section {
+    margin-bottom: 34px;
+    background: linear-gradient(135deg, #1f1f1f9c 0%, #272001cf 100%);
+    border-radius: 8px;
+    padding: 22px 22px 18px 22px;
+    box-shadow: 0 2px 8px #0000000a;
+}
+
+.lbk-disclosure-section p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.lbk-disclosure-h2 {
+    margin: 6px 0 15px 0;
+    color: #d4af37;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+.lbk-disclosure-dl {
+    margin: 0;
+}
+.lbk-disclosure-dl dt {
+    font-weight: 600;
+    margin: 5px 0 0 0;
+    color: #e0c97e;
+    font-size: 21px;
+}
+.lbk-disclosure-dl dd {
+    margin: 0 0 10px 0;
+    padding-left: 12px;
+    color: #d1a71f;
+    font-size: 20px;
+}
+
+.lbk-disclosure-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.lbk-disclosure-list li {
+    margin-bottom: 7px;
+    list-style: none;
+}
+
+.lbk-disclosure-link,
+.lbk-disclosure-section a:not(.lbk-disclosure-link-home) {
+    color: #9cbeeb;
+    text-decoration: underline;
+    transition: color .16s;
+    font-size: 20px;
+}
+
+.lbk-disclosure-link:hover,
+.lbk-disclosure-section a:not(.lbk-disclosure-link-home):hover {
+    color: #e2f489;
+    text-decoration: underline double;
+}
+
+.lbk-disclosure-links-inline {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 8px 18px;
+    margin: 8px 0 0 0;
+    padding-left: 0;
+}
+
+.lbk-disclosure-links-inline li {
+    margin: 0;
+    padding: 0;
+}
+
+.lbk-disclosure-financial-block {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.lbk-disclosure-financial-year {
+    background: #ffffff14;
+    border-left: 4px solid #ffd700;
+    padding: 12px 15px 10px 15px;
+    margin-bottom: 4px;
+    border-radius: 7px;
+}
+
+.lbk-disclosure-financial-year > a {
+    font-weight: bold;
+    color: #01309e;
+    font-size: 1.10em;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+
+
+
 /* Социальные сети - контейнер */
 .footer-social {
     display: flex;
@@ -4137,7 +4249,7 @@ body.light-theme .scroll-top-btn {
     line-height: 0.7;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     color: #d4af37;
     text-transform: uppercase;
     letter-spacing: 1.5px;

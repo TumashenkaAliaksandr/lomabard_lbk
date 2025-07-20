@@ -102,6 +102,18 @@ def about(request):
     return render(request, 'webapp/about.html', context=context)
 
 
+def about_info_docs(request):
+    """
+    Страница О нас Документы
+    """
+    services = ServiceIcon.objects.all()
+
+    context = {
+        'services': services,
+    }
+    return render(request, 'webapp/about_docs.html', context=context)
+
+
 def store(request):
     """
     Страница Магазина

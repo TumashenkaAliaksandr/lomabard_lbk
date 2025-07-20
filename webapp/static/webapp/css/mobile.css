@@ -177,3 +177,21 @@
     text-align: right;
   }
 }
+
+@media (max-width: 600px) {
+    .lbk-disclosure-main {
+        padding: 0 3vw;
+    }
+    .lbk-disclosure-header {
+        padding: 10px 0 7px 0;
+    }
+    .lbk-disclosure-title {
+        font-size: 1.2em;
+    }
+    .lbk-disclosure-section {
+        padding: 11px 9px 9px 12px;
+    }
+    .lbk-disclosure-financial-block {
+        gap: 10px;
+    }
+}
