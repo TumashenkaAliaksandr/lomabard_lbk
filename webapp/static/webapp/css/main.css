@@ -4068,7 +4068,7 @@ body.light-theme .step-item p {
 
 .lbk-disclosure-section {
     margin-bottom: 34px;
-    background: linear-gradient(135deg, #1f1f1f9c 0%, #272001cf 100%);
+    background: linear-gradient(135deg, #5150509c 0%, #272001cf 100%);
     border-radius: 8px;
     padding: 22px 22px 18px 22px;
     box-shadow: 0 2px 8px #0000000a;
@@ -4079,9 +4079,21 @@ body.light-theme .step-item p {
     font-weight: 500;
 }
 
+body.light-theme .lbk-disclosure-section p {
+    font-size: 19px;
+    font-weight: 500;
+    color: #e2dfd3;
+}
+
 .lbk-disclosure-h2 {
     margin: 6px 0 15px 0;
     color: #d4af37;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+body.light-theme .lbk-disclosure-h2 {
+    margin: 6px 0 15px 0;
+    color: #e6e2d4;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
@@ -4094,6 +4106,13 @@ body.light-theme .step-item p {
     color: #e0c97e;
     font-size: 21px;
 }
+
+body.light-theme .lbk-disclosure-dl dt {
+    font-weight: 600;
+    margin: 5px 0 0 0;
+    color: #d8d8d8;
+    font-size: 21px;
+}
 .lbk-disclosure-dl dd {
     margin: 0 0 10px 0;
     padding-left: 12px;
@@ -4101,15 +4120,28 @@ body.light-theme .step-item p {
     font-size: 20px;
 }
 
+body.light-theme .lbk-disclosure-dl dd {
+    margin: 0 0 10px 0;
+    padding-left: 12px;
+    color: #dfd6ba;
+    font-size: 20px;
+}
+
 .lbk-disclosure-list {
     margin: 0;
     padding-left: 20px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .lbk-disclosure-list li {
     margin-bottom: 7px;
     list-style: none;
+}
+
+body.light-theme .lbk-disclosure-list li {
+    margin-bottom: 7px;
+    list-style: none;
+    color: #e2dfd3;
 }
 
 .lbk-disclosure-link,
@@ -4120,10 +4152,24 @@ body.light-theme .step-item p {
     font-size: 20px;
 }
 
+body.light-theme .lbk-disclosure-link,
+.lbk-disclosure-section a:not(.lbk-disclosure-link-home) {
+    color: #aaceff;
+    text-decoration: none;
+    transition: color .16s;
+    font-size: 20px;
+}
+
 .lbk-disclosure-link:hover,
 .lbk-disclosure-section a:not(.lbk-disclosure-link-home):hover {
     color: #e2f489;
-    text-decoration: underline double;
+    text-decoration: none;
+}
+
+body.light-theme .lbk-disclosure-link:hover,
+.lbk-disclosure-section a:not(.lbk-disclosure-link-home):hover {
+    color: #e2f489;
+    text-decoration: none;
 }
 
 .lbk-disclosure-links-inline {

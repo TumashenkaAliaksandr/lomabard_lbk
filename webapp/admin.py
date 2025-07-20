@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from .models import Slider, ServiceIcon, ProductPhoto, Product
+from .models import Slider, ServiceIcon, ProductPhoto, Product, FinancialStatement
 
 
 @admin.register(Slider)
@@ -96,3 +96,16 @@ class ProductAdmin(admin.ModelAdmin):
         return "-"
 
     main_photo_tag.short_description = "Главное фото"
+
+@admin.register(FinancialStatement)
+class FinancialStatementAdmin(admin.ModelAdmin):
+    list_display = ('name', 'year')
+    fields = (
+        'name',
+        'year',
+        'balance_pdf',
+        'notes_pdf',
+        'profit_loss_pdf',
+        'capital_change_pdf',
+        'cash_flow_pdf',
+    )

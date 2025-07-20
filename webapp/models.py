@@ -106,3 +106,20 @@ class ProductPhoto(models.Model):
     def __str__(self):
         status = 'главное' if self.is_main else 'дополнительное'
         return f"Фото для {self.product.name} ({status})"
+
+
+class FinancialStatement(models.Model):
+    name = models.CharField('Название', max_length=255, default='Имя')
+    year = models.PositiveIntegerField('Год', default='2000')
+    balance_pdf = models.FileField('Бухгалтерский баланс (PDF)', upload_to='financials/')
+    notes_pdf = models.FileField('Примечания к балансу (PDF)', upload_to='financials/')
+    profit_loss_pdf = models.FileField('Отчет о прибылях и убытках (PDF)', upload_to='financials/')
+    capital_change_pdf = models.FileField('Отчет об изменении капитала (PDF)', upload_to='financials/')
+    cash_flow_pdf = models.FileField('Отчет о движении денежных средств (PDF)', upload_to='financials/')
+
+    class Meta:
+        verbose_name = 'Финансовая отчетность'
+        verbose_name_plural = 'Финансовые отчетности'
+
+    def __str__(self):
+        return f"Финансовая отчетность {self.name}"

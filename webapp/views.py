@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from webapp.models import Slider, ServiceIcon, Product
+from webapp.models import Slider, ServiceIcon, Product, FinancialStatement
 import requests
 import datetime
 
@@ -107,9 +107,11 @@ def about_info_docs(request):
     Страница О нас Документы
     """
     services = ServiceIcon.objects.all()
+    reports = FinancialStatement.objects.order_by('-year')
 
     context = {
         'services': services,
+        'reports': reports,
     }
     return render(request, 'webapp/about_docs.html', context=context)
 
