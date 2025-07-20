@@ -12,6 +12,69 @@
     <section class="contact-bg">
         {% include 'webapp/sections_main/adress_section.html' %}
 
+        <!-- Кнопки переключения городов -->
+    <div class="lombard-cities-buttons">
+        {% for city in cities %}
+            <button class="lombard-city-button" data-city="{{ city.id }}">
+                {{ city.name }}
+            </button>
+        {% endfor %}
+    </div>
+
+        <!-- Адреса по городам -->
+        {% for city in cities %}
+            <div class="lombard-city-section" id="city-{{ city.id }}"
+                 style="display: {% if forloop.first %}block{% else %}none{% endif %};">
+                {% for addr in city.addresses.all %}
+                    <div class="lombard-addresses-item" itemscope itemtype="https://schema.org/LocalBusiness">
+                        <div class="lombard-addresses-item-img">
+                            {% if addr.photo %}
+                                <img src="{{ addr.photo.url }}"
+                                     alt="Фото к г. {{ city.name }}, {{ addr.address }}"
+                                     loading="lazy" itemprop="photo"
+                                     class="lombard-addresses-photo"/>
+                            {% else %}
+                                <img src="{% static 'webapp/img/lbk.png' %}"
+                                     alt="Фото отсутствует"
+                                     loading="lazy" itemprop="photo"
+                                     class="lombard-addresses-photo"/>
+                            {% endif %}
+                        </div>
+
+                        <div class="lombard-addresses-item-info">
+                            <div class="lombard-addresses-item-address" itemprop="address" itemscope
+                                 itemtype="https://schema.org/PostalAddress">
+                                <p>🏘️ г. <span itemprop="addressLocality">{{ city.name }}</span>, ул. <span
+                                        itemprop="streetAddress">{{ addr.address }}</span></p>
+                                {% if addr.note %}
+                                    <p>💡 {{ addr.note }}</p>
+                                {% endif %}
+                            </div>
+                            <div class="lombard-addresses-item-time">
+                                <h5 class="workhours-title-mobile">🕔 Время работы:</h5>
+                                <p>📅 {{ addr.working_hours }}</p>
+                                {% if addr.lunch_break %}
+                                    <p>🥪 Перерыв: {{ addr.lunch_break }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="lombard-addresses-item-number">
+                            <h5 class="workhours-title-mobile">📞 Телефоны:</h5>
+                            {% for phone in addr.phones %}
+                                <a class="lombard-addresses-phone" href="tel:{{ phone.number|default:phone }}">
+                                    <span itemprop="telephone">{{ phone.number|default:phone }}</span>
+                                </a>
+                            {% endfor %}
+                            {% if addr.email %}
+                                <div>📧 <a href="mailto:{{ addr.email }}" itemprop="email">{{ addr.email }}</a></div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
         <div class="lombard-addresses-item" itemscope itemtype="https://schema.org/LocalBusiness">
 
             <div class="lombard-addresses-item-img">

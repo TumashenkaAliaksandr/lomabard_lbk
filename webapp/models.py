@@ -123,3 +123,33 @@ class FinancialStatement(models.Model):
 
     def __str__(self):
         return f"Финансовая отчетность {self.name}"
+
+
+class City(models.Model):
+    name = models.CharField('Город', max_length=100, unique=True)
+
+    class Meta:
+        verbose_name = 'Город'
+        verbose_name_plural = 'Города'
+
+    def __str__(self):
+        return self.name
+
+
+class Address(models.Model):
+    city = models.ForeignKey(City, related_name='addresses', on_delete=models.CASCADE, verbose_name='Город')
+    address = models.CharField('Адрес', max_length=255)
+    note = models.CharField('Примечание', max_length=255, blank=True)
+    working_hours = models.CharField('Время работы', max_length=100)
+    lunch_break = models.CharField('Обед', max_length=100, blank=True)
+    phones = models.JSONField('Телефоны')  # Список или словарь телефонов, например [{"number": "+375 29 1234567"}]
+    email = models.EmailField('Электронная почта', blank=True)
+    photo = models.ImageField('Фото', upload_to='addresses/photos/', blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Адрес'
+        verbose_name_plural = 'Адреса'
+
+    def __str__(self):
+        return f"{self.city.name}, {self.address}"
+

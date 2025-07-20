@@ -4147,7 +4147,7 @@ body.light-theme .lbk-disclosure-list li {
 .lbk-disclosure-link,
 .lbk-disclosure-section a:not(.lbk-disclosure-link-home) {
     color: #9cbeeb;
-    text-decoration: underline;
+    text-decoration: none;
     transition: color .16s;
     font-size: 20px;
 }

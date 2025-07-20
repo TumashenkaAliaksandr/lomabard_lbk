@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 
-from .models import Slider, ServiceIcon, ProductPhoto, Product, FinancialStatement
+from .models import Slider, ServiceIcon, ProductPhoto, Product, FinancialStatement, Address, City
 
 
 @admin.register(Slider)
@@ -109,3 +109,18 @@ class FinancialStatementAdmin(admin.ModelAdmin):
         'capital_change_pdf',
         'cash_flow_pdf',
     )
+
+from django.contrib import admin
+
+@admin.register(City)
+class CityAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ('name',)
+
+
+@admin.register(Address)
+class AddressAdmin(admin.ModelAdmin):
+    list_display = ('address', 'city', 'working_hours')
+    list_filter = ('city',)
+    search_fields = ('address', 'note', 'phones')
+
