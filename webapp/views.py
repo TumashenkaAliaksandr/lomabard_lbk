@@ -144,5 +144,20 @@ def contacts(request):
     return render(request, 'webapp/contacts.html', context=context)
 
 
+def city_detail_view(request, slug):
+    """
+    Страница адреса города
+    """
+    city = get_object_or_404(City, slug=slug)
+    addresses = city.addresses.all()  # assuming related_name='addresses'
+
+    context = {
+        'city': city,
+        'addresses': addresses,
+    }
+
+    return render(request, 'webapp/adress_single.html', context=context)
+
+
 def custom_404_view(request, exception):
     return render(request, 'webapp/404.html', status=404)

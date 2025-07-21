@@ -14,6 +14,7 @@ urlpatterns = [
     path('contacts/', views.contacts, name='contacts'),
     path('action/', views.action, name='action'),
     path('api/metals-price-probas/', MetalsPriceProbasAPIView.as_view(), name='metals_price_probas'),
+    path('city/<slug:slug>/', views.city_detail_view, name='city_detail'),
 
     ]
 

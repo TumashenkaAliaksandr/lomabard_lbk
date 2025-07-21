@@ -1,6 +1,7 @@
 from django.core.validators import RegexValidator
 from django.db import models
 from django.urls import reverse
+from django.utils.text import slugify
 
 
 class Slider(models.Model):
@@ -125,12 +126,21 @@ class FinancialStatement(models.Model):
         return f"Финансовая отчетность {self.name}"
 
 
+
 class City(models.Model):
-    name = models.CharField('Город', max_length=100, unique=True)
+    name = models.CharField('Город', max_length=100, unique=True, db_index=True)
+    slug = models.SlugField('Слаг', max_length=120, unique=False, blank=True)
 
     class Meta:
         verbose_name = 'Город'
         verbose_name_plural = 'Города'
+        ordering = ['name']
+
+    def save(self, *args, **kwargs):
+        # Авто-генерация слага из имени, если слаг не задан
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name

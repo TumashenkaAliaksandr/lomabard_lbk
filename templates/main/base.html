@@ -143,10 +143,17 @@
                                 Адреса Ломбардов
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownContacts">
-                                <li><a class="dropdown-item" href="/city1/">Минск</a></li>
-                                <li><a class="dropdown-item" href="/komissionnyj-magazin/">Дзержинск</a></li>
+
+                                {% for city in cities_for_menu %}
+                                    <li><a class="dropdown-item"
+                                           href="{% url 'city_detail' city.slug %}">{{ city.name }}</a></li>
+                                {% empty %}
+                                    <li><span class="dropdown-item">Города не найдены</span></li>
+                                {% endfor %}
+
                             </ul>
                         </li>
+
 
                     </ul>
 

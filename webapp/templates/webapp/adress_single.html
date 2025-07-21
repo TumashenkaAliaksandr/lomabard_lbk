@@ -1,0 +1,53 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+    <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ city.name }}</li>
+        </ol>
+    </nav>
+    <section class="contact-bg">
+        <h1 class="services-title">Адреса в городе {{ city.name }}</h1>
+
+        {% for addr in addresses %}
+            <div class="lombard-addresses-item" itemscope itemtype="https://schema.org/LocalBusiness">
+                <div class="lombard-addresses-item-img">
+                    {% if addr.photo %}
+                        <img src="{{ addr.photo.url }}" alt="Фото {{ addr.address }}" loading="lazy" itemprop="photo"
+                             class="lombard-addresses-photo"/>
+                    {% else %}
+                        <img src="{% static 'webapp/img/lbk.png' %}" alt="Фото отсутствует" loading="lazy"
+                             itemprop="photo" class="lombard-addresses-photo"/>
+                    {% endif %}
+                </div>
+                <div class="lombard-addresses-item-info">
+                    <div class="lombard-addresses-item-address" itemprop="address" itemscope
+                         itemtype="https://schema.org/PostalAddress">
+                        <p>🏘️ г. <span itemprop="addressLocality">{{ city.name }}</span>, ул. <span
+                                itemprop="streetAddress">{{ addr.address }}</span></p>
+                        {% if addr.note %}<p>💡 {{ addr.note }}</p>{% endif %}
+                    </div>
+                    <div class="lombard-addresses-item-time">
+                        <h5 class="workhours-title-mobile">🕔 Время работы:</h5>
+                        <p>📅 {{ addr.working_hours }}</p>
+                        {% if addr.lunch_break %}<p>🥪 Перерыв: {{ addr.lunch_break }}</p>{% endif %}
+                    </div>
+                </div>
+                <div class="lombard-addresses-item-number">
+                    <h5 class="workhours-title-mobile">📞 Телефоны:</h5>
+                    {% for phone in addr.phones %}
+                        <a href="tel:{{ phone }}" class="lombard-addresses-phone"><span
+                                itemprop="telephone">{{ phone }}</span></a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% empty %}
+            <p>Адреса для данного города отсутствуют.</p>
+        {% endfor %}
+
+        {% include 'webapp/sections_main/adress_section.html' %}
+    </section>
+{% endblock %}
+
