@@ -1,7 +1,10 @@
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from lomabard_lbk import settings
 from webapp.models import Slider, ServiceIcon, Product, FinancialStatement, City
 import requests
 import datetime
@@ -161,3 +164,62 @@ def city_detail_view(request, slug):
 
 def custom_404_view(request, exception):
     return render(request, 'webapp/404.html', status=404)
+
+
+@csrf_exempt
+def callback_request(request):
+    print('--- callback_request called ---')
+
+    if request.method != 'POST':
+        print(f'Invalid method: {request.method}')
+        return JsonResponse({'success': False, 'error': 'Только POST запросы'}, status=405)
+
+    name = request.POST.get('name', '').strip()
+    phone = request.POST.get('phone', '').strip()
+    description = request.POST.get('description', '').strip()
+    photo = request.FILES.get('photo')
+
+    print(
+        f'Received data - name: "{name}", phone: "{phone}", description: "{description}", photo: {"yes" if photo else "no"}')
+
+    if not name or not phone:
+        print('Validation failed: name or phone is empty')
+        return JsonResponse({'success': False, 'error': 'Имя и телефон обязательны.'})
+
+    message_text = (
+        f"<b>Новая заявка на обратный звонок</b>\n"
+        f"<b>Имя:</b> {name}\n"
+        f"<b>Телефон:</b> {phone}\n"
+        f"<b>Описание:</b> {description if description else 'Отсутствует'}"
+    )
+
+    print('Prepared message_text:')
+    print(message_text)
+
+    bot_token = settings.TELEGRAM_BOT_TOKEN
+    chat_id = settings.TELEGRAM_CHAT_ID
+    telegram_api_url = f"https://api.telegram.org/bot{bot_token}"
+
+    try:
+        if photo:
+            print('Sending photo message to Telegram')
+            files = {'photo': photo}
+            data = {'chat_id': chat_id, 'caption': message_text, 'parse_mode': 'HTML'}
+            response = requests.post(f"{telegram_api_url}/sendPhoto", data=data, files=files)
+        else:
+            print('Sending text message to Telegram')
+            data = {'chat_id': chat_id, 'text': message_text, 'parse_mode': 'HTML'}
+            response = requests.post(f"{telegram_api_url}/sendMessage", data=data)
+
+        print(f'Telegram response status: {response.status_code}')
+        if response.status_code == 200:
+            print('Message sent successfully')
+            return JsonResponse({'success': True})
+        else:
+            error_msg = response.json().get('description', 'Ошибка при отправке в Telegram')
+            print(f'Telegram API error: {error_msg}')
+            return JsonResponse({'success': False, 'error': error_msg})
+    except Exception as e:
+        print(f'Exception during Telegram request: {str(e)}')
+        return JsonResponse({'success': False, 'error': str(e)})
+

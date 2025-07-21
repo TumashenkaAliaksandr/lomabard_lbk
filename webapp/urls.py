@@ -3,7 +3,7 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-from .views import MetalsPriceProbasAPIView
+from .views import MetalsPriceProbasAPIView, callback_request
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -15,6 +15,7 @@ urlpatterns = [
     path('action/', views.action, name='action'),
     path('api/metals-price-probas/', MetalsPriceProbasAPIView.as_view(), name='metals_price_probas'),
     path('city/<slug:slug>/', views.city_detail_view, name='city_detail'),
+    path('callback/', callback_request, name='callback_request'),
 
     ]
 

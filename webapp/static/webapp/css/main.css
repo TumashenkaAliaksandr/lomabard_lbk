@@ -1158,7 +1158,50 @@ body.light-theme .collage-slide img {
   transform: translateX(-75%);
 }
 
+.form-btn {
+    position: absolute;
+    left: 210px;
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #ffd700;
+    color: #121212;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
+}
 
+.form-btn:hover {
+  background-color: #fff700;
+  color: #000;
+}
+
+
+.form-cancel-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #ff9400;
+    color: #121212;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
+}
+
+.form-cancel-btn:hover {
+  background-color: #ffbf67;
+  color: #000;
+}
 
 /* Светлая тема */
 body.light-theme .hero-slider {
@@ -4209,7 +4252,46 @@ body.light-theme .lbk-disclosure-link:hover,
 }
 
 
+.modal-backdrop {
+    --bs-backdrop-zindex: 1050;
+    --bs-backdrop-bg: #000;
+    --bs-backdrop-opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+     z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bs-backdrop-bg);
+}
 
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-clip: padding-box;
+    outline: 0;
+    margin-top: 55px;
+}
+
+.form-label {
+    margin-bottom: .5rem;
+    color: #535044;
+}
+
+.form-title {
+    font-size: 1.6rem;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    user-select: none;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
 
 /* Социальные сети - контейнер */
 .footer-social {
