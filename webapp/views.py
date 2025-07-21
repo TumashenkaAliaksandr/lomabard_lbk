@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from webapp.models import Slider, ServiceIcon, Product, FinancialStatement
+from webapp.models import Slider, ServiceIcon, Product, FinancialStatement, City
 import requests
 import datetime
 
@@ -113,6 +113,7 @@ def about_info_docs(request):
         'services': services,
         'reports': reports,
     }
+
     return render(request, 'webapp/about_docs.html', context=context)
 
 
@@ -134,7 +135,13 @@ def contacts(request):
     """
     Страница Контактов
     """
-    return render(request, 'webapp/contacts.html')
+    cities = City.objects.prefetch_related('addresses').all()
+
+    context = {
+        'cities': cities,
+    }
+
+    return render(request, 'webapp/contacts.html', context=context)
 
 
 def custom_404_view(request, exception):

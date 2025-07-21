@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.html import format_html
-
+from django import forms
 from .models import Slider, ServiceIcon, ProductPhoto, Product, FinancialStatement, Address, City
 
 
@@ -97,6 +97,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     main_photo_tag.short_description = "Главное фото"
 
+
 @admin.register(FinancialStatement)
 class FinancialStatementAdmin(admin.ModelAdmin):
     list_display = ('name', 'year')
@@ -110,7 +111,39 @@ class FinancialStatementAdmin(admin.ModelAdmin):
         'cash_flow_pdf',
     )
 
+
+from django import forms
 from django.contrib import admin
+from .models import City, Address
+
+class AddressForm(forms.ModelForm):
+    phones = forms.CharField(
+        label='Телефоны',
+        widget=forms.Textarea(attrs={'rows': 3, 'style': 'font-family: monospace;'}),
+        required=False,
+        help_text='Введите каждый номер телефона с новой строки'
+    )
+
+    class Meta:
+        model = Address
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Преобразуем JSON список phones в многострочный текст для отображения
+        phones_data = self.instance.phones if self.instance and self.instance.phones else []
+        if isinstance(phones_data, list):
+            self.initial['phones'] = '\n'.join(phones_data)
+        else:
+            # на всякий случай, если вдруг хранится не список
+            self.initial['phones'] = phones_data
+
+    def clean_phones(self):
+        data = self.cleaned_data['phones']
+        # Разбиваем по строкам, фильтруем пустые
+        phones_list = [line.strip() for line in data.splitlines() if line.strip()]
+        return phones_list
+
 
 @admin.register(City)
 class CityAdmin(admin.ModelAdmin):
@@ -120,7 +153,7 @@ class CityAdmin(admin.ModelAdmin):
 
 @admin.register(Address)
 class AddressAdmin(admin.ModelAdmin):
+    form = AddressForm
     list_display = ('address', 'city', 'working_hours')
     list_filter = ('city',)
-    search_fields = ('address', 'note', 'phones')
-
+    search_fields = ('address', 'note')
