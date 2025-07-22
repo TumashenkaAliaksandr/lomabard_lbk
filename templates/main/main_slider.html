@@ -17,8 +17,9 @@
                     <h2 class="hero-title gold-text">{{ slide.title }}</h2>
                     <p class="hero-subtitle">{{ slide.subtitle }}</p>
                     {% if slide.button_text and slide.button_link %}
-                        <a href="{{ slide.button_link }}" class="btn gold-btn">{{ slide.button_text }}</a>
+                        <a href="{{ slide.button_link }}" class="btn gold-btn" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal">{{ slide.button_text }}</a>
                     {% endif %}
+                    {% include "webapp/sections_main/callback_modal.html" %}
                 </div>
             {% endfor %}
         </div>
