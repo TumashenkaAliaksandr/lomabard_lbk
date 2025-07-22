@@ -1923,28 +1923,46 @@ body.light-theme .social-icon:hover,
 }
 
 /* Фоновые изображения иконок (можно заменить на свои пути) */
-.social-icon.vk {
-    background-image: url('../img/vk.svg');
+/*.social-icon.vk {*/
+/*    background-image: url('../img/vk.svg');*/
+/*}*/
+
+/*.social-icon.instagram {*/
+/*    background-image: url('../img/instagram.svg');*/
+/*}*/
+
+/*.social-icon.telegram {*/
+/*    background-image: url('../img/telegram.svg');*/
+/*}*/
+
+/*.social-icon-had.vk {*/
+/*    background-image: url('../img/vk.svg');*/
+/*}*/
+
+/*.social-icon-had.instagram {*/
+/*    background-image: url('../img/instagram.svg');*/
+/*}*/
+
+/*.social-icon-had.telegram {*/
+/*    background-image: url('../img/telegram.svg');*/
+/*}*/
+.about-social-icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-top: 2px;
+    border-radius: 50%;
 }
 
-.social-icon.instagram {
-    background-image: url('../img/instagram.svg');
-}
-
-.social-icon.telegram {
-    background-image: url('../img/telegram.svg');
-}
-
-.social-icon-had.vk {
-    background-image: url('../img/vk.svg');
-}
-
-.social-icon-had.instagram {
-    background-image: url('../img/instagram.svg');
-}
-
-.social-icon-had.telegram {
-    background-image: url('../img/telegram.svg');
+.about-social-icon:hover,
+.about-social-icon:focus {
+    transform: scale(1.15);
+    outline: none;
 }
 
 /* Эффект при наведении */

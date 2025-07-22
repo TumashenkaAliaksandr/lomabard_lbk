@@ -22,12 +22,14 @@
                     <img src="{% static 'webapp/img/lbk.png' %}" alt="Ломбард ЛБК"/>
                     <div class="social-icons">
                         <h2 id="info">Наши Соцсети: </h2>
-                        <a href="https://vk.com/yourpage" target="_blank" rel="noopener" aria-label="ВКонтакте"
-                           class="social-icon vk"></a>
-                        <a href="https://instagram.com/yourpage" target="_blank" rel="noopener"
-                           aria-label="Instagram" class="social-icon instagram"></a>
-                        <a href="https://t.me/yourpage" target="_blank" rel="noopener" aria-label="Telegram"
-                           class="social-icon telegram"></a>
+                        {% for social in social_networks %}
+                            <a href="{{ social.url }}" target="_blank" rel="noopener" aria-label="{{ social.name }}" class="about-social-icon">
+                                <img src="{{ social.icon.url }}" alt="{{ social.name }} иконка"/>
+                            </a>
+
+                        {% empty %}
+                            <p>Соцсети не найдены.</p>
+                        {% endfor %}
                     </div>
                 </div>
 
