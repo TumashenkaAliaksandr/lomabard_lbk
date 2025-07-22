@@ -140,6 +140,18 @@ body.light-theme .btn-callback:hover {
     color: #000;
 }
 
+body.light-theme .btn-resev {
+    background: linear-gradient(45deg, #b8860b, #ffd700, #fff700);
+    color: #121212;
+    box-shadow: 0 0 10px #b8860b;
+}
+
+body.light-theme .btn-reserv:hover {
+    background: linear-gradient(45deg, #ffd700, #fff700, #b8860b);
+    box-shadow: 0 0 20px #b8860b;
+    color: #000;
+}
+
 body.light-theme .footer {
     background-color: #f0e0a0;
     color: #5a4d00;
@@ -510,6 +522,35 @@ body.light-theme .breadcrumb-item.active {
     text-align: center;
     position: relative;
     height: 54px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;   /* расстояние между элементами */
+}
+
+.btn-reserv {
+    background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+    color: #121212;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 8px 25px;
+    box-shadow: 0 0 1px #ffd700, 0 0 7px #fff700;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    width: 224px;
+    font-size: 14px !important;
+    align-self: flex-start;  /* закрепить кнопку слева */
+    white-space: nowrap;      /* не переносить текст */
+    cursor: pointer;
+}
+
+
+.btn-reserv:hover {
+    background: linear-gradient(45deg, #fff700, #ffec8b, #b28f20);
+    box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
+    color: darkgoldenrod;
 }
 
 

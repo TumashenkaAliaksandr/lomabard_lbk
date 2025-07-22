@@ -177,10 +177,10 @@ def callback_request(request):
     name = request.POST.get('name', '').strip()
     phone = request.POST.get('phone', '').strip()
     description = request.POST.get('description', '').strip()
+    product_name = request.POST.get('product_name', '').strip()
     photo = request.FILES.get('photo')
 
-    print(
-        f'Received data - name: "{name}", phone: "{phone}", description: "{description}", photo: {"yes" if photo else "no"}')
+    print(f'Received data - name: "{name}", phone: "{phone}", product_name: "{product_name}", description: "{description}", photo: {"yes" if photo else "no"}')
 
     if not name or not phone:
         print('Validation failed: name or phone is empty')
@@ -188,6 +188,7 @@ def callback_request(request):
 
     message_text = (
         f"<b>Новая заявка на обратный звонок</b>\n"
+        f"<b>Продукт:</b> {product_name if product_name else 'Не указан'}\n"
         f"<b>Имя:</b> {name}\n"
         f"<b>Телефон:</b> {phone}\n"
         f"<b>Описание:</b> {description if description else 'Отсутствует'}"
@@ -222,4 +223,3 @@ def callback_request(request):
     except Exception as e:
         print(f'Exception during Telegram request: {str(e)}')
         return JsonResponse({'success': False, 'error': str(e)})
-

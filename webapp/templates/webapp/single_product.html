@@ -48,6 +48,8 @@
                     <p>{{ product.description }}</p>
                 </div>
             {% endif %}
+    <button class="btn btn-reserv" type="button" data-bs-toggle="modal" data-bs-target="#callbackModalProduct">Забронировать</button>
+    {% include 'webapp/sections_main/callback_product_modal.html' %}
         </div>
     </div>
 {% endblock %}
