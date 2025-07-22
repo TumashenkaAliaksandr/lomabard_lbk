@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from django import forms
-from .models import Slider, ServiceIcon, ProductPhoto, Product, FinancialStatement, Address, City
+from .models import Slider, ServiceIcon, ProductPhoto, Product, FinancialStatement, Address, City, SocialNetwork
 
 
 @admin.register(Slider)
@@ -157,3 +157,9 @@ class AddressAdmin(admin.ModelAdmin):
     list_display = ('address', 'city', 'working_hours')
     list_filter = ('city',)
     search_fields = ('address', 'note')
+
+
+@admin.register(SocialNetwork)
+class SocialNetworkAdmin(admin.ModelAdmin):
+    list_display = ('name', 'url', 'icon')
+    search_fields = ('name',)

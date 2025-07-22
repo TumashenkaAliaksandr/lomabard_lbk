@@ -129,7 +129,7 @@ class FinancialStatement(models.Model):
 
 class City(models.Model):
     name = models.CharField('Город', max_length=100, unique=True, db_index=True)
-    slug = models.SlugField('Слаг', max_length=120, unique=False, blank=True)
+    slug = models.SlugField('Слаг', max_length=120, null=True, unique=False, blank=True)
 
     class Meta:
         verbose_name = 'Город'
@@ -163,3 +163,19 @@ class Address(models.Model):
     def __str__(self):
         return f"{self.city.name}, {self.address}"
 
+
+def icon_upload_path(instance, filename):
+    return f'social_icons/{filename}'
+
+class SocialNetwork(models.Model):
+    name = models.CharField('Название соцсети', max_length=50)
+    icon = models.FileField('Иконка (SVG или изображение)', upload_to=icon_upload_path, help_text='Загрузите SVG или изображение (PNG, JPG)')
+    url = models.URLField('Ссылка на соцсеть')
+
+    class Meta:
+        verbose_name = 'Соцсеть'
+        verbose_name_plural = 'Соцсети'
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name

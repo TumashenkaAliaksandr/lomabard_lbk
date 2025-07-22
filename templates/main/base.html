@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -110,7 +111,7 @@
 
                                 <!-- Второе вложенное подменю -->
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-toggle" href="https://visem.by/cdat-pod-zalog/"
+                                    <a class="dropdown-item dropdown-toggle" href="#"
                                        id="submenuPawn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Сдать под залог
                                     </a>
@@ -171,19 +172,19 @@
 
                         <!-- Соцсети -->
                         <div class="social-icons-had">
-                            <a href="https://vk.com/yourpage" target="_blank" rel="noopener" aria-label="ВКонтакте"
-                               class="social-icon-had">
-                                <i class="social-icon-had vk"></i>
-                            </a>
-                            <a href="https://instagram.com/yourpage" target="_blank" rel="noopener"
-                               aria-label="Instagram" class="social-icon-had">
-                                <i class="social-icon-had instagram"></i>
-                            </a>
-                            <a href="https://t.me/yourpage" target="_blank" rel="noopener" aria-label="Telegram"
-                               class="social-icon-had">
-                                <i class="social-icon-had telegram"></i>
-                            </a>
+                            {% for social in social_networks %}
+                                <a href="{{ social.url }}" target="_blank" rel="noopener" aria-label="{{ social.name }}"
+                                   class="social-icon-had">
+                                    <img src="{{ social.icon.url }}" alt="{{ social.name }}" class="social-icon-img">
+                                </a>
+                            {% empty %}
+                                <p>Соцсети не найдены</p>
+                            {% endfor %}
                         </div>
+
+
+
+
 
                         <button class="btn btn-callback" type="button" data-bs-toggle="modal" data-bs-target="#callbackModal">Обратный Звонок</button>
                        {% include "webapp/sections_main/callback_modal.html" %}
@@ -217,16 +218,20 @@
 
             <!-- Блок с соцсетями -->
             <div class="footer-social mb-3 mb-md-0">
-                <a href="https://vk.com/yourpage" target="_blank" aria-label="ВКонтакте" class="social-link">
-                    <i class="fab fa-vk"></i>
-                </a>
-                <a href="https://instagram.com/yourpage" target="_blank" aria-label="Instagram" class="social-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://t.me/yourpage" target="_blank" aria-label="Telegram" class="social-link">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
+                {% for social in social_networks %}
+                    <a href="{{ social.url }}" target="_blank" aria-label="{{ social.name }}" class="social-link">
+                        {% if social.icon_class %}
+                            <i class="{{ social.icon_class }}"></i>
+                        {% else %}
+                            <!-- Если класс не задан, показываем загруженную иконку -->
+                            <img src="{{ social.icon.url }}" alt="{{ social.name }}" style="width:24px; height:24px;"/>
+                        {% endif %}
+                    </a>
+                {% empty %}
+                    <p>Социальные сети отсутствуют</p>
+                {% endfor %}
             </div>
+
         </div>
 
         <!-- Копирайт -->
