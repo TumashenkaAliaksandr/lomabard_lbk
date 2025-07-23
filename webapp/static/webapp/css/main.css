@@ -1822,7 +1822,7 @@ body.light-theme .about-us-title {
     display: block;
     width: 100%; /* или фиксированная ширина по необходимости */
     height: auto;
-    border-radius: 12px; /* если нужно скругление */
+    border-radius: 17px; /* если нужно скругление */
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
     margin-top: 7px;
 }
@@ -1887,7 +1887,7 @@ body.light-theme .about-us-image h3 {
 body.light-theme .social-icons {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 15px;
     margin-top: 5px;
     background-color: rgb(248 248 248 / 45%);
     color: #6d6c65;
