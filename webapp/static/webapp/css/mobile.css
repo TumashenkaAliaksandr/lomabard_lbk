@@ -1,197 +1,300 @@
-/* Адаптивность */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    .nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-/* Адаптивность для мобильных */
-@media (max-width: 991.98px) {
-    .contact-info {
-        font-size: 0.85rem;
+/* Мобильная версия: стили для экранов до 768px */
+@media (max-width: 440px) {
+    body {
+        padding-top: 60px; /* меньше верхний отступ под top-bar и navbar */
+        font-size: 14px;
     }
 
-    .btn-callback {
-        padding: 6px 20px;
+    .container {
+        width: 95%;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 100%;
+    }
+
+    body.light-theme .services-title {
         font-size: 0.9rem;
-    }
-}
-
-
-/* Адаптив для мобильных устройств */
-@media (max-width: 480px) {
-    .error-code {
-        font-size: 4rem;
-        letter-spacing: 5px;
-    }
-    .error-message {
-        font-size: 1.5rem;
-    }
-    .error-description {
-        font-size: 1rem;
-    }
-}
-
-
-/* Адаптив для мобильных */
-@media (max-width: 1200px) {
-    .products-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-}
-
-@media (max-width: 600px) {
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-}
-
-/* Адаптив */
-@media (max-width: 768px) {
-    .product-detail-container {
-        padding: 0 15px;
+        color: #68675f;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        user-select: none;
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
     }
 
-    .product-name {
-        font-size: 2rem;
+
+    /* Кнопка переключения темы — разместить в верхнем правом углу с меньшим размером */
+    .theme-toggle-btn {
+        width: 30px;
+        height: 30px;
+        top: 45px;
+        right: 22px;
+        font-size: 1.2rem;
     }
 
-    .product-price {
-        font-size: 1.3rem;
+    /* Фиксированное меню */
+    header.header {
+        position: fixed;
+        top: 30px;
+        width: 100%;
+        padding: 0 10px;
+        background: linear-gradient(135deg, rgb(31, 31, 31), #3a2f00);
+        border-bottom: 2px solid #ffd700;
+        box-shadow: 0 2px 6px rgba(212, 175, 55, 0.6);
+        z-index: 1100;
     }
 
-    .product-phone {
-        font-size: 1rem;
-    }
-}
-/* Адаптив */
-@media (max-width: 900px) {
-    .product-detail-container {
+    .navbar-nav {
         flex-direction: column;
-        max-width: 90%;
+        gap: 8px;
     }
 
-    .product-gallery,
-    .product-info {
-        max-width: 100%;
-    }
-
-    .additional-photos {
-        justify-content: flex-start;
-    }
-}
-/* Адаптив для маленьких экранов */
-@media (max-width: 768px) {
-    .Services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-text {
-        max-width: 100%;
+    /* Навигационные ссылки */
+    .nav-link {
+        font-size: 13px;
+        padding: 8px 12px;
         text-align: center;
     }
 
-    .squares-wrapper {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+    /* Паддинги для логотипа */
+    .logo {
+        font-size: 1.3rem;
+        margin-right: 15px;
+    }
+
+    /* Меню бургер */
+    .navbar-toggler {
+        border: none;
+        padding: 6px 8px;
+        margin-left: auto;
+        color: #ffd700;
+    }
+
+    /* Dropdown меню — чтобы раскрывалось по клику */
+    .navbar-collapse {
+        background: #1f1f1f;
+        position: fixed;
+        top: 80px; /* под header */
+        right: 0;
+        width: 100%;
+        max-width: 320px;
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding: 10px 15px;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        border-left: 3px solid #ffd700;
+        z-index: 1150;
+    }
+
+    /* Активируем меню при развёртывании */
+    .navbar-collapse.show {
+        transform: translateX(0);
+    }
+
+    /* Дропдауны в меню */
+    .dropdown-menu {
+        position: static !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        min-width: auto !important;
+        padding-left: 15px;
+        border-radius: 0 !important;
+        margin: 5px 0;
+    }
+
+    .dropdown-menu .dropdown-item {
+        padding-left: 20px;
+        font-size: 14px;
+        color: #ffd700 !important;
+    }
+
+    .dropdown-submenu > .dropdown-menu {
+        padding-left: 20px;
+        box-shadow: none !important;
+    }
+
+    /* Верхняя интерактивная полоска — текст разместить компактно */
+    .top-bar-link {
+        font-size: 0.67rem;
+        padding: 0 10px;
+    }
+
+    /* Основной фон и блоки */
+    body .main-bg,
+    body .contact-bg,
+    body.light-theme .main-bg,
+    body.light-theme .contact-bg {
+        background-attachment: scroll; /* фиксированный фон плохо работает на мобильных */
+        padding: 25px 10px 25px;
+        background-size: cover;
+    }
+
+    /* Акценты золотого цвета */
+    .gold-text {
+        font-size: 0.7rem;
+    }
+
+    body.light-theme .gold-text {
+        color: #5b5a58;
+        text-shadow: none;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .hero-subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 40px;
+        color: #fffae4;
+    }
+
+    body.light-theme .gold-btn {
+        background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+        color: #121212;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #f6f5f5;
+        width: 185px;
+        text-align: center;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        font-size: 10px;
+    }
+
+    /* Подвал */
+    footer.footer {
+        padding: 20px 10px;
+        font-size: 13px;
+        color: #d0bf5f;
+    }
+
+    .footer-logo,
+    .footer-nav,
+    .footer-social {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .footer-nav li a {
+        font-size: 14px;
+    }
+
+    /* Контактная информация в хедере */
+    .contact-info.d-none.d-lg-flex {
+        display: none !important;
+    }
+
+    /* Соцсети в хедере и футере */
+    .social-icon,
+    .social-icon-had,
+    .footer-social a {
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+    }
+
+    /* Кнопки */
+    .btn-callback,
+    .btn-reserv,
+    .btn-consultations {
+        width: 100%;
+        max-width: 280px;
+        font-size: 13px !important;
+        margin-left: 0;
+        position: relative;
+        padding: 10px 0;
+        box-shadow: 0 0 10px #ffd700;
+        border-radius: 25px;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    /* Блоки описания продукта */
+    .product-info {
         gap: 15px;
     }
 
-    .squares-wrapper .row {
-        justify-content: center !important;
-        width: auto;
+    /* Бесконечный список хлебных крошек — сделаем удобочитаемым */
+    .breadcrumb-list {
+        font-size: 12px;
+        margin-left: 5px;
+        flex-wrap: wrap;
+        gap: 5px;
     }
 
-    .square {
+    /* Уменьшим маргин сверху, чтобы не было избыточного пространства */
+    .breadcrumb-list {
+        margin-top: 65px;
+    }
+
+    /* Слайдер - кнопки и точки */
+    .slider-nav .nav-dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+    }
+
+    /* Модификация размеров фото */
+    .product-gallery img.main-photo {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .additional-photos img.additional-photo {
         width: 60px;
         height: 60px;
+        margin-right: 5px;
+        border-radius: 5px;
+        object-fit: cover;
     }
-}
 
-/* Адаптив */
-@media (max-width: 991px) {
-  .row-SectionCards {
-    flex-direction: column;
-  }
-  .Section5-left,
-  .Section5-right {
-    flex: 1 1 100%;
-    min-width: auto;
-    height: auto !important;
-  }
-  .Section5-right {
-    margin-top: 30px;
-  }
-}
-
-
-@media (max-width: 991px) {
-  .Section10CollateralItems .row {
-    flex-direction: column;
-    gap: 20px 0;
-  }
-  .Section10CollateralItems .col {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .Section10CollateralItems .title {
-    font-size: 2rem;
-  }
-  .blur-card, .Section10CollateralItems .section-text {
-    padding: 18px 10px;
-    min-height: 120px;
-    border-radius: 12px;
-  }
-  .change-high {
-    min-height: 160px;
-  }
-}
-
-
-/* На экранах md и выше - горизонтальный flex */
-@media(min-width: 768px) {
-  .footer > .container {
-    flex-direction: row;
-    align-items: center;
-    gap: 0;
-  }
-}
-
-@media(min-width: 768px) {
-  .footer-copy {
-    margin-top: 0;
-    text-align: right;
-  }
-}
-
-@media (max-width: 600px) {
-    .lbk-disclosure-main {
-        padding: 0 3vw;
+    /* Модальные окна (если используются Bootstrap) */
+    .modal-dialog {
+        max-width: 95%;
+        margin: 1.75rem auto;
     }
-    .lbk-disclosure-header {
-        padding: 10px 0 7px 0;
+
+    /* Меню «жёсткие» шрифты + выравнивание */
+    .nav-link {
+        font-size: 13px !important;
+        padding: 10px 5px !important;
     }
-    .lbk-disclosure-title {
-        font-size: 1.2em;
+
+    /* Изменение позиционирования и размеров кнопок навигации */
+    #scrollTopBtn {
+        right: 15px;
+        bottom: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
-    .lbk-disclosure-section {
-        padding: 11px 9px 9px 12px;
-    }
-    .lbk-disclosure-financial-block {
-        gap: 10px;
+
+    .top-bar {
+        background: linear-gradient(45deg, rgb(255, 247, 0), #ffd700, rgb(178, 143, 32));
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #121212;
+        font-weight: 600;
+        font-size: 0.55rem !important;
+        user-select: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1051;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+        transition: transform 0.3s ease;
     }
 }
