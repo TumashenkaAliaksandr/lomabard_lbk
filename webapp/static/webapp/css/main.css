@@ -2705,6 +2705,23 @@ body.light-theme .cardGlass-two {
     color: inherit;
     height: 345px !important;
     width: 535px;
+    margin-bottom: 175px;
+}
+
+.cardGlass-two {
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(43 43 41 / 46%);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Убираем подчеркивание у текста внутри карточек, если там ссылки */
+    text-decoration: none;
+    color: inherit;
+    height: 345px !important;
+    width: 535px;
+    margin-bottom: 175px;
 }
 
 .cardGlass-two:hover,
