@@ -133,6 +133,18 @@ def action(request):
     """
     return render(request, 'webapp/action.html')
 
+def news(request):
+    """
+    Страница новости
+    """
+    return render(request, 'webapp/action.html')
+
+def zaim(request):
+    """
+    Страница новости
+    """
+    return render(request, 'webapp/zaim.html')
+
 
 def contacts(request):
     """
