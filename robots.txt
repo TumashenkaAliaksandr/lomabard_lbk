@@ -1,0 +1,15 @@
+# robots.txt для lombardminsk.by (Компания Ломбард ЛБК)
+
+User-agent: *
+Disallow: /admin/
+Disallow: /account/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /register/
+Disallow: /static/
+Disallow: /media/
+
+Allow: /
+
+# Укажите реальный путь к sitemap, если он есть
+Sitemap: https://lombardminsk.by/sitemap.xml
