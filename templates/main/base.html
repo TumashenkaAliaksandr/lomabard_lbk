@@ -61,10 +61,10 @@
                                href="{% url 'about' %}">О нас</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'store' %}active{% endif %}"
-                               href="{% url 'store' %}">Магазин
+                            <a class="nav-link dropdown-toggle">Магазин
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownContacts">
+                                <li><a class="dropdown-item {% if request.resolver_match.url_name == 'store' %}active{% endif %}" href="{% url 'store' %}">Все товары</a></li>
                                 <li><a class="dropdown-item" href="#">Драгоценные металлы</a></li>
                                 <li><a class="dropdown-item" href="#">Бытовая техника</a></li>
                                 <li><a class="dropdown-item" href="#">Электроника</a></li>
