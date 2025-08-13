@@ -829,8 +829,10 @@ body.light-theme .desctop-none {
         font-size: 1.25rem !important;
         text-align: center !important;
         margin-bottom: 20px !important;
+        margin-top: 255px;
         font-weight: 500 !important;
     }
+
 
     /* Ряд с колонками меняем на вертикальный поток */
     .Section10CollateralItems.Services .row.row-cols-lg-3 {
