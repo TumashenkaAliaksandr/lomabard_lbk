@@ -61,8 +61,8 @@ body.light-theme .contact-bg {
     position: fixed;
     top: 10px;
     right: 20px;
-    width: 47px;
-    height: 47px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     border: none;
     background-color: #ffd700;
@@ -72,9 +72,10 @@ body.light-theme .contact-bg {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     transition: background-color 0.3s ease, color 0.3s ease;
     z-index: 2000;
+    padding-top: 4px;
 }
 
 .theme-toggle-btn:hover {
@@ -1633,18 +1634,17 @@ body.light-theme .product-button:hover {
 
 .product-detail-container {
     display: flex;
-    max-width: 1300px;
+    max-width: 100%;
     margin: 40px auto;
-    gap: 40px;
+    gap: 25px;
     padding: 20px 20px;
-    font-family: Arial, sans-serif;
     color: #222;
 }
 
 /* Левая колонка — галерея */
 .product-gallery {
     flex: 1;
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1652,12 +1652,11 @@ body.light-theme .product-button:hover {
 
 .main-photo {
   display: block;
-  max-width: 350px;     /* максимальная ширина — подберите под ваш дизайн */
   width: 100%;          /* фото будет по ширине блока-родителя, но не шире max-width */
   height: auto;         /* высота автоматически, чтобы сохранять пропорции */
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  object-fit: contain;
+  object-fit: none;
   margin-bottom: 20px;
 }
 
@@ -1701,7 +1700,7 @@ body.light-theme .product-button:hover {
     flex: 1.2;
     display: flex;
     flex-direction: column;
-    background-color: gainsboro;
+    background-color: #dcdcdc3b;
     padding: 25px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -1711,7 +1710,7 @@ body.light-theme .product-button:hover {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffd700;
 }
 
 .product-price {
@@ -1728,6 +1727,7 @@ body.light-theme .product-button:hover {
 .product-phone {
     font-size: 1.2rem;
     margin-bottom: 25px;
+    color: #ffd700;
 }
 
 .product-phone a {
@@ -1743,23 +1743,21 @@ body.light-theme .product-button:hover {
 
 .product-description,
 .product-characteristics {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
-.product-description h2,
-.product-characteristics h2 {
+.product-description h2, .product-characteristics h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     border-top: 2px solid #d4af37;
     padding-top: 20px;
-    color: #444;
+    color: #ffd700;
 }
 
-.product-description p,
-.product-characteristics p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
+.product-description p, .product-characteristics p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #b28f20;
 }
 
 .about-us-section {
@@ -2288,21 +2286,21 @@ body.light-theme .tab-button {
 
 /* Текстовый блок */
 .section-text {
-    max-width: 700px; /* увеличил ширину для баланса с большими квадратами */
+    /*max-width: 700px; !* увеличил ширину для баланса с большими квадратами *!*/
     flex: 1 1 400px; /* позволяет тексту занимать место, но с минимальной шириной */
     color: #d4af37; /* цвет текста */
     /*margin-right: 20px;*/
 }
 
 .section-text-zalog {
-    max-width: 700px; /* увеличил ширину для баланса с большими квадратами */
+    max-width: 750px; /* увеличил ширину для баланса с большими квадратами */
     flex: 1 1 400px; /* позволяет тексту занимать место, но с минимальной шириной */
     color: #d4af37; /* цвет текста */
     /*margin-right: 20px;*/
 }
 
 body.light-theme .section-text {
-    max-width: 700px; /* увеличил ширину для баланса с большими квадратами */
+    /*max-width: 700px; !* увеличил ширину для баланса с большими квадратами *!*/
     flex: 1 1 400px; /* позволяет тексту занимать место, но с минимальной шириной */
     color: #d4af37; /* цвет текста */
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
@@ -2374,6 +2372,18 @@ body.light-theme .section-text .h2 {
     margin-left: 21px;
 }
 
+/*.section-text .section-p-calc {*/
+/*    background: rgba(212, 175, 55, 0.15);*/
+/*    padding: 15px;*/
+/*    border-radius: 12px;*/
+/*    font-size: 1.2rem;*/
+/*    color: rgb(255 215 0);*/
+/*    margin-top: 0;*/
+/*    margin-bottom: 15px;*/
+/*    font-weight: 300;*/
+/*    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));*/
+/*    width: 100%;*/
+/*}*/
 .section-text .section-p-calc {
     background: rgba(212, 175, 55, 0.15);
     padding: 15px;
@@ -2383,12 +2393,14 @@ body.light-theme .section-text .h2 {
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 300;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     width: 100%;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    position: relative;
+    bottom: 200px;
 }
 
 body.light-theme .section-text .section-p-calc {
-    background: rgb(217 220 214);
+    background: rgb(217 220 214 / 51%);
     padding: 15px;
     border-radius: 12px;
     font-size: 1.2rem;
@@ -2396,8 +2408,10 @@ body.light-theme .section-text .section-p-calc {
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 300;
-    width: 100%;
+    width: 98.67%;
     filter: none;
+    position: absolute;
+    bottom: -28px;
 
 }
 
@@ -2598,11 +2612,13 @@ body.light-theme .square-label {
 .Section5Сalculator {
     padding: 20px 20px;
     color: #f3cd01;
+    height: 444px;
 }
 
 .glassCards {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .glassCards > p.h2 {
@@ -2693,6 +2709,19 @@ body.light-theme .cardGlass {
 }
 
 body.light-theme .cardGlass-two {
+    /*background: rgba(255 255 255 / 0.1);*/
+    /*border-radius: 15px;*/
+    /*box-shadow: 0 0 10px rgb(43 43 41 / 46%);*/
+    /*padding: 40px 20px;*/
+    /*text-align: center;*/
+    /*cursor: pointer;*/
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+    /*!* Убираем подчеркивание у текста внутри карточек, если там ссылки *!*/
+    /*text-decoration: none;*/
+    /*color: inherit;*/
+    /*height: 345px !important;*/
+    /*width: 535px;*/
+    /*margin-bottom: 175px;*/
     background: rgba(255 255 255 / 0.1);
     border-radius: 15px;
     box-shadow: 0 0 10px rgb(43 43 41 / 46%);
@@ -2700,27 +2729,38 @@ body.light-theme .cardGlass-two {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Убираем подчеркивание у текста внутри карточек, если там ссылки */
     text-decoration: none;
     color: inherit;
-    height: 345px !important;
-    width: 535px;
+    height: 100px !important;
+    width: 600px;
     margin-bottom: 175px;
 }
 
 .cardGlass-two {
-    background: rgba(255 255 255 / 0.1);
+    /*background: rgba(255 255 255 / 0.1);*/
+    /*border-radius: 15px;*/
+    /*box-shadow: 0 0 10px rgb(43 43 41 / 46%);*/
+    /*padding: 40px 20px;*/
+    /*text-align: center;*/
+    /*cursor: pointer;*/
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+    /*!* Убираем подчеркивание у текста внутри карточек, если там ссылки *!*/
+    /*text-decoration: none;*/
+    /*color: inherit;*/
+    /*height: 345px !important;*/
+    /*width: 535px;*/
+    /*margin-bottom: 175px;*/
+     background: rgba(255 255 255 / 0.1);
     border-radius: 15px;
     box-shadow: 0 0 10px rgb(43 43 41 / 46%);
     padding: 40px 20px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Убираем подчеркивание у текста внутри карточек, если там ссылки */
     text-decoration: none;
     color: inherit;
-    height: 345px !important;
-    width: 535px;
+    height: 100px !important;
+    width: 600px;
     margin-bottom: 175px;
 }
 
@@ -2931,6 +2971,9 @@ body.light-theme .cardGlass-two.Calculator-jewellery-card::before {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #42360d;
     transition: background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    bottom: 298px;
+    left: 83%;
 }
 
 body.light-theme .MainBtn {
@@ -2946,6 +2989,9 @@ body.light-theme .MainBtn {
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e6ebeb;
     transition: background 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 35px;
 }
 
 body.light-theme .MainBtn:hover,
@@ -2964,7 +3010,7 @@ body.light-theme .MainBtn:hover,
 
 /* Правый блок занимает всю высоту и центрирует содержимое */
 .Section5-right {
-    height: 527px; /* как у вас */
+    height: 280px; /* как у вас */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2985,7 +3031,7 @@ body.light-theme .MainBtn:hover,
 }
 
 .Section10CollateralItems .container {
-    max-width: 1088px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -3015,7 +3061,7 @@ body.light-theme .Section10CollateralItems .title {
 .Section10CollateralItems .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px 0;
+    gap: 25px 0;
     justify-content: space-between;
 }
 
@@ -3086,7 +3132,7 @@ body.light-theme .Section10CollateralItems .title {
     padding: 32px 24px 24px 24px;
     transition: box-shadow 0.3s, transform 0.3s;
     cursor: pointer;
-    width: 701px;
+    width: 750px;
     right: 12px;
 }
 
@@ -3415,7 +3461,7 @@ body.light-theme .news-item {
     scroll-behavior: smooth;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
-    gap: 15px;
+    gap: 22px;
     padding: 10px 0;
     flex-grow: 1;
 }
@@ -3536,6 +3582,19 @@ body.light-theme .news-item {
     box-shadow: 0 0 25px #fff700, 0 0 50px #ffd700;
     color: darkgoldenrod;
 }
+
+
+.news-slider {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth; /* плавная прокрутка */
+}
+
+.news-item {
+  scroll-snap-align: start;
+  flex-shrink: 0; /* Чтобы слайды не сжимались */
+}
+
 
 
 .addresses-map-main-bg {

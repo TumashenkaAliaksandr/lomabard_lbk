@@ -11,7 +11,7 @@
 
     /* Уменьшение отступов сверху в body из-за fixed header */
     body {
-        padding-top: 130px !important; /* Подберите под высоту мобильного header */
+        padding-top: 50px !important; /* Подберите под высоту мобильного header */
     }
 
     /* Хедер фиксированный — уменьшаем padding, уменьшаем шрифты и лого */
@@ -44,11 +44,21 @@
         font-size: 1rem !important;
         color: #d4af37;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 4px;
         text-transform: uppercase;
         letter-spacing: 2px;
         user-select: none;
         filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    }
+
+    .news-section {
+        padding: 20px;
+        background: rgb(255 255 255 / 34%);
+        max-width: 1320px;
+        margin: 0px auto;
+        border-radius: 7px;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+        width: 350px;
     }
 
     .slider-prev {
@@ -69,6 +79,14 @@
         margin-right: 15px !important;
         position: relative;
         right: 40px;
+        top: 5px;
+    }
+
+    .logo-footer {
+        font-size: 1.3rem !important;
+        margin-right: 15px !important;
+        position: relative;
+        right: 0px;
         top: 5px;
     }
 
@@ -265,7 +283,7 @@
 
     .news-item {
         min-width: 80vw !important;
-        max-width: 90vw !important;
+        max-width: 82vw !important;
         height: auto !important;
         font-size: 16px !important;
     }
@@ -280,6 +298,39 @@
         border-radius: 10px !important;
         box-shadow: none !important;
     }
+
+    .tabs-pagination {
+        border-bottom: none;
+        margin-bottom: 20px;
+        user-select: none;
+        padding-top: 10px;
+    }
+
+    .slider-btn {
+        background: linear-gradient(45deg, #fff700, #ffec8b, #debe13);
+        border: none;
+        color: #d4af37;
+        font-size: 15px;
+        padding: 5px 9px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        user-select: none;
+        margin: 0 5px;
+        height: 40px;
+        width: 40px;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .news-image {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
 
     .address-city, .city-addresses {
         flex: 1 1 100% !important;
@@ -812,13 +863,25 @@ body.light-theme .desctop-none {
     /* Текст внутри карточек */
     .Section10CollateralItems.Services .blur-card p {
         position: relative !important;
-        color: #fff !important;
+        /* color: #fff !important; */
         font-size: 1.1rem !important;
-        font-weight: 600 !important;
+        font-weight: 500 !important;
         z-index: 2 !important;
         margin: 0 !important;
         line-height: 1.3 !important;
-        white-space: pre-line !important; /* перенос строк внутри */
+        white-space: pre-line !important;
+    }
+
+    .blur-card-left p {
+        position: relative;
+        z-index: 2;
+        color: #fad300;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-shadow: 0 2px 8px #000, 0 0 6px #d4af37;
+        margin: 0;
+        line-height: 1.3;
+        text-transform: uppercase;
     }
 
     /* Для текстового блока с классом section-text-zalog */
@@ -931,7 +994,7 @@ body.light-theme .desctop-none {
     .row-SectionCards {
         display: flex !important;
         flex-direction: column !important;
-        gap: 20px !important;
+        gap: 10px !important;
     }
 
     /* Левая и правая часть занимают 100% ширины */
@@ -1139,7 +1202,7 @@ body.light-theme .desctop-none {
     }
 
     body.light-theme .section-text .section-p-calc {
-        background: rgb(217 220 214);
+        background: rgb(217 220 214 / 66%);
         padding: 15px;
         border-radius: 12px;
         font-size: 1.2rem;
@@ -1149,6 +1212,10 @@ body.light-theme .desctop-none {
         font-weight: 300;
         width: 100%;
         filter: none;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        bottom: 10px;
     }
 }
 
@@ -1157,7 +1224,7 @@ body.light-theme .desctop-none {
     /* Заголовок услуг */
     .services-title {
         font-size: 1.25rem !important; /* Немного уменьшаем шрифт */
-        margin: 0px 15px 20px !important; /* Отступы по бокам для мобильных */
+        margin: 40px 15px 20px !important; /* Отступы по бокам для мобильных */
         text-align: center !important; /* Центрируем текст */
     }
 
@@ -1727,6 +1794,148 @@ body.light-theme .desctop-none-class {
         font-size: 0.9rem !important;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.7) !important;
         user-select: none !important;
+    }
+
+    .blur-card-left {
+        position: relative;
+        border-radius: 18px;
+        overflow: hidden;
+        min-height: 200px;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 0 22px rgba(243, 205, 1, 0.15), 0 2px 12px rgba(0, 0, 0, 0.12);
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 32px 24px 24px 24px;
+        transition: box-shadow 0.3s, transform 0.3s;
+        cursor: pointer;
+        width: 701px;
+        right: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .products-section {
+        padding: 15px 10px !important;
+    }
+
+    .product-info {
+        flex: 1.2;
+        display: flex;
+        flex-direction: column;
+        background-color: #dcdcdc40;
+        padding: 20px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-detail-container {
+        display: grid;
+        max-width: 350px;
+        margin: 40px auto;
+        gap: 40px;
+        padding: 20px 20px;
+        color: #222;
+    }
+
+    .product-description, .product-characteristics {
+        margin-bottom: 10px;
+    }
+
+    .product-card:hover,
+    .product-card:focus-within {
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6) !important;
+    }
+
+
+    .main-photo {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        object-fit: contain;
+        margin-bottom: 5px;
+        height: 100%;
+    }
+
+    /* Цена */
+    .product-price {
+        font-size: 1.15rem !important;
+        font-weight: 700 !important;
+        color: #d4af37 !important;
+        margin-bottom: 5px !important;
+    }
+
+
+    /* Сообщение при отсутствии продуктов */
+    .products-grid p {
+        text-align: center !important;
+        font-size: 1.2rem !important;
+        color: #999 !important;
+        user-select: none;
+    }
+}
+
+/* Для очень маленьких экранов — чуть уменьшить размеры */
+@media (max-width: 480px) {
+    .product-image {
+        max-width: 100% !important;
+        margin-bottom: 12px !important;
+    }
+
+    .product-detail-container {
+        display: grid;
+        max-width: 400px;
+        margin: 30px auto;
+        gap: 25px;
+        padding: 20px 20px;
+        color: #222;
+    }
+
+    .additional-photo {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 7px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .product-name {
+        font-size: 1.16rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #ffd700;
+        text-transform: uppercase;
+    }
+
+    .product-description p, .product-characteristics p {
+        font-size: 1.3rem;
+        line-height: 1.4;
+        color: #b28f20;
+    }
+
+    .product-description h2, .product-characteristics h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        border-top: 2px solid #d4af37;
+        padding-top: 20px;
+        color: #ffd700;
+    }
+
+    .product-phone {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #ffd700;
+    }
+
+    .product-price {
+        font-size: 1.3rem !important;
     }
 
 }
