@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="lombard-addresses-item-number">
-                            <h5 class="workhours-title-mobile">📞 Телефоны:</h5>
+                            <h5 class="workhours-title-mobile">📞 Телефон:</h5>
                             {% for phone in addr.phones %}
                                 <a class="lombard-addresses-phone" href="tel:{{ phone.number|default:phone }}">
                                     <span itemprop="telephone">{{ phone.number|default:phone }}</span>

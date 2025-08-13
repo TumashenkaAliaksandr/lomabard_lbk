@@ -2303,7 +2303,7 @@ body.light-theme .section-text {
     /*max-width: 700px; !* увеличил ширину для баланса с большими квадратами *!*/
     flex: 1 1 400px; /* позволяет тексту занимать место, но с минимальной шириной */
     color: #d4af37; /* цвет текста */
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 .section-text .h2 {
@@ -2393,10 +2393,10 @@ body.light-theme .section-text .h2 {
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 300;
-    width: 100%;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     position: relative;
     bottom: 200px;
+    width: 1255px;
 }
 
 body.light-theme .section-text .section-p-calc {
@@ -4047,7 +4047,7 @@ body.light-theme .lombard-addresses-item-time {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-right: 40px;
+    margin-right: 4px;
     font-size: 1.5em;
     color: #eeefef;
     line-height: 1;

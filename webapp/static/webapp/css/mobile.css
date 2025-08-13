@@ -521,7 +521,20 @@
 
     .lombard-addresses-item-number {
         margin-right: 0 !important;
-        font-size: 1.3em !important;
+        font-size: 22px !important;
+        margin-left: 0;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 21px;
+    }
+
+    .lombard-addresses-phone {
+        text-decoration: underline;
+        color: #eef0f1;
+        cursor: pointer;
+        transition: color 0.2s;
+        margin-left: 135px;
+        position: absolute;
     }
 
     /* Калькулятор и карточки — в колонку */
@@ -995,6 +1008,51 @@ body.light-theme .desctop-none {
         display: flex !important;
         flex-direction: column !important;
         gap: 10px !important;
+    }
+
+    .lombard-addresses-item-address {
+        flex: 2;
+        font-weight: bold;
+        font-size: 1.1em;
+        line-height: 1;
+    }
+
+    body .contact-bg {
+         padding: 0px 0 35px;
+        background: linear-gradient(to left, rgba(20, 20, 20, 0.98) 0%, /* очень тёмный почти чёрный слева */ rgba(60, 50, 10, 0.95) 45%, /* глубокий тёмно-золотистый в середине */ rgb(65 50 1 / 88%) 100% /* мягкий золотой справа */), url(../img/contacts_bg.jpg) center center / cover no-repeat fixed;
+        background-attachment: fixed;
+        color: #ffd700;
+    }
+
+    body.light-theme .lombard-addresses-item-time {
+        flex: 1.5;
+        color: #5b5a58;
+        font-size: 1.3em;
+        line-height: 1.5;
+        position: absolute;
+        left: 50%;
+    }
+
+    .lombard-addresses-item-time {
+        flex: 1.5;
+        color: #5b5a58;
+        font-size: 1.3em;
+        line-height: 1.5;
+        position: absolute;
+        left: 50%;
+    }
+
+    .lombard-addresses-item-time {
+        flex: 1.5;
+        color: #f0f0ef;
+        font-size: 15.93px;
+        line-height: 1;
+        position: absolute;
+        left: 50%;
+    }
+
+    .workhours-title-mobile {
+        padding: 0;
     }
 
     /* Левая и правая часть занимают 100% ширины */
