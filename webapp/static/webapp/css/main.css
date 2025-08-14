@@ -426,7 +426,6 @@ body.light-theme .nav-link.active {
 }
 
 .breadcrumb-container {
-    font-family: Arial, sans-serif;
     font-size: 14px;
     margin: 15px 0;
 }
@@ -1355,6 +1354,20 @@ body.light-theme .services-title {
 }
 
 .services-title a {
+    color: #d4af37;
+}
+.advertisement-index-title {
+    font-size: 1.8rem; /* крупный размер */
+    color: #d4af37; /* золотистый цвет, подходящий для ломбарда */
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase; /* заглавные буквы */
+    letter-spacing: 2px; /* увеличенный межбуквенный интервал */
+    user-select: none; /* запрет выделения */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+.advertisement-index-title a {
     color: #d4af37;
 }
 

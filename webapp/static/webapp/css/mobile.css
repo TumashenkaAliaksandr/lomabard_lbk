@@ -49,6 +49,8 @@
         letter-spacing: 2px;
         user-select: none;
         filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+        margin-left: 4px;
+        margin-right: auto;
     }
 
     .news-section {
@@ -142,6 +144,21 @@
         margin-bottom: 40px;
         color: #fffae4;
     }
+
+    .advertisement-index-title {
+        font-size: 1.1rem;
+        color: #d4af37;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        user-select: none;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 57px;
+    }
+
 
     .services-title {
         font-size: 1.8rem;
@@ -393,6 +410,12 @@
         gap: 15px !important;
     }
 
+    .padding-menu {
+        margin-right: 17px !important;
+        margin-left: 10px;
+        margin-top: 21px;
+    }
+
     .social-icon, .social-icon-had, .about-social-icon, .footer-social .social-link {
         width: 28px !important;
         height: 28px !important;
@@ -407,6 +430,41 @@
         right: 20px !important;
         font-size: 1.3rem !important;
     }
+
+    .about-info-img {
+        display: flex;
+        justify-content: center; /* Горизонтальное центрирование дочерних элементов */
+        align-items: center; /* Вертикальное центрирование */
+        height: auto; /* Чтобы контейнер не фиксировал жестко высоту */
+    }
+
+    .about-info-img img {
+        width: 300px !important; /* фиксированная ширина */
+        height: 100% !important; /* высота равна контейнеру */
+        object-fit: cover !important;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .sercives-info-left-two h3 {
+        line-height: 1.1;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 1.25rem;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    body .main-bg {
+    padding: 35px 0 35px;
+
+    }
+
 
     .blur-card {
         position: relative;
@@ -829,7 +887,6 @@ body.light-theme .desctop-none {
         font-size: 1.25rem !important;
         text-align: center !important;
         margin-bottom: 20px !important;
-        margin-top: 255px;
         font-weight: 500 !important;
     }
 
@@ -839,6 +896,45 @@ body.light-theme .desctop-none {
         display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
+    }
+
+
+    body.light-theme .btn-consultations {
+        background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+        color: #121212;
+        font-weight: 600;
+        border-radius: 7px;
+        padding: 2px 8px;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        width: 415px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #dfddbd;
+        font-size: 14px !important;
+        text-align: center;
+        position: relative;
+        height: 54px;
+        margin-top: 30px;
+    }
+
+    body.light-theme .shop-button {
+        background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
+        color: #121212;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e2e5d6;
+        width: 250px;
+        text-align: center;
+        position: relative;
+        display: block;
+        margin: 35px auto;
+        border-radius: 5px;
+        text-decoration: none;
+        padding-top: 17px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        height: 56px;
     }
 
     /* Для каждого кола — полный размер по ширине */
@@ -1020,7 +1116,7 @@ body.light-theme .desctop-none {
     }
 
     body .contact-bg {
-         padding: 0px 0 35px;
+        padding: 0px 0 35px;
         background: linear-gradient(to left, rgba(20, 20, 20, 0.98) 0%, /* очень тёмный почти чёрный слева */ rgba(60, 50, 10, 0.95) 45%, /* глубокий тёмно-золотистый в середине */ rgb(65 50 1 / 88%) 100% /* мягкий золотой справа */), url(../img/contacts_bg.jpg) center center / cover no-repeat fixed;
         background-attachment: fixed;
         color: #ffd700;
@@ -1553,13 +1649,14 @@ body.light-theme .desctop-none {
     /* Ссылки иконок соцсетей */
     .about-social-icon {
         display: inline-flex !important;
-        width: 35px !important;
+        width: 39px !important;
         height: 23px !important;
         border-radius: 50% !important;
         overflow: hidden !important;
         box-shadow: 0 0 8px rgba(212, 175, 55, 0.6) !important;
         transition: box-shadow 0.3s ease;
-        margin-top: 6px;
+        margin-top: 5px;
+        margin-right: 8px;
     }
 
     .about-us-image h3 {
@@ -1618,6 +1715,21 @@ body.light-theme .desctop-none {
         display: flex !important;
         flex-direction: column !important;
         gap: 25px !important;
+    }
+
+    .section-text .section-p-calc {
+        background: rgba(212, 175, 55, 0.15);
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        color: rgb(255 215 0);
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 300;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+        position: relative;
+        bottom: 2px;
+        width: 1255px;
     }
 
     /* Левая часть с табами — занимать всю ширину */
@@ -1998,4 +2110,234 @@ body.light-theme .desctop-none-class {
         font-size: 1.3rem !important;
     }
 
+    .Section5Сalculator {
+        padding: 20px 20px;
+        color: #f3cd01;
+        height: auto;
+    }
+
+    /* Пример для иконки-бургера, реализованной через 3 полоски */
+    .navbar-toggler-icon,
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        background-color: #d4af37 !important; /* нужный вам цвет, например золотистый */
+    }
+
+    /* Обязательно задайте позиционирование для псевдоэлементов, если они используются */
+    .navbar-toggler-icon {
+        position: relative;
+        width: 24px;
+        height: 2.5px;
+        background-color: #d4af37;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 2.5px;
+        background-color: #d4af37;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-toggler-icon::before {
+        top: -7px;
+    }
+
+    .navbar-toggler-icon::after {
+        bottom: -7px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .sub-dropdown-list {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Меню навигации в коллапсе */
+    .navbar-collapse {
+        text-align: left; /* Выравнивание текста по левому краю */
+    }
+
+    /* Dropdown-меню будут выезжать и располагаться по левому краю */
+    .dropdown-menu {
+        left: 0 !important; /* Принудительно прижать к левому краю */
+        right: auto !important; /* Сброс правого позиционирования */
+        top: 100%; /* Чтобы появлялось сразу под кнопкой */
+    }
+
+    /* Для вложенных подменю (dropdown-submenu), если есть */
+    .dropdown-submenu .dropdown-menu {
+
+        left: 73% !important;
+        right: auto !important;
+        top: 0;
+    }
+
+    /* Отступы элементов меню */
+    .navbar-nav .nav-link,
+    .dropdown-item {
+        padding-left: 1rem; /* Отступ слева для читаемости */
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: whitesmoke;
+        padding: 5px 10px;
+        font-weight: 500;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+        white-space: normal;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Общие контейнеры */
+    .container,
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Кнопки и ссылки в блоках (чтобы не были слишком маленькими) */
+    a {
+        word-wrap: break-word;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .about-h3 {
+        line-height: 1.7;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 1.8rem;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    .sercives-info-left {
+        flex: 1 1 60%;
+        max-width: 350px;
+        padding: 0 20px;
+    }
+
+
+    .breadcrumb-list {
+        font-size: 0.9em;
+        margin-bottom: 0.8rem;
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: "›"; /* стиль разделителя */
+    }
+
+    /* Блоки серивисов по умолчанию были flex с row и gap,
+       на мобилке сделаем столбцы, подгоняя картинки и тексты */
+    .sercives-info .row {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .sercives-info-left {
+        padding: 0 !important;
+    }
+
+    .sercives-info-left-1,
+    .sercives-info-left-2 {
+        padding: 0 !important;
+    }
+
+    .about-info-img {
+        height: auto !important;
+        max-height: 250px;
+        width: 100% !important;
+        box-shadow: 0 0 15px rgb(17 15 1 / 60%);
+        border-radius: 10px;
+    }
+
+    .about-info-img img {
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 10px;
+    }
+
+
+    h3.about-h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+
+    /* Дополнительные стили для текста с классами, если есть */
+    p.tablet-text,
+    p.mobile-text {
+        font-size: 0.95rem;
+    }
+
+    /* Удаляем отступы у внутренних блоков для сжатия */
+    .sercives-info-left-two {
+        padding-left: 0 !important;
+    }
+
+
+    /* Переопределяем flex-колонки для списка преимуществ */
+    .steps-items .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .step-item {
+        flex: 1 1 45%;
+        max-width: 45%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .step-item-img img {
+        max-width: 70px;
+        height: auto;
+    }
+
+    /* Разделительные линии */
+    hr.section-divider {
+        margin: 30px 0;
+        border-top: 1px solid #ddd;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body.light-theme .advertisement-index-title {
+        font-size: 1.1rem;
+        color: #63615a;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        user-select: none;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 57px;
+    }
+
+    body.light-theme .advertisement-index-title a {
+        color: #63615a;
+    }
 }
