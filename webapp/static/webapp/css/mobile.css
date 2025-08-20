@@ -16,7 +16,7 @@
 
     /* Хедер фиксированный — уменьшаем padding, уменьшаем шрифты и лого */
     header.header {
-        padding: 10px 15px !important;
+        padding: 20px 15px !important;
         flex-wrap: wrap;
         gap: 10px;
     }
@@ -81,7 +81,17 @@
         margin-right: 15px !important;
         position: relative;
         right: 40px;
-        top: 5px;
+        top: 7px;
+    }
+
+    .navbar-toggler {
+        margin-left: 44px;
+        /* border-color: rgb(162 141 71); */
+        height: 21px;
+        padding-bottom: 4px;
+        position: relative;
+        left: 40px;
+        top: 7px;
     }
 
     .logo-footer {
@@ -107,9 +117,11 @@
 
     /* Верхняя интерактивная полоска */
     .top-bar {
-        height: 30px !important;
-        font-size: 10px !important;
+        height: 48px !important;
+        font-size: 16px !important;
         padding: 0 10px !important;
+        text-align: center;
+        line-height: 1.1;
     }
 
     /* Основная секция hero — перестраиваем слайдер и коллаж */
@@ -137,6 +149,7 @@
         width: 280px;
         margin-left: auto;
         margin-right: auto;
+        line-height: 1.3;
     }
 
     .hero-subtitle {
@@ -1118,7 +1131,7 @@ body.light-theme .desctop-none {
     body .contact-bg {
         padding: 0px 0 35px;
         background: linear-gradient(to left, rgba(20, 20, 20, 0.98) 0%, /* очень тёмный почти чёрный слева */ rgba(60, 50, 10, 0.95) 45%, /* глубокий тёмно-золотистый в середине */ rgb(65 50 1 / 88%) 100% /* мягкий золотой справа */), url(../img/contacts_bg.jpg) center center / cover no-repeat fixed;
-        background-attachment: fixed;
+        background-attachment: scroll;
         color: #ffd700;
     }
 
@@ -1568,7 +1581,7 @@ body.light-theme .desctop-none {
 
     /* Заголовок h3 внутри контента */
     .about-us-content h3 {
-        font-size: 1.4rem !important;
+        font-size: 1.5rem !important;
         font-weight: 700 !important;
         margin-bottom: 15px !important;
         color: #ffd700 !important;
@@ -1576,7 +1589,7 @@ body.light-theme .desctop-none {
 
     /* Абзацы текста */
     .about-us-content p {
-        font-size: 1.2rem !important;
+        font-size: 1.3rem !important;
         line-height: 1.2 !important;
         color: #cca835 !important;
         margin-bottom: 15px !important;
@@ -2338,6 +2351,6 @@ body.light-theme .desctop-none-class {
     }
 
     body.light-theme .advertisement-index-title a {
-        color: #63615a;
+        color: #5e5c54;
     }
 }

@@ -379,8 +379,8 @@ header.header {
 
 .logo .gold-text {
     color: #fff700 !important;
-    text-shadow: 0 0 2px #fff700, 0 0 4px #FFD700, 0 0 0 #ffec8b;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    text-shadow: 0 0 2px #fff700, 0 0 2px #FFD700, 0 0 0 #ffec8b;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 .footer-logo {
@@ -4439,7 +4439,7 @@ body.light-theme .lbk-disclosure-link:hover,
     text-transform: uppercase;
     letter-spacing: 2px;
     user-select: none;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
 }
 
 /* Социальные сети - контейнер */
