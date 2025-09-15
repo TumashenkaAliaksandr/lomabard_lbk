@@ -1809,7 +1809,7 @@ body.light-theme .desctop-none {
 
     .tab-content {
         display: none;
-        font-size: 1rem !important;
+        font-size: 19px !important;
         color: #cfab36 !important;
         line-height: 1.5 !important;
         padding: 10px 15px !important;
