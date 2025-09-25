@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from lomabard_lbk import settings
-from webapp.models import Slider, ServiceIcon, Product, FinancialStatement, City
+from webapp.models import Slider, ServiceIcon, Product, FinancialStatement, City, Document
 import requests
 import datetime
 
@@ -111,10 +111,12 @@ def about_info_docs(request):
     """
     services = ServiceIcon.objects.all()
     reports = FinancialStatement.objects.order_by('-year')
+    document = Document.objects.first()
 
     context = {
         'services': services,
         'reports': reports,
+        'document': document,
     }
 
     return render(request, 'webapp/about_docs.html', context=context)

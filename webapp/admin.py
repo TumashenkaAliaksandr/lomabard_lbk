@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from django import forms
-from .models import Slider, ServiceIcon, ProductPhoto, Product, FinancialStatement, Address, City, SocialNetwork
+from .models import Slider, ServiceIcon, ProductPhoto, Product, FinancialStatement, Address, City, SocialNetwork, \
+    Document
 
 
 @admin.register(Slider)
@@ -163,3 +164,21 @@ class AddressAdmin(admin.ModelAdmin):
 class SocialNetworkAdmin(admin.ModelAdmin):
     list_display = ('name', 'url', 'icon')
     search_fields = ('name',)
+
+
+@admin.register(Document)
+class DocumentAdmin(admin.ModelAdmin):
+    list_display = ['id', 'registration_certificate_link', 'ministry_of_finance_license_link']
+    readonly_fields = []
+
+    def registration_certificate_link(self, obj):
+        if obj.registration_certificate:
+            return format_html('<a href="{}" target="_blank">Просмотр</a>', obj.registration_certificate.url)
+        return "-"
+    registration_certificate_link.short_description = "Свидетельство о регистрации"
+
+    def ministry_of_finance_license_link(self, obj):
+        if obj.ministry_of_finance_license:
+            return format_html('<a href="{}" target="_blank">Просмотр</a>', obj.ministry_of_finance_license.url)
+        return "-"
+    ministry_of_finance_license_link.short_description = "Лицензия мин. финансов"

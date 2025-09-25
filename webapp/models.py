@@ -126,6 +126,61 @@ class FinancialStatement(models.Model):
         return f"Финансовая отчетность {self.name}"
 
 
+class Document(models.Model):
+    registration_certificate = models.FileField(
+        upload_to='documents/registration_certificate/',
+        blank=True, null=True,
+        verbose_name='Свидетельство о регистрации'
+    )
+    registry_inclusion_certificate = models.FileField(
+        upload_to='documents/registry_inclusion_certificate/',
+        blank=True, null=True,
+        verbose_name='Свидетельство о включении в реестр'
+    )
+    charter = models.FileField(
+        upload_to='documents/charter/',
+        blank=True, null=True,
+        verbose_name='Устав'
+    )
+    microloan_agreement = models.FileField(
+        upload_to='documents/microloan_agreement/',
+        blank=True, null=True,
+        verbose_name='Договор микрозайма'
+    )
+    pledge_ticket = models.FileField(
+        upload_to='documents/pledge_ticket/',
+        blank=True, null=True,
+        verbose_name='Залоговый билет'
+    )
+    microloan_rules = models.FileField(
+        upload_to='documents/microloan_rules/',
+        blank=True, null=True,
+        verbose_name='Правила предоставления микрозаймов'
+    )
+    loyalty_program_regulation = models.FileField(
+        upload_to='documents/loyalty_program_regulation/',
+        blank=True, null=True,
+        verbose_name='Положение о программе лояльности'
+    )
+    microloan_types = models.FileField(
+        upload_to='documents/microloan_types/',
+        blank=True, null=True,
+        verbose_name='Виды предоставления микрозаймов'
+    )
+    ministry_of_finance_license = models.FileField(
+        upload_to='documents/ministry_of_finance_license/',
+        blank=True, null=True,
+        verbose_name='Лицензия министерства финансов'
+    )
+
+    class Meta:
+        verbose_name = "Документ"
+        verbose_name_plural = "Документы"
+
+    def __str__(self):
+        return f"Документы #{self.pk}"
+
+
 
 class City(models.Model):
     name = models.CharField('Город', max_length=100, unique=True, db_index=True)
