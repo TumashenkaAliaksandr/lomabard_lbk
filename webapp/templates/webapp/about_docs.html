@@ -90,12 +90,20 @@
             </section>
             <section class="lbk-disclosure-section">
                 <h2 class="lbk-disclosure-h2">🛈 Фонды, сформированные в соответствии с законодательством</h2>
-                <p>📐 Размер уставного фонда ООО «ЛОМБАРД ЛБК»: <b>110 000 белорусских рублей</b>.</p>
+                <p>📐 Размер уставного фонда ООО «ЛОМБАРД ЛБК»: <b>64750 белорусских рублей</b>.</p>
             </section>
             <section class="lbk-disclosure-section">
                 <h2 class="lbk-disclosure-h2">📜 Уставные документы</h2>
-                <p><a href="/tut/"
-                      class="lbk-disclosure-link">Устав ООО «ЛОМБАРД ЛБК»</a></p>
+                <p>
+                    {% if document.charter %}
+                        <a href="{{ document.charter.url }}" class="lbk-disclosure-link" target="_blank">
+                            Устав ООО «ЛОМБАРД ЛБК»
+                        </a>
+                    {% else %}
+                        <span>Устав не загружен</span>
+                    {% endif %}
+                </p>
+
             </section>
             <section class="lbk-disclosure-section">
                 <h2 class="lbk-disclosure-h2">🛈 Типовые формы договора микрозайма и залогового билета</h2>

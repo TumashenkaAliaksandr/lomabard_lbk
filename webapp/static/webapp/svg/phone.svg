@@ -1,0 +1,18 @@
+<svg width="140" height="180" viewBox="0 0 140 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Корпус телефона -->
+  <rect x="10" y="10" width="120" height="160" rx="30" ry="30" fill="#FFD700" stroke="#B8860B" stroke-width="2"/>
+  <!-- Экран телефона -->
+  <rect x="20" y="40" width="80" height="100" rx="15" ry="15" fill="#FFF8DC" stroke="#B8860B" stroke-width="1.2"/>
+
+  <!-- Текст внутри экрана -->
+  <text x="40" y="85" font-family="Arial" font-size="14" fill="#B8860B" font-weight="bold">Calling to LBK</text>
+
+  <!-- Динамик -->
+  <circle cx="60" cy="120" r="12" fill="#B8860B" />
+  <circle cx="60" cy="120" r="8" fill="#FFD700" />
+
+  <!-- Волны звонка -->
+  <path d="M40 120 C 45 110, 55 110, 60 120" stroke="#B8860B" stroke-width="3" fill="none" />
+  <path d="M38 130 C 48 115, 58 115, 68 130" stroke="#B8860B" stroke-width="2" fill="none" />
+  <path d="M35 140 C 52 120, 62 120, 85 140" stroke="#B8860B" stroke-width="1.5" fill="none" />
+</svg>

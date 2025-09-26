@@ -3046,16 +3046,16 @@ body.light-theme .MainBtnOcenka {
     font-weight: 700;
     padding: 14px 40px;
     border-radius: 7px;
-    text-decoration: none;
+    text-decoration: none; /* Убираем подчеркивание */
     text-align: center;
     user-select: none;
     text-transform: uppercase;
     background: linear-gradient(45deg, #fff700, #ffd700, #b8860b);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #e6ebeb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px #42360d;
     transition: background 0.3s ease, box-shadow 0.3s ease;
-    position: absolute;
-    bottom: 20px;
-    right: 35px;
+    position: relative;
+    bottom: 35px;
+    left: 83%;
 }
 
 body.light-theme .MainBtnOcenka:hover,
@@ -3164,7 +3164,7 @@ body.light-theme .Section10CollateralItems .title {
     color: #fad300;
     font-size: 1.2rem;
     font-weight: 500;
-    text-shadow: 0 2px 8px #000, 0 0 6px #d4af37;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
     margin: 0;
     line-height: 1.3;
     text-transform: uppercase;
@@ -4266,14 +4266,15 @@ body.light-theme .tablet-text {
     max-height: 100px;
     width: auto;
     display: block;
-    border-radius: 50px;
-    height: 75px;
-    margin-top: 17px;
+    height: 115px;
+    margin-top: 44px;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.8));
+
 
 }
 
 .step-item p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     line-height: 1.1;
     color: #b69e3e;
@@ -4287,7 +4288,7 @@ body.light-theme .tablet-text {
 
 
 body.light-theme .step-item p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     line-height: 1.1;
     color: #68675f;
@@ -4757,7 +4758,6 @@ body.light-theme .sercives-info-left-two h3 {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60%;
   background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
   border-radius: 15px;
   pointer-events: none;

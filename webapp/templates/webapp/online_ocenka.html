@@ -55,53 +55,41 @@
                 </div>
             </div>
             <div class="steps">
-                <p class="h3">Как происходит онлайн-оценка?</p>
+                <p class="h2">Как происходит онлайн-оценка?</p>
                 <div class="steps-items">
                     <div class="row">
                         <div class="step-item-wrap col-6 col-sm-3">
                             <div class="step-item">
-                                <div class="step-item-img">
-                                    <!-- SVG icon here -->
-                                    [SVG content for step 1]
+                               <div class="step-item-img">
+                                    <img src="{% static 'webapp/img/free-icon-monitor-1926234.png' %}" alt="Монитор" />
                                 </div>
-                                <p>Заходите на соответствующий раздел сайта</p>
-                            </div>
-                            <div class="step-arrow">
-                                <!-- arrow SVG -->
-                                [Arrow SVG content]
+
+                                <p>Заходите на соответствующий раздел</p>
                             </div>
                         </div>
                         <div class="step-item-wrap col-6 col-sm-3">
                             <div class="step-item">
                                 <div class="step-item-img">
                                     <!-- SVG icon here -->
-                                    [SVG content for step 2]
+                                    <img src="{% static 'webapp/img/free-icon-registration-10209854.png' %}" alt="Листок" />
                                 </div>
                                 <p>Заполняете поля описания имущества</p>
                             </div>
-                            <div class="step-arrow">
-                                <!-- arrow SVG -->
-                                [Arrow SVG content]
-                            </div>
                         </div>
                         <div class="step-item-wrap col-6 col-sm-3">
                             <div class="step-item">
                                 <div class="step-item-img">
                                     <!-- SVG icon here -->
-                                    [SVG content for step 3]
+                                    <img src="{% static 'webapp/img/free-icon-application-3671211.png' %}" alt="Заявка" />
                                 </div>
                                 <p>Оставляете заявку и ожидаете звонка</p>
-                            </div>
-                            <div class="step-arrow">
-                                <!-- arrow SVG -->
-                                [Arrow SVG content]
                             </div>
                         </div>
                         <div class="step-item-wrap col-6 col-sm-3">
                             <div class="step-item">
                                 <div class="step-item-img step-item-img-money">
                                     <!-- SVG icon here -->
-                                    [SVG content for step 4]
+                                    <img src="{% static 'webapp/img/free-icon-recieved-2343597.png' %}" alt="Оценка" />
                                 </div>
                                 <p>Получаете оценку имущества</p>
                             </div>
@@ -114,7 +102,7 @@
                     <div class="col col-6 col-md-5">
                         <a href="/online-ocenka-zolota-i-serebra/">
                             <div class="blur-card parallax-cards"
-                                 style="background-image: url(webapp/static/webapp/img/lbk_juvelire.png);">
+                                 style="background-image: url({% static 'webapp/img/lbk_juvelire.png' %});">
                                 <p class="h3">Оценить<br>драгоценные металлы</p>
                                 <div class="darkBlur"></div>
                             </div>
@@ -123,7 +111,7 @@
                     <div class="col col-6 col-md-3">
                         <a href="/online-ocenka-ehlektroniki/">
                             <div class="blur-card parallax-cards"
-                                 style="background-image: url(webapp/static/webapp/img/lbk_electronics.jpg);">
+                                 style="background-image: url({% static 'webapp/img/lbk_electronics.jpg' %});">
                                 <p class="h3">Оценить<br>электронику</p>
                                 <div class="darkBlur"></div>
                             </div>
@@ -132,7 +120,7 @@
                     <div class="col col-6 col-md-4">
                         <a href="/online-ocenka-stroitelnogo-instrumenta/">
                             <div class="blur-card parallax-cards"
-                                 style="background-image: url(webapp/static/webapp/img/lbk_instrument.jpeg);">
+                                 style="background-image: url({% static 'webapp/img/lbk_instrument.jpeg' %});">
                                 <p class="h3">Оценить<br>инструменты</p>
                                 <div class="darkBlur"></div>
                             </div>
@@ -141,7 +129,7 @@
                     <div class="col col-6 col-md-4">
                         <a href="/online-ocenka-bytovoj-tekhniki/">
                             <div class="blur-card parallax-cards change-high"
-                                 style="background-image: url(webapp/static/webapp/img/lbk_phones_tech.jpeg);">
+                                 style="background-image: url({% static 'webapp/img/lbk_phones_tech.jpeg' %});">
                                 <p class="h3">Оценить<br>бытовую технику</p>
                                 <div class="darkBlur"></div>
                             </div>
@@ -150,7 +138,7 @@
                     <div class="col col-6 col-md-5">
                         <a href="/online-ocenka-avtomobilya/">
                             <div class="blur-card parallax-cards change-high"
-                                 style="background-image: url(webapp/static/webapp/img/lamborghini.jpg);">
+                                 style="background-image: url({% static 'webapp/img/lamborghini.jpg' %});">
                                 <p class="h3">Оценить<br>автомобиль</p>
                                 <div class="darkBlur"></div>
                             </div>
@@ -159,7 +147,7 @@
                     <div class="col col-6 col-md-3">
                         <a href="/calculator/">
                             <div class="blur-card parallax-cards change-high"
-                                 style="background-image: url(webapp/static/webapp/img/lbk_calc.png);">
+                                 style="background-image: url({% static 'webapp/img/lbk_calc.png' %});">
                                 <p class="h3">Онлайн<br>калькулятор</p>
                                 <div class="darkBlur"></div>
                             </div>
@@ -168,7 +156,7 @@
                     <div class="col col-6 col-md-4">
                         <a href="/ocenka-telefona/">
                             <div class="blur-card parallax-cards change-high"
-                                 style="background-image: url(webapp/static/webapp/img/lbk_phones.png);">
+                                 style="background-image: url({% static 'webapp/img/lbk_phones.png' %});">
                                 <p class="h3">Оценить<br>телефон</p>
                                 <div class="darkBlur"></div>
                             </div>
