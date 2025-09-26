@@ -4114,7 +4114,7 @@ body.light-theme .lombard-addresses-phone:hover {
 
 .sercives-info-left p{
     font-size: 1.3em;
-    color: #b69e3e;
+    color: #c4ac4d;
     line-height: 1.15;
     margin-bottom: 1em;
 }
@@ -4268,6 +4268,7 @@ body.light-theme .step-item p {
 .lbk-disclosure-section p {
     font-size: 18px;
     font-weight: 500;
+    color: #c4ac4d;
 }
 
 body.light-theme .lbk-disclosure-section p {
@@ -4322,6 +4323,7 @@ body.light-theme .lbk-disclosure-dl dd {
     margin: 0;
     padding-left: 20px;
     font-size: 20px;
+    color: #c4ac4d;
 }
 
 .lbk-disclosure-list li {
