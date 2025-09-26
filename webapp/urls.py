@@ -13,6 +13,7 @@ urlpatterns = [
     path('store/', views.store, name='store'),
     path('news/', views.news, name='news'),
     path('zaim/', views.zaim, name='zaim'),
+    path('online-ocenka/', views.online_ocenka, name='online-ocenka'),
     path('contacts/', views.contacts, name='contacts'),
     path('action/', views.action, name='action'),
     path('api/metals-price-probas/', MetalsPriceProbasAPIView.as_view(), name='metals_price_probas'),

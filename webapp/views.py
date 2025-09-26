@@ -143,9 +143,16 @@ def news(request):
 
 def zaim(request):
     """
-    Страница новости
+    Страница Займа
     """
     return render(request, 'webapp/zaim.html')
+
+
+def online_ocenka(request):
+    """
+    Страница Онлайн оценки
+    """
+    return render(request, 'webapp/online_ocenka.html')
 
 
 def contacts(request):

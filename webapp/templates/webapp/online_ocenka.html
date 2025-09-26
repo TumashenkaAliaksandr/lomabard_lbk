@@ -1,0 +1,343 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+    <body class="lbk-disclosure-body">
+    <nav aria-label="breadcrumb" class="breadcrumb-container">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> Онлайн Оценка</li>
+        </ol>
+    </nav>
+
+    <h1 class="services-title">⚖️ Онлайн Оценка</h1>
+
+    <section class="Valuation-page">
+        <div class="container-ocenka">
+            <div style="margin-bottom:50px;" class="sercives-info">
+                <div class="row">
+                    <div class="sercives-info-left col-sm-6">
+                        <p>Оценка – самый первый и важный этап оформления микрозайма в ломбарде. Изделия из драгоценных
+                            металлов оцениваются по прейскуранту, установленному государством, а стоимость остальных
+                            предметов залога определяется по соглашению сторон.<br>
+                            От качества первоначальной оценки вещи зависит возможность выдачи нужной суммы займа клиенту
+                            и впечатление о работе нашего ломбарда в целом. Мы это понимаем, поэтому наши товароведы
+                            стараются оценить вашу вещь максимально объективно.<br>
+                        <p class="h4">Сумма оценки зависит от следующих параметров:</p>
+                        <ul>
+                            <li><span>Производитель/страна происхождения товара</span></li>
+                            <li><span>Модель</span> (модификация, комплектация)</li>
+                            <li><span>Год выпуска</span></li>
+                            <li><span>Внешний вид и состояние</span> (наличие/отсутствие дефектов)</li>
+                            <li><span>Наличие/отсутствие гарантийного талона</span></li>
+                            <li><span>Уровень спроса, актуальность вещи на данный момент</span></li>
+                            <li><span>Цена на рынке</span></li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="sercives-info-right sercives-info-right-2 sercives-info-right-3 col-sm-6" itemscope
+                         itemtype="https://schema.org/ImageObject">
+                        <span hidden itemprop="name">Онлайн-оценка</span>
+                       <img itemprop="contentUrl"
+                         src="{% static 'webapp/img/appraisal-process-rings.jpg' %}"
+                         class="resize-img" alt="Онлайн-оценка">
+                        <div class="sercives-info-left sercives-info-left-3 resize-text">
+                            <p>Начните сотрудничество с нами уже сейчас, попробуйте сервис Онлайн-оценка. <br>
+                                Введите данные, прикрепите фото и узнайте стоимость вещи без визита в ломбард *
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <span class="descriptor">* полученная стоимость является ориентировочной, окончательная стоимость предмета залога предлагается товароведом ломбарда после осмотра и проверки товара и устанавливается по взаимному согласию сторон.</span>
+                <div style="text-align:center; margin-top:20px;">
+                    <a class="MainBtnOcenka" href="tel: +375297462754" data-bs-toggle="modal"
+                       data-bs-target="#order-call-modal">Получить бесплатную консультацию</a>
+                </div>
+            </div>
+            <div class="steps">
+                <p class="h3">Как происходит онлайн-оценка?</p>
+                <div class="steps-items">
+                    <div class="row">
+                        <div class="step-item-wrap col-6 col-sm-3">
+                            <div class="step-item">
+                                <div class="step-item-img">
+                                    <!-- SVG icon here -->
+                                    [SVG content for step 1]
+                                </div>
+                                <p>Заходите на соответствующий раздел сайта</p>
+                            </div>
+                            <div class="step-arrow">
+                                <!-- arrow SVG -->
+                                [Arrow SVG content]
+                            </div>
+                        </div>
+                        <div class="step-item-wrap col-6 col-sm-3">
+                            <div class="step-item">
+                                <div class="step-item-img">
+                                    <!-- SVG icon here -->
+                                    [SVG content for step 2]
+                                </div>
+                                <p>Заполняете поля описания имущества</p>
+                            </div>
+                            <div class="step-arrow">
+                                <!-- arrow SVG -->
+                                [Arrow SVG content]
+                            </div>
+                        </div>
+                        <div class="step-item-wrap col-6 col-sm-3">
+                            <div class="step-item">
+                                <div class="step-item-img">
+                                    <!-- SVG icon here -->
+                                    [SVG content for step 3]
+                                </div>
+                                <p>Оставляете заявку и ожидаете звонка</p>
+                            </div>
+                            <div class="step-arrow">
+                                <!-- arrow SVG -->
+                                [Arrow SVG content]
+                            </div>
+                        </div>
+                        <div class="step-item-wrap col-6 col-sm-3">
+                            <div class="step-item">
+                                <div class="step-item-img step-item-img-money">
+                                    <!-- SVG icon here -->
+                                    [SVG content for step 4]
+                                </div>
+                                <p>Получаете оценку имущества</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Services">
+                <div class="row row-cols-lg-3">
+                    <div class="col col-6 col-md-5">
+                        <a href="/online-ocenka-zolota-i-serebra/">
+                            <div class="blur-card parallax-cards"
+                                 style="background-image: url(webapp/static/webapp/img/lbk_juvelire.png);">
+                                <p class="h3">Оценить<br>драгоценные металлы</p>
+                                <div class="darkBlur"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-6 col-md-3">
+                        <a href="/online-ocenka-ehlektroniki/">
+                            <div class="blur-card parallax-cards"
+                                 style="background-image: url(webapp/static/webapp/img/lbk_electronics.jpg);">
+                                <p class="h3">Оценить<br>электронику</p>
+                                <div class="darkBlur"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-6 col-md-4">
+                        <a href="/online-ocenka-stroitelnogo-instrumenta/">
+                            <div class="blur-card parallax-cards"
+                                 style="background-image: url(webapp/static/webapp/img/lbk_instrument.jpeg);">
+                                <p class="h3">Оценить<br>инструменты</p>
+                                <div class="darkBlur"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-6 col-md-4">
+                        <a href="/online-ocenka-bytovoj-tekhniki/">
+                            <div class="blur-card parallax-cards change-high"
+                                 style="background-image: url(webapp/static/webapp/img/lbk_phones_tech.jpeg);">
+                                <p class="h3">Оценить<br>бытовую технику</p>
+                                <div class="darkBlur"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-6 col-md-5">
+                        <a href="/online-ocenka-avtomobilya/">
+                            <div class="blur-card parallax-cards change-high"
+                                 style="background-image: url(webapp/static/webapp/img/lamborghini.jpg);">
+                                <p class="h3">Оценить<br>автомобиль</p>
+                                <div class="darkBlur"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-6 col-md-3">
+                        <a href="/calculator/">
+                            <div class="blur-card parallax-cards change-high"
+                                 style="background-image: url(webapp/static/webapp/img/lbk_calc.png);">
+                                <p class="h3">Онлайн<br>калькулятор</p>
+                                <div class="darkBlur"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col col-6 col-md-4">
+                        <a href="/ocenka-telefona/">
+                            <div class="blur-card parallax-cards change-high"
+                                 style="background-image: url(webapp/static/webapp/img/lbk_phones.png);">
+                                <p class="h3">Оценить<br>телефон</p>
+                                <div class="darkBlur"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top:20px;" class="Section6Shop other-pages">
+                <div class="container">
+                    <div class="row">
+                        <p class="h3">Вы можете купить в нашем ломбарде</p>
+                        <div class="owl-carousel owl-theme shop-products-carousel">
+                            <div class="item product-card-small" itemscope itemtype="https://schema.org/ImageObject">
+                                <div class="product-card-img">
+                                    <img itemprop="contentUrl"
+                                         srcset="/static/images/ShopJewellery-576.webp 576w, /static/images/ShopJewellery-745.webp 745w, /static/images/ShopJewellery-1400.webp 1920w, /static/images/ShopJewellery-745.webp 576w 2x, /static/images/ShopJewellery-1400.webp 745w 2x, /static/images/ShopJewellery.webp 2x"
+                                         src="/static/images/ShopJewellery.webp" alt="Ювелирные товары в ломбарде"
+                                         loading="lazy">
+                                </div>
+                                <p class="product-card-title" itemprop="name">Драгоценные металлы</p>
+                                <a href="/pokupka-yuvelirnyh-izdelij-v-lombarde/"
+                                   class="product-card-more">Подробнее</a>
+                            </div>
+                            <div class="item product-card-small" itemscope itemtype="https://schema.org/ImageObject">
+                                <div class="product-card-img">
+                                    <img itemprop="contentUrl"
+                                         srcset="/static/images/ShopAppliances-576.webp 576w, /static/images/ShopAppliances-745.webp 745w, /static/images/ShopAppliances-1400.webp 1920w, /static/images/ShopAppliances-745.webp 576w 2x, /static/images/ShopAppliances-1400.webp 745w 2x, /static/images/ShopAppliances.webp 2x"
+                                         src="/static/images/ShopAppliances.webp"
+                                         alt="Бытовая техника в наличии в ломбарде" loading="lazy">
+                                </div>
+                                <p class="product-card-title" itemprop="name">Бытовая техника</p>
+                                <a href="/pokupka-bytovoj-tekhniki-v-lombarde/" class="product-card-more">Подробнее</a>
+                            </div>
+                            <div class="item product-card-small" itemscope itemtype="https://schema.org/ImageObject">
+                                <div class="product-card-img">
+                                    <img itemprop="contentUrl"
+                                         srcset="/static/images/ShopDevices-576.webp 576w, /static/images/ShopDevices-745.webp 745w, /static/images/ShopDevices-1400.webp 1920w, /static/images/ShopDevices-745.webp 576w 2x, /static/images/ShopDevices-1400.webp 745w 2x, /static/images/ShopDevices.webp 2x"
+                                         src="/static/images/ShopDevices.webp"
+                                         alt="Магазин смартфонов и мобильных устройств" loading="lazy">
+                                </div>
+                                <p class="product-card-title" itemprop="name">Электроника</p>
+                                <a href="/pokupka-texniki-v-lombarde/" class="product-card-more">Подробнее</a>
+                            </div>
+                            <div class="item product-card-small" itemscope itemtype="https://schema.org/ImageObject">
+                                <div class="product-card-img">
+                                    <img itemprop="contentUrl"
+                                         srcset="/static/images/ShopTools-576.webp 576w, /static/images/ShopTools-745.webp 745w, /static/images/ShopTools-1400.webp 1920w, /static/images/ShopTools-745.webp 576w 2x, /static/images/ShopTools-1400.webp 745w 2x, /static/images/ShopTools.webp 2x"
+                                         src="/static/images/ShopTools.webp" alt="Инструменты для стройки в ломбарде"
+                                         loading="lazy">
+                                </div>
+                                <p class="product-card-title" itemprop="name">Инструменты</p>
+                                <a href="/pokupka-stroitelnyh-instrumentov-v-lombarde/" class="product-card-more">Подробнее</a>
+                            </div>
+                            <div class="item product-card-small" itemscope itemtype="https://schema.org/ImageObject">
+                                <div class="product-card-img">
+                                    <img itemprop="contentUrl"
+                                         srcset="/static/images/ShopFiltersTop-sport-576.webp 576w, /static/images/ShopFiltersTop-sport-745.webp 745w, /static/images/ShopFiltersTop-sport.webp 1920w, /static/images/ShopFiltersTop-sport-745.webp 576w 2x, /static/images/ShopFiltersTop-sport.webp 2x"
+                                         src="/static/images/ShopFiltersTop-sport.webp"
+                                         alt="Ломбард спортивных принадлежностей" loading="lazy">
+                                </div>
+                                <p class="product-card-title" itemprop="name">Спорт и туризм</p>
+                                <a href="/pokupka-sportivnogo-inventarya-v-lombarde/" class="product-card-more">Подробнее</a>
+                            </div>
+                            <div class="item product-card-small" itemscope itemtype="https://schema.org/ImageObject">
+                                <div class="product-card-img">
+                                    <img itemprop="contentUrl"
+                                         srcset="/static/images/ShopFiltersTop-child-576.webp 576w, /static/images/ShopFiltersTop-child-745.webp 745w, /static/images/ShopFiltersTop-child-1400.webp 1920w, /static/images/ShopFiltersTop-child-745.webp 576w 2x, /static/images/ShopFiltersTop-child-1400.webp 745w 2x, /static/images/ShopFiltersTop-child.webp 2x"
+                                         src="/static/images/ShopFiltersTop-child.webp"
+                                         alt="Детские вещи в ломбарде Висем" loading="lazy">
+                                </div>
+                                <p class="product-card-title" itemprop="name">Детское</p>
+                                <a href="/pokupka-detskih-veshchej-v-lombarde/" class="product-card-more">Подробнее</a>
+                            </div>
+                            <div class="item product-card-small" itemscope itemtype="https://schema.org/ImageObject">
+                                <div class="product-card-img">
+                                    <img itemprop="contentUrl"
+                                         srcset="/static/images/ShopFiltersTop-other-576.webp 576w, /static/images/ShopFiltersTop-other-745.webp 745w, /static/images/ShopFiltersTop-other.webp 1920w, /static/images/ShopFiltersTop-other-745.webp 576w 2x, /static/images/ShopFiltersTop-other.webp 2x"
+                                         src="/static/images/ShopFiltersTop-other.webp" alt="Ассортимент ломбарда"
+                                         loading="lazy">
+                                </div>
+                                <p class="product-card-title" itemprop="name">Другое</p>
+                                <a href="/pokupka-drugoe-v-lombarde/" class="product-card-more">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @media (max-width: 992px) {
+                    .Section6Shop.Services.MorePages .blur-card p {
+                        font-size: 14px;
+
+                    }
+                }
+            </style>
+            <div style="padding-top:0px;" class="Section6Shop Services MorePages  d-sm-block">
+                <div class="container">
+                    <div class="row">
+                        <p class="h3">Смотрите также</p>
+                        <div class="owl-carousel owl-theme pages-carousel">
+                            <div class="item">
+                                <a href="/zajmy-pod-zalog/">
+                                    <div class="blur-card parallax-cards square-card"
+                                         style="background-image: url(/static/images/ServicesPawn.webp);">
+                                        <p class="h3">Займы под залог</p>
+                                        <div class="darkBlur"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/uslugi-po-prodazhe-nevostrebovannogo-imushchestva/">
+                                    <div class="blur-card parallax-cards square-card"
+                                         style="background-image: url(/static/images/ServicesBuy.webp);">
+                                        <p class="h3">Продажа невостребованного имущества</p>
+                                        <div class="darkBlur"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/online-ocenka/">
+                                    <div class="blur-card parallax-cards square-card"
+                                         style="background-image: url(/static/images/ServicesValue.webp);">
+                                        <p class="h3">Онлайн-оценка</p>
+                                        <div class="darkBlur"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/calculator/">
+                                    <div class="blur-card parallax-cards square-card"
+                                         style="background-image: url(/static/images/ServicesCalculator.webp);">
+                                        <p class="h3">Калькулятор</p>
+                                        <div class="darkBlur"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="/avtolombard/">
+                                    <div class="blur-card parallax-cards square-card"
+                                         style="background-image: url(/static/images/services-auto.webp);">
+                                        <p class="h3">Автоломбард</p>
+                                        <div class="darkBlur"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var l1H = document.getElementsByClassName("sercives-info-left")[0].offsetHeight;
+        document.getElementsByClassName("sercives-info-right")[0].style.height = l1H + "px";
+    </script>
+    <script>
+        var r1H = document.getElementsByClassName("sercives-info-left")[0].offsetHeight;
+        var r2H = document.getElementsByClassName("resize-text")[0].offsetHeight;
+        document.getElementsByClassName("resize-img")[0].style.height = r1H - r2H + "px";
+    </script>
+    <script>
+        var l1H = document.getElementsByClassName("sercives-info-left")[0].offsetHeight;
+        document.getElementsByClassName("sercives-info-right")[0].style.height = l1H + "px";
+    </script>
+    <script>
+        var l22H = document.getElementsByClassName("sercives-info-left-2")[0].offsetHeight;
+        document.getElementsByClassName("sercives-info-right-2")[0].style.height = l22H + "px";
+    </script>
+
+
+{% endblock %}
