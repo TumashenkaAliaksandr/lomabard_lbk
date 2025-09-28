@@ -4765,7 +4765,7 @@ body.light-theme .sercives-info-left-two h3 {
   height: 130px;
   margin-bottom: 20px;
     border-radius: 75px;
-    background: linear-gradient(90deg, #ffee00 0%, #45451d 100%);
+    background: linear-gradient(90deg, #ffd700 0%, #45451d 100%);
    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.98));
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #ffffff;
 }
