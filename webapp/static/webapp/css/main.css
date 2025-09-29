@@ -1860,7 +1860,7 @@ body.light-theme .about-us-title {
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #56564f;
+    color: #56564f!important;
     user-select: none;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
 }
@@ -1919,7 +1919,7 @@ body.light-theme .about-us-image h3 {
     margin: 0;
     padding: 8px 15px;
     background-color: rgb(248 248 248 / 45%);
-    color: #6d6c65;
+    color: #6d6c65!important;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     border-radius: 8px;
@@ -2076,7 +2076,7 @@ body.light-theme .about-us-content {
 
 .about-us-content p::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: -10px;
     left: -10px;
     right: -10px;
@@ -2094,7 +2094,7 @@ body.light-theme .about-us-content p {
     font-size: 1.4rem;
     line-height: 1.5;
     margin-bottom: 10px;
-    color: #6d6c65;
+    color: #6d6c65!important;
 }
 
 .learn-more-link {
@@ -2160,7 +2160,7 @@ body.light-theme .info-dop {
 
 body.light-theme .info-dop h3 {
     font-size: 1.7rem;
-    color: #686868;
+    color: #686868!important;
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 700;
@@ -2211,7 +2211,7 @@ body.light-theme .info-dop p {
 
 body.light-theme .info-size li {
     font-size: 19px;
-    color: #5c5c5c;
+    color: #5c5c5c!important;
     margin-top: 10px;
     padding-left: 10px;
     list-style-type: none;
@@ -2219,6 +2219,28 @@ body.light-theme .info-size li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
     border-radius: 12px;
     transition: box-shadow 0.3s ease;
+}
+
+.info-size a {
+    color: rgb(255 215 0);
+
+}
+
+
+body.light-theme .info-size li {
+    font-size: 19px;
+    color: #5c5c5c!important;
+    margin-top: 10px;
+    padding-left: 10px;
+    list-style-type: none;
+    filter: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+body.light-theme .info-size a {
+    color: #5c5c5c !important;
 }
 
 @keyframes pulseGlow {

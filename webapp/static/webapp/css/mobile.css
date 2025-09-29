@@ -908,7 +908,7 @@ body.light-theme .desctop-none {
     .Section10CollateralItems.Services .row.row-cols-lg-3 {
         display: flex !important;
         flex-direction: column !important;
-        gap: 20px !important;
+        gap: 4px !important;
     }
 
 
@@ -1494,8 +1494,8 @@ body.light-theme .desctop-none {
         padding: 0 5px !important;
         text-align: center !important;
         max-width: 350px;
-        margin-left: 12px !important;
-        margin-right: 12px;
+        margin-left: auto !important;
+        margin-right: auto;
         margin-top: 15px;
     }
 
@@ -1587,6 +1587,13 @@ body.light-theme .desctop-none {
         color: #ffd700 !important;
     }
 
+    body.light-theme .about-us-content h3 {
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 15px !important;
+        color: #747470 !important;
+    }
+
     /* Абзацы текста */
     .about-us-content p {
         font-size: 1.3rem !important;
@@ -1654,6 +1661,16 @@ body.light-theme .desctop-none {
         font-size: 1rem !important;
         font-weight: 500 !important;
         color: #d4af37 !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
+        user-select: none;
+    }
+
+    body.light-theme .social-icons h2#info {
+        flex-basis: 100% !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+        color: #56564f !important;
         margin-bottom: 10px !important;
         text-align: center !important;
         user-select: none;
@@ -1810,7 +1827,18 @@ body.light-theme .desctop-none {
     .tab-content {
         display: none;
         font-size: 19px !important;
-        color: #cfab36 !important;
+        color: #cfab36;
+        line-height: 1.5 !important;
+        padding: 10px 15px !important;
+        background-color: rgb(255 253 243 / 8%) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3) !important;
+    }
+
+    body.light-theme .tab-content {
+        display: none;
+        font-size: 19px !important;
+        color: #686868;
         line-height: 1.5 !important;
         padding: 10px 15px !important;
         background-color: rgb(255 253 243 / 8%) !important;
@@ -1829,7 +1857,7 @@ body.light-theme .desctop-none {
     }
 
     .info-size li {
-        font-size: 16px;
+        font-size: 18px!important;
         color: rgb(255 215 0);
         margin-top: 10px;
         padding-left: 8px;
@@ -1856,7 +1884,17 @@ body.light-theme .desctop-none {
         background-color: #fff9e01c !important; /* лёгкий золотистый фон */
         border-radius: 12px !important;
         padding-right: 25px;
-        padding-left: 5px;
+        padding-left: 7px;
+        box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3) !important;
+    }
+
+    body.light-theme .loan-info-second-block {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        background-color: #fff9e01c !important; /* лёгкий золотистый фон */
+        border-radius: 12px !important;
+        padding-right: 25px;
+        padding-left: 7px;
         box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3) !important;
     }
 
@@ -1883,10 +1921,10 @@ body.light-theme .desctop-none {
     }
 
     .loan-info-second-block p {
-        font-size: 1rem !important;
+        font-size: 1.3rem !important;
         line-height: 1.4 !important;
         margin-bottom: 15px !important;
-        color: #d4af37 !important;
+        color: #1ebb0d !important;
         user-select: none;
     }
 
