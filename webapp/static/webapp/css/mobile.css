@@ -4,7 +4,7 @@
 
     /* Контейнеры */
     .container, .container-big, .container-metally, .container-about {
-        width: 95% !important;
+        width: 97% !important;
         padding-left: 10px !important;
         padding-right: 10px !important;
     }
@@ -77,11 +77,19 @@
     }
 
     .logo {
-        font-size: 1.3rem !important;
+        font-size: 1.5rem !important;
         margin-right: 15px !important;
         position: relative;
         right: 40px;
         top: 7px;
+    }
+
+    .logo-footer {
+        font-size: 1.3rem !important;
+        margin-right: 15px !important;
+        position: relative;
+        right: 0px;
+        top: 5px;
     }
 
     .navbar-toggler {
@@ -94,14 +102,6 @@
         top: 7px;
     }
 
-    .logo-footer {
-        font-size: 1.3rem !important;
-        margin-right: 15px !important;
-        position: relative;
-        right: 0px;
-        top: 5px;
-    }
-
     /* Навигация — переход в столбец для удобства */
     .nav ul {
         flex-wrap: wrap !important;
@@ -110,8 +110,8 @@
     }
 
     .nav-link {
-        font-size: 12px !important;
-        padding: 8px !important;
+        font-size: 15px !important;
+        padding: 7px 0 !important;
         white-space: nowrap;
     }
 
@@ -158,8 +158,14 @@
         color: #fffae4;
     }
 
+    body.light-theme .social-icon-img {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 1.3rem !important;
+    }
+
     .advertisement-index-title {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: #d4af37;
         text-align: center;
         margin-bottom: 30px;
@@ -452,7 +458,7 @@
     }
 
     .about-info-img img {
-        width: 333px !important; /* фиксированная ширина */
+        width: 344px !important; /* фиксированная ширина */
         height: 100% !important; /* высота равна контейнеру */
         object-fit: cover !important;
         border-radius: 10px;
@@ -460,32 +466,37 @@
         margin: 0 auto;
     }
 
+    .steps {
+        margin-top: 4px;
+    }
+
 
     .sercives-info-left-two h3 {
-        line-height: 1.1!important;
-        margin-bottom: 20px!important;
-        text-align: center!important;
-        font-size: 1.25rem!important;
+        line-height: 1.1 !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+        font-size: 1.25rem !important;
         color: #d4af37;
         text-transform: uppercase;
-        letter-spacing: 1.5px!important;
+        letter-spacing: 1.5px !important;
         font-weight: 500;
         filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
     }
+
     body.light-theme .sercives-info-left-two h3 {
-        line-height: 1.1!important;
-        margin-bottom: 20px!important;
-        text-align: center!important;
-        font-size: 1.25rem!important;
-        color: #68675f!important;
+        line-height: 1.1 !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+        font-size: 1.25rem !important;
+        color: #68675f !important;
         text-transform: uppercase;
-        letter-spacing: 1.5px!important;
+        letter-spacing: 1.5px !important;
         font-weight: 500;
         filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
     }
 
     body .main-bg {
-    padding: 0 0 35px;
+        padding: 0 0 35px;
 
     }
 
@@ -574,8 +585,11 @@
     .sercives-info-left p {
         font-size: 1.29em;
         color: #e1d19d;
-        line-height: 1.15;
-        margin-bottom: 1em;
+        line-height: 1.18;
+        margin-bottom: 0.5em;
+        position: relative;
+        margin-left: 18px;
+        margin-right: auto;
     }
 
     /* Прочие мелкие подгонки */
@@ -1154,7 +1168,7 @@ body.light-theme .desctop-none {
     body .contact-bg {
         padding: 0px 0 35px;
         background: linear-gradient(to left, rgba(20, 20, 20, 0.98) 0%, /* очень тёмный почти чёрный слева */ rgba(60, 50, 10, 0.95) 45%, /* глубокий тёмно-золотистый в середине */ rgb(65 50 1 / 88%) 100% /* мягкий золотой справа */), url(../img/contacts_bg.jpg) center center / cover no-repeat fixed;
-        background-attachment: scroll;
+        /*background-attachment: scroll;*/
         color: #ffd700;
     }
 
@@ -1621,8 +1635,15 @@ body.light-theme .desctop-none {
     .about-us-content p {
         font-size: 1.3rem !important;
         line-height: 1.2 !important;
-        color: #cca835 !important;
+        color: #e1d19d !important;
         margin-bottom: 15px !important;
+    }
+
+    .about-us-content p {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        color: #6d6c65;
     }
 
     /* Ссылка "Узнать больше" */
@@ -1879,15 +1900,8 @@ body.light-theme .desctop-none {
         padding-top: 5px;
     }
 
-    .section-text p.section-p {
-        font-size: 1.3rem;
-        line-height: 1.5;
-        margin-bottom: 25px;
-        color: #e1d19d;
-    }
-
     .info-size li {
-        font-size: 18px!important;
+        font-size: 18px !important;
         color: #e1d19d;
         margin-top: 10px;
         padding-left: 8px;
@@ -1900,6 +1914,13 @@ body.light-theme .desctop-none {
         list-style: none;
         padding-bottom: 4px;
         padding-top: 4px;
+    }
+
+    .section-text p.section-p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        color: #e1d19d;
     }
 
     .tab-content li {
@@ -1990,25 +2011,26 @@ body.light-theme .desctop-none-class {
 
 /* Для мобильных устройств применяем анимацию */
 @media (max-width: 768px) {
-  .top-bar {
-    overflow: hidden;  /* Скрываем выезжающий текст */
-  }
-  .top-bar > div {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scroll-left 12s linear infinite;
-    /* Можно настроить длительность анимации под длину текста */
-  }
+    .top-bar {
+        overflow: hidden; /* Скрываем выезжающий текст */
+    }
+
+    .top-bar > div {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll-left 12s linear infinite;
+        /* Можно настроить длительность анимации под длину текста */
+    }
 }
 
 /* Анимация прокрутки с правого края к левому */
 @keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 
@@ -2311,6 +2333,10 @@ body.light-theme .desctop-none-class {
         white-space: normal;
         line-height: 1.4;
     }
+
+    .top-m {
+        padding-top: 33px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2326,6 +2352,7 @@ body.light-theme .desctop-none-class {
         word-wrap: break-word;
         word-break: break-word;
         overflow-wrap: break-word;
+        margin-left: 4px;
     }
 
     .about-h3 {
@@ -2342,12 +2369,30 @@ body.light-theme .desctop-none-class {
 
     .sercives-info-left {
         flex: 1 1 60%;
-        max-width: 350px;
-        padding: 0 20px;
+        max-width: 390px;
+        padding: 0 8px;
+    }
+
+    .sercives-info-left h5 {
+        font-size: 1.4em;
+        line-height: 1.15;
+        margin-bottom: 1em;
+        margin-left: 4px;
+    }
+
+    .display-n {
+        display: none;
+    }
+
+    .sercives-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 22px;
     }
 
     body.light-theme .main-bg {
-        padding: 0 0 35px;
+        padding: 0px 0 35px;
         background: linear-gradient(to right, rgba(255, 255, 255, 0.85) 0%, rgba(236, 248, 249, 0.95) 45%, rgb(173 146 61 / 65%) 100%), url(../img/lbk_bg.jpg) center center / cover no-repeat;
         background-attachment: fixed;
     }
@@ -2369,25 +2414,25 @@ body.light-theme .desctop-none-class {
        на мобилке сделаем столбцы, подгоняя картинки и тексты */
     .sercives-info .row {
         flex-direction: column !important;
-        gap: 20px !important;
+        gap: 1px !important;
     }
 
     .sercives-info-left {
-        padding: 0 !important;
+        /*padding: 0 !important;*/
     }
 
     .sercives-info-left-1,
     .sercives-info-left-2 {
-        padding: 0 !important;
+        /*padding: 0 !important;*/
     }
 
     .about-info-img {
         height: auto !important;
-        max-height: 220px;
+        max-height: 244px;
         width: 100% !important;
         box-shadow: 0 0 15px rgb(17 15 1 / 60%);
         border-radius: 10px;
-        max-width: 360px;
+        max-width: 380px;
     }
 
     .about-info-img img {
@@ -2400,7 +2445,7 @@ body.light-theme .desctop-none-class {
     h3.about-h3 {
         font-size: 1.3rem !important;
         margin-bottom: 1rem !important;
-        line-height: 1!important;
+        line-height: 1 !important;
     }
 
 
@@ -2432,7 +2477,7 @@ body.light-theme .desctop-none-class {
     }
 
     .step-item-img img {
-        max-width: 70px;
+        max-width: 60px;
         height: auto;
     }
 
@@ -2452,29 +2497,30 @@ body.light-theme .desctop-none-class {
 }
 
 @media (max-width: 768px) {
-  .steps-items .row {
-    display: flex !important;      /* Обязательно flex */
-    flex-wrap: nowrap !important;  /* Без переноса */
-    overflow-x: auto !important;   /* Горизонтальный скролл */
-    -webkit-overflow-scrolling: touch !important; /* плавность на iOS */
-    gap: 12px !important;          /* Отступы */
-    box-sizing: border-box !important;
-  }
+    .steps-items .row {
+        display: flex !important; /* Обязательно flex */
+        /*flex-wrap: nowrap !important;   Без переноса
+        overflow-x: auto !important;   /* Горизонтальный скролл */
+        -webkit-overflow-scrolling: touch !important; /* плавность на iOS */
+        gap: 12px !important; /* Отступы */
+        box-sizing: border-box !important;
+    }
 
-  .steps-items .step-item {
-    flex: 0 0 auto !important;     /* Не сжимается и не растягивается */
-  }
+    .steps-items .step-item {
+        flex: 0 0 auto !important; /* Не сжимается и не растягивается */
+    }
 
-  /* Скрываем скроллбар, если нужно */
-  .steps-items .row::-webkit-scrollbar {
-    display: none;
-  }
-  .steps-items .row {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+    /* Скрываем скроллбар, если нужно */
+    .steps-items .row::-webkit-scrollbar {
+        display: none;
+    }
 
-  body.light-theme .step-item-img {
+    .steps-items .row {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    body.light-theme .step-item-img {
         width: 100px;
         height: 100px;
         margin-bottom: 13px;
@@ -2490,6 +2536,7 @@ body.light-theme .desctop-none-class {
         height: 100px;
         margin-bottom: 13px;
         border-radius: 75px;
+        /*background: linear-gradient(90deg, #f7f2ab 0%, #8b8b87 100%);*/
         filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.98));
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #ffffff;
         margin-top: 10px;
