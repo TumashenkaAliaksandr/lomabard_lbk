@@ -2879,7 +2879,7 @@ body.light-theme .cardGlass-two {
     font-size: clamp(1rem, 3vw, 1.3rem);
     margin: 0;
     font-weight: 550;
-    color: #f3cd01;
+    color: #e1d19d;
     text-transform: uppercase;
 }
 
@@ -4320,7 +4320,7 @@ body.light-theme .tablet-text {
 
 .step-item {
   /*width: 100%;*/
-  max-width: 280px;
+  max-width: 260px;
   flex: 1 1 22%;
   box-sizing: border-box;
   display: flex;
@@ -4367,7 +4367,7 @@ body.light-theme .step-item p {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.1;
-    color: #68675f;
+    color: #54534c;
     margin: 20px 10px 10px 10px;
     min-height: 50px;
     display: flex;

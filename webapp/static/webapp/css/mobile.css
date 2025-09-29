@@ -452,7 +452,7 @@
     }
 
     .about-info-img img {
-        width: 300px !important; /* фиксированная ширина */
+        width: 333px !important; /* фиксированная ширина */
         height: 100% !important; /* высота равна контейнеру */
         object-fit: cover !important;
         border-radius: 10px;
@@ -462,19 +462,30 @@
 
 
     .sercives-info-left-two h3 {
-        line-height: 1.1;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 1.25rem;
+        line-height: 1.1!important;
+        margin-bottom: 20px!important;
+        text-align: center!important;
+        font-size: 1.25rem!important;
         color: #d4af37;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.5px!important;
         font-weight: 500;
-        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+    }
+    body.light-theme .sercives-info-left-two h3 {
+        line-height: 1.1!important;
+        margin-bottom: 20px!important;
+        text-align: center!important;
+        font-size: 1.25rem!important;
+        color: #68675f!important;
+        text-transform: uppercase;
+        letter-spacing: 1.5px!important;
+        font-weight: 500;
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
     }
 
     body .main-bg {
-    padding: 35px 0 35px;
+    padding: 0 0 35px;
 
     }
 
@@ -552,8 +563,19 @@
     }
 
     .step-item p {
-        width: 100% !important;
-        font-size: 1.1rem !important;
+        width: 188px !important;
+        font-size: 1.5rem !important;
+    }
+
+    .steps {
+        padding: 4px 0 20px 0;
+    }
+
+    .sercives-info-left p {
+        font-size: 1.29em;
+        color: #e1d19d;
+        line-height: 1.15;
+        margin-bottom: 1em;
     }
 
     /* Прочие мелкие подгонки */
@@ -640,7 +662,7 @@
         margin-bottom: 15px;
         filter: none;
         text-transform: uppercase;
-        color: #9e842a;
+        color: #d4af37;
         text-align: center;
     }
 
@@ -1019,10 +1041,11 @@ body.light-theme .desctop-none {
     }
 
     .Section10CollateralItems.Services .section-text-zalog .section-p {
-        font-size: 1rem !important;
+        font-size: 1.29rem !important;
         line-height: 1.4 !important;
-        color: #222;
+        color: rgb(225 209 157) !important;
         margin-bottom: 15px !important;
+        text-align: left;
     }
 
     .Section10CollateralItems .section-text-zalog .section-p {
@@ -1041,7 +1064,7 @@ body.light-theme .desctop-none {
     body.light-theme .Section10CollateralItems .section-text-zalog .section-p {
         color: #6d6c64 !important;
         font-size: 1.2rem;
-        text-align: center;
+        text-align: left;
         margin-bottom: 18px;
         line-height: 1.4;
         width: 100%;
@@ -1279,7 +1302,7 @@ body.light-theme .desctop-none {
     }
 
     .section-p-calc {
-        font-size: 1rem !important;
+        font-size: 1.25rem !important;
         line-height: 1.4 !important;
         color: #222 !important;
         margin-bottom: 15px !important;
@@ -1359,7 +1382,7 @@ body.light-theme .desctop-none {
         padding: 15px;
         border-radius: 12px;
         font-size: 1.2rem;
-        color: rgb(255 215 0) !important;
+        color: rgb(225 209 157) !important;
         margin-top: 0;
         margin-bottom: 15px;
         font-weight: 300;
@@ -1518,7 +1541,7 @@ body.light-theme .desctop-none {
         font-size: 0.85rem !important;
         padding: 17px 0 !important;
         border-radius: 28px !important;
-        box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5) !important;
+        /*box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5) !important;*/
         user-select: none;
     }
 
@@ -1826,8 +1849,8 @@ body.light-theme .desctop-none {
 
     .tab-content {
         display: none;
-        font-size: 19px !important;
-        color: #cfab36;
+        font-size: 20px !important;
+        color: #e1d19d;
         line-height: 1.5 !important;
         padding: 10px 15px !important;
         background-color: rgb(255 253 243 / 8%) !important;
@@ -1856,9 +1879,16 @@ body.light-theme .desctop-none {
         padding-top: 5px;
     }
 
+    .section-text p.section-p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        color: #e1d19d;
+    }
+
     .info-size li {
         font-size: 18px!important;
-        color: rgb(255 215 0);
+        color: #e1d19d;
         margin-top: 10px;
         padding-left: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 15px 3px rgb(255 249 230);
@@ -1912,12 +1942,13 @@ body.light-theme .desctop-none {
 
     /* Заголовок правого блока */
     .loan-info-second-block h3 {
-        font-size: 1.1rem !important;
+        font-size: 1.3rem !important;
         font-weight: 500 !important;
         margin-bottom: 15px !important;
         color: #f3cd01 !important;
         user-select: none;
         text-transform: uppercase;
+        text-align: center;
     }
 
     .loan-info-second-block p {
@@ -2161,6 +2192,14 @@ body.light-theme .desctop-none-class {
         text-transform: uppercase;
     }
 
+    body.light-theme .product-name {
+        font-size: 1.16rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #505048;
+        text-transform: uppercase;
+    }
+
     .product-description p, .product-characteristics p {
         font-size: 1.3rem;
         line-height: 1.4;
@@ -2307,9 +2346,15 @@ body.light-theme .desctop-none-class {
         padding: 0 20px;
     }
 
+    body.light-theme .main-bg {
+        padding: 0 0 35px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.85) 0%, rgba(236, 248, 249, 0.95) 45%, rgb(173 146 61 / 65%) 100%), url(../img/lbk_bg.jpg) center center / cover no-repeat;
+        background-attachment: fixed;
+    }
+
 
     .breadcrumb-list {
-        font-size: 0.9em;
+        font-size: 1.1em;
         margin-bottom: 0.8rem;
         white-space: nowrap;
         overflow-x: auto;
@@ -2338,10 +2383,11 @@ body.light-theme .desctop-none-class {
 
     .about-info-img {
         height: auto !important;
-        max-height: 250px;
+        max-height: 220px;
         width: 100% !important;
         box-shadow: 0 0 15px rgb(17 15 1 / 60%);
         border-radius: 10px;
+        max-width: 360px;
     }
 
     .about-info-img img {
@@ -2352,8 +2398,9 @@ body.light-theme .desctop-none-class {
 
 
     h3.about-h3 {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem !important;
+        line-height: 1!important;
     }
 
 
@@ -2396,6 +2443,59 @@ body.light-theme .desctop-none-class {
     }
 
 }
+
+/* Десктоп - без изменений */
+.steps-items .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .steps-items .row {
+    display: flex !important;      /* Обязательно flex */
+    flex-wrap: nowrap !important;  /* Без переноса */
+    overflow-x: auto !important;   /* Горизонтальный скролл */
+    -webkit-overflow-scrolling: touch !important; /* плавность на iOS */
+    gap: 12px !important;          /* Отступы */
+    box-sizing: border-box !important;
+  }
+
+  .steps-items .step-item {
+    flex: 0 0 auto !important;     /* Не сжимается и не растягивается */
+  }
+
+  /* Скрываем скроллбар, если нужно */
+  .steps-items .row::-webkit-scrollbar {
+    display: none;
+  }
+  .steps-items .row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  body.light-theme .step-item-img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 13px;
+        border-radius: 75px;
+        background: linear-gradient(90deg, #f7f2ab 0%, #8b8b87 100%);
+        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.98));
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #ffffff;
+        margin-top: 10px;
+    }
+
+    .step-item-img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 13px;
+        border-radius: 75px;
+        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.98));
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 13px 0 #ffffff;
+        margin-top: 10px;
+    }
+}
+
 
 @media (max-width: 768px) {
     body.light-theme .advertisement-index-title {
