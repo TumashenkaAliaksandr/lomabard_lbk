@@ -117,7 +117,7 @@
 
     /* Верхняя интерактивная полоска */
     .top-bar {
-        height: 48px !important;
+        height: 44px !important;
         font-size: 16px !important;
         padding: 0 10px !important;
         text-align: center;
@@ -1956,6 +1956,30 @@ body.light-theme .desctop-none {
 body.light-theme .desctop-none-class {
     color: #1f1f1f;
 }
+
+/* Для мобильных устройств применяем анимацию */
+@media (max-width: 768px) {
+  .top-bar {
+    overflow: hidden;  /* Скрываем выезжающий текст */
+  }
+  .top-bar > div {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 12s linear infinite;
+    /* Можно настроить длительность анимации под длину текста */
+  }
+}
+
+/* Анимация прокрутки с правого края к левому */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 /* Показываем элемент только на мобильных (max-width: 768px) */
 @media (max-width: 768px) {
