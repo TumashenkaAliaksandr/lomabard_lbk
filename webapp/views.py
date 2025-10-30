@@ -122,6 +122,13 @@ def about_info_docs(request):
     return render(request, 'webapp/about_docs.html', context=context)
 
 
+def price_lists(request):
+    """
+    Страница Прайс листы
+    """
+    return render(request, 'webapp/price_lists.html')
+
+
 def store(request):
     """
     Страница Магазина
